@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap");
+header {
+  width: 100%;
+  height: 50px;
+  background-color: #7A233C;
+}
+
+header .top-container {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .top-container h1 {
+  font-size: 12px;
+  padding-left: 12px;
+  color: #fff;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+header .nav-container {
+  width: 80%;
+  margin: 0 auto;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .nav-container .logo {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .nav-container .logo__title {
+  font-family: 'Pacifico', sans-serif;
+  color: #7A233C;
+  font-size: 65px;
+  font-weight: normal;
+  margin-left: 1rem;
+}
+
+header .nav-container .logo__image {
+  height: 75px;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+
+header .nav-container .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+}
+
+header .nav-container .navbar__item {
+  color: #7A233C;
+  text-transform: uppercase;
+  padding-left: 1rem;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.96px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+}
+/*# sourceMappingURL=style.css.map */

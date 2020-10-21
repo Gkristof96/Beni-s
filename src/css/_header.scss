@@ -1,0 +1,66 @@
+@mixin container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: color(primary);
+    .top-container {
+        width: 80%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        h1 {
+            font-size: 12px;
+            padding-left: 12px;
+            color: color(text);
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+    }
+    .nav-container {
+        @include container();
+        height: 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            &__title {
+                font-family: 'Pacifico', sans-serif;
+                color: color(primary);
+                font-size: 65px;
+                font-weight: normal;
+                margin-left: 1rem;
+            }
+
+            &__image {
+                height: 75px;
+                transform: rotate(-20deg);
+
+            }
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+
+            &__item {
+                color: color(primary);
+                text-transform: uppercase;
+                padding-left: 1rem;
+                font-weight: bold;
+                font-size: 16px;
+                letter-spacing: 0.96px;
+            }
+
+        }
+    }
+}

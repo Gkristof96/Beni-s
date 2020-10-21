@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap');
+
+$colors: (
+    primary: #7A233C,
+    text: #fff,
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+@import './header';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
