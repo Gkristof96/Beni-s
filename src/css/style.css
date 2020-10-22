@@ -8,7 +8,7 @@ header {
 header .top-container {
   width: 80%;
   height: 100%;
-  margin: auto;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,6 +26,59 @@ header .top-container h1 {
   color: #fff;
   font-weight: normal;
   text-transform: uppercase;
+}
+
+header .top-container .topbar-button {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  height: 100%;
+}
+
+header .top-container .topbar-button .dropdown {
+  display: none;
+  max-width: 134px;
+  margin: 0;
+  -webkit-box-shadow: 0px 10px 20px #00000033;
+          box-shadow: 0px 10px 20px #00000033;
+  background-color: #fff;
+}
+
+header .top-container .topbar-button .dropdown ul {
+  list-style: none;
+}
+
+header .top-container .topbar-button .dropdown ul li {
+  text-align: right;
+  padding: 10px 20px;
+  color: #001926;
+  font: normal normal normal 14px/21px Poppins;
+  letter-spacing: 0.56px;
+}
+
+header .top-container .topbar-button .dropdown ul::after {
+  position: absolute;
+  right: 0;
+  top: -10px;
+  width: 0;
+  height: 0;
+  content: '';
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid #fff;
+}
+
+header .top-container .topbar-button .dropdown.open {
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 0;
 }
 
 header .nav-container {

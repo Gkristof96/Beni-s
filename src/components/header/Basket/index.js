@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Basket = () => {
+    const [productCount, setProductCount] = useState(0);
     return (
         <>
-            <h1>Kosár (0)</h1>
+            <h1>Kosár ({productCount})</h1>
         </>
     )
 }
