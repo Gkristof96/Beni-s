@@ -298,6 +298,71 @@ nav .nav-container .navbar__item a {
   font-size: 32px;
 }
 
+footer {
+  width: 100%;
+  height: 120px;
+}
+
+footer .footer-container {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+footer .footer-container ul li {
+  padding: 0 20px;
+  text-transform: uppercase;
+  font: normal normal 600 14px/21px Poppins;
+  letter-spacing: 0.42px;
+  color: #001926;
+}
+
+footer .footer-container .copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-container .copyright h1 {
+  text-align: right;
+  font: normal normal normal 14px/28px Poppins;
+  letter-spacing: 0px;
+  color: #001926;
+  margin-right: 20px;
+}
+
+footer .footer-container .copyright img {
+  width: 28px;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+
+.gradient-line {
+  height: 6px;
+  width: 100%;
+  background: transparent -webkit-gradient(linear, left top, right top, from(#DC386D), to(#FFB3B5)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, #DC386D 0%, #FFB3B5 100%) 0% 0% no-repeat padding-box;
+}
+
 *,
 *::before,
 *::after {
