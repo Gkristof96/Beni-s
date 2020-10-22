@@ -6,12 +6,14 @@ import Gyik from './pages/GYIK';
 import Home from './pages/Home';
 import Products from './pages/Products'
 import Contact from './pages/Contact'
+import Nav from './components/Nav';
 
 function App() {
   return (
     <>
       <Router>
         <Header />
+        <Nav />
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/gyik' component={Gyik} />

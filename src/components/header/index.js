@@ -3,8 +3,6 @@ import Basket from './Basket'
 import LanguageButton from './LanguageButton'
 import CurrencyButton from './CurrencyButton'
 import LoginButton from './LoginButton'
-import Navbar from './Navbar'
-import Logo from './Logo'
 import ProfileButton from './ProfileButton'
 
 const Header = () => {
@@ -18,11 +16,6 @@ const Header = () => {
                     <LanguageButton />
                     <CurrencyButton  />
                 </div>
-                <div className='nav-container'>
-                    <Logo />
-                    <Navbar />
-                </div>
-                
             </header>
         </>
     )
