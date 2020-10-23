@@ -1,0 +1,29 @@
+@import './input';
+
+section {
+    margin-top: 200px;
+    .contact-container {
+            width: 1000px;
+            margin: 0 auto;
+            .contact-title {
+                width: 100%;
+                text-align: left;
+                font: normal normal medium 36px/48px Poppins;
+                letter-spacing: 0px;
+                color: #001926;
+                margin: 15px 0;
+            }
+            .line {
+                background: #DC386D;
+                height: 6px;
+            }
+            p {
+                margin: 20px 0;
+                text-align: left;
+                font: normal normal medium 16px/25px Poppins;
+                letter-spacing: 0px;
+                color: #001926;
+                font-weight: bold;
+            }
+    }
+}
