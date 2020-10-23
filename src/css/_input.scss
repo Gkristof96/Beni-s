@@ -13,8 +13,33 @@
         padding: 0 5px;
         height: 40px;
     }
-
-    span::before {
+    textarea {
+        font-size: 15px;
+        color: #333;
+        border: none;
+        width: 100%;
+        outline: none;
+        background: none;
+        padding: 0 5px;
+        height: 40px;
+        resize: none;
+        transition: .5s;
+    }
+    .textarea-span::before {
+        content: attr(data-placeholder);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        text-align: left;
+        font-weight: bolder;
+        font: normal normal medium 18px/48px Poppins;
+        letter-spacing: 0px;
+        color: #181818;
+        transform: translateY(-50%);
+        z-index: -1;
+        transition: .5s;
+    }
+    .input-span::before {
         content: attr(data-placeholder);
         position: absolute;
         top: 50%;
@@ -40,8 +65,16 @@
         transition: .5s;
     }
 }
-.input-container.focus span::before {
+.input-container.focus .input-span::before {
     top: -5px;
+}
+
+.input-container.focus textarea {
+    height: 100px;
+}
+
+.input-container.focus .textarea-span::before {
+    top: -15px;
 }
 
 .input-container.focus span::after {

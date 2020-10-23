@@ -1,5 +1,6 @@
 import React from 'react'
 import InputField from '../../components/Contact/InputField'
+import TextField from '../../components/Contact/TextField'
 
 const Contact = () => {
     return (
@@ -14,6 +15,9 @@ const Contact = () => {
                         <InputField type='text' placeholder='Keresztnév'/>
                         <InputField type='email' placeholder='Email'/>
                         <InputField type='text' placeholder='Rendelés azonosító'/>
+                        <TextField placeholder='Üzenet'/>
+                        <input type='checkbox' />
+                        <input type='submit' />
                     </div>
                     
 
