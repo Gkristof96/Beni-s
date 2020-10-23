@@ -2,11 +2,11 @@ import React from 'react'
 import InputField from '../../Contact/InputField'
 import { IoMdClose } from 'react-icons/io'
 
-const RegistrationCard = ({ setLoginActive }) => {
+const RegistrationCard = ({ setLoginActive, setVisible }) => {
     return (
         <>
             <div className='registration-card'>
-                <IoMdClose className='close-btn'/>
+                <IoMdClose className='close-btn' onClick={() => setVisible(false)}/>
                 <h1 className='registration-card_title'>Regisztráció</h1>
                 <InputField type='email' placeholder='Email'/>
                 <InputField type='password' placeholder='Jelszó'/>

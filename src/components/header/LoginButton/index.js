@@ -1,9 +1,9 @@
 import React from 'react'
 
-const LoginButton = () => {
+const LoginButton = ({ setVisible }) => {
     return (
         <>
-            <h1>Bejelentkezés</h1>
+            <h1 onClick={() => setVisible(true)}>Bejelentkezés</h1>
         </>
     )
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './css/style.css'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Header from './components/header'
@@ -11,11 +11,12 @@ import Footer from './components/footer';
 import Authentication from './components/Authentication'
 
 function App() {
+  const [authVisible, setVisible] = useState(false)
   return (
     <>
       <Router>
-        <Authentication />
-        <Header />
+        {authVisible ? <Authentication setVisible={setVisible} /> : null}
+        <Header setVisible={setVisible}/>
         <Nav />
         
         <Switch>
