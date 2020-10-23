@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const InputField = ({}) => {
+const InputField = ({type, placeholder}) => {
     const [focus, setFocus] = useState(false)
     const [input, setInput] = useState('')
 
@@ -15,8 +15,8 @@ const InputField = ({}) => {
     return (
         <>
             <div className={`input-container ${focus ? 'focus' : null}`}>
-                <input onChange={(e) => setInput(e.target.value)} value={input} type="text" onBlur={() => handleInput()} onFocus={() => handleInput()}/>
-                <span data-placeholder="Password"></span>
+                <input onChange={(e) => setInput(e.target.value)} value={input} type={type} onBlur={() => handleInput()} onFocus={() => handleInput()}/>
+                <span data-placeholder={placeholder}></span>
             </div>
         </>
     )

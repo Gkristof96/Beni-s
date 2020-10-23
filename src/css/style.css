@@ -655,8 +655,12 @@ section .gyik-container .gradient-line {
   content: attr(data-placeholder);
   position: absolute;
   top: 50%;
-  left: 5px;
-  color: #adadad;
+  left: 0;
+  text-align: left;
+  font-weight: bolder;
+  font: normal normal medium 18px/48px Poppins;
+  letter-spacing: 0px;
+  color: #181818;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: -1;
@@ -714,6 +718,17 @@ section .contact-container p {
   letter-spacing: 0px;
   color: #001926;
   font-weight: bold;
+}
+
+section .contact-container .inputs {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 2fr 1fr;
+      grid-template-rows: 1fr 1fr 2fr 1fr;
+  grid-column-gap: 25px;
 }
 
 *,

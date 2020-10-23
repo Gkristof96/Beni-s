@@ -18,8 +18,12 @@
         content: attr(data-placeholder);
         position: absolute;
         top: 50%;
-        left: 5px;
-        color: #adadad;
+        left: 0;
+        text-align: left;
+        font-weight: bolder;
+        font: normal normal medium 18px/48px Poppins;
+        letter-spacing: 0px;
+        color: #181818;
         transform: translateY(-50%);
         z-index: -1;
         transition: .5s;

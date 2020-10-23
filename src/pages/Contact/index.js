@@ -9,7 +9,14 @@ const Contact = () => {
                     <h1 className='contact-title'>Kapcsolat</h1>
                     <div className='line' />
                     <p>További kérdése van, részleges tájékoztatásra van szűksége? Írjon nekünk, keresse munkatársainkat!</p>
-                    <InputField />
+                    <div className='inputs'>
+                        <InputField type='text' placeholder='Vezetéknév'/>
+                        <InputField type='text' placeholder='Keresztnév'/>
+                        <InputField type='email' placeholder='Email'/>
+                        <InputField type='text' placeholder='Rendelés azonosító'/>
+                    </div>
+                    
+
                 </div>
                 
             </section>
