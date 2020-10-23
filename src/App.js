@@ -8,13 +8,16 @@ import Products from './pages/Products'
 import Contact from './pages/Contact'
 import Nav from './components/Nav';
 import Footer from './components/footer';
+import Authentication from './components/Authentication'
 
 function App() {
   return (
     <>
       <Router>
+        <Authentication />
         <Header />
         <Nav />
+        
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/gyik' component={Gyik} />
