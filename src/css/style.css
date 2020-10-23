@@ -963,6 +963,51 @@ section .contact-container .inputs .btn {
           justify-content: center;
 }
 
+.paginator-container {
+  margin-top: 200px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.paginator-container .pager {
+  width: 70px;
+  height: 70px;
+  border: 6px solid var(--unnamed-color-dc386d);
+  background: #DC386D 0% 0% no-repeat padding-box;
+  border: 6px solid #DC386D;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.paginator-container .pager .pager-icon {
+  color: #fff;
+  font-size: 32px;
+}
+
+.paginator-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.paginator-container ul .pagination-item {
+  padding: 20px;
+}
+
 *,
 *::before,
 *::after {

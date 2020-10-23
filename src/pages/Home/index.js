@@ -1,6 +1,5 @@
 import React from 'react'
 import Hero from '../../components/Hero'
-import Pagination from '../../components/Pagination'
 import Partners from '../../components/Partners'
 import Recomended from '../../components/Recomended'
 
@@ -9,7 +8,6 @@ const Home = () => {
         <>
             <Hero />
             <Recomended />
-            <Pagination />
             <Partners />
         </>
     )

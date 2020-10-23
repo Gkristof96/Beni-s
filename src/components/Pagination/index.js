@@ -1,29 +1,29 @@
 import React from 'react'
 import { HiOutlineArrowNarrowLeft, HiOutlineArrowNarrowRight} from 'react-icons/hi'
-const Pagination = () => {
+const Pagination = ({totalPosts, currentPage, paginate}) => {
     const pageNumbers = [];
-    for (let i = 1; i <= Math.ceil(30 / 10); i++) {
+    for (let i = 1; i <= Math.ceil(18 / 6); i++) {
         pageNumbers.push(i);
     }
     return (
         <>
             <div className='paginator-container'>
-                <div className='pager'>
-                    <HiOutlineArrowNarrowLeft />
+                <div className={`pager ${pageNumbers[0] === currentPage && "disabled"}`}>
+                    <HiOutlineArrowNarrowLeft className='pager-icon'/>
                 </div>
                 <ul>
                     {pageNumbers.map((number) => (
                         <li
                         key={number}
-                        className={`${currentPage === number && "active"}`}
+                        className={`pagination-item${currentPage === number ? "active" : ''}`}
                         onClick={() => paginate(number)}
                         >
                         {number}
                         </li>
                     ))}
                 </ul>
-                <div className='pager'>
-                    <HiOutlineArrowNarrowRight />
+                <div className={`pager ${pageNumbers.reverse()[0] === currentPage && "disabled"}`}>
+                    <HiOutlineArrowNarrowRight className='pager-icon'/>
                 </div>
             </div>
 
