@@ -1,15 +1,15 @@
 import React from 'react'
 
-const ProductCard = () => {
+const ProductCard = ({key, product}) => {
     return (
         <>
             <div className='product-card'>
                 <div className='new-tag'>új!</div>
-                <img className='product-image' src='images/products/cocacola.png'></img>
-                <h1 className='product-title'>Coca-Cola</h1>
+                <img className='product-image' src={product.image} alt={product.name}></img>
+                <h1 className='product-title'>{product.name}</h1>
                 <div className='prices'>
-                    <h2 className='discont'>240Ft/db</h2>
-                    <h2 className='full'>290Ft/db</h2>
+                    <h2 className='discont'>{product.price}</h2>
+                    <h2 className='full'>{product.discontedprice}</h2>
                 </div>
                 
                 <button className='btn'>kosárba rakom</button>

@@ -4,41 +4,125 @@
         "name" : "Coca-Cola 0,33dl",
         "image": "images/products/cocacola.png",
         "price": 290,
-        "disconted-price": 240
+        "discontedprice": 240
     },
     {
         "id": 2,
         "name" : "Hell energia ital",
         "image": "images/products/hell.png",
         "price": 290,
-        "disconted-price": 240
+        "discontedprice": 240
     },
     {
         "id": 3,
         "name" : "Balaton szelet",
         "image": "images/products/balaton.png",
         "price": 290,
-        "disconted-price": 240
+        "discontedprice": 240
     },
     {
         "id": 4,
         "name" : "Mars szelet",
         "image": "images/products/mars.png",
         "price": 290,
-        "disconted-price": 240
+        "discontedprice": 240
     },
     {
         "id": 5,
         "name" : "Twix szelet",
         "image": "images/products/twix.png",
         "price": 290,
-        "disconted-price": 240
+        "discontedprice": 240
     },
     {
         "id": 6,
         "name" : "Milky Way szelet",
         "image": "images/products/milkyway.png",
         "price": 290,
-        "disconted-price": 240
+        "discontedprice": 240
+    },
+    {
+        "id": 7,
+        "name" : "Mars szelet",
+        "image": "images/products/mars.png",
+        "price": 290,
+        "discontedprice": 240
+    },
+    {
+        "id": 8,
+        "name" : "Coca-Cola 0,33dl",
+        "image": "images/products/cocacola.png",
+        "price": 290,
+        "discontedprice": 240
+    },
+    {
+        "id": 9,
+        "name" : "Hell energia ital",
+        "image": "images/products/hell.png",
+        "price": 290,
+        "discontedprice": 240
+    },
+    {
+        "id": 10,
+        "name" : "Milky Way szelet",
+        "image": "images/products/milkyway.png",
+        "price": 290,
+        "discontedprice": 240
+    },
+    {
+        "id": 11,
+        "name" : "Hell energia ital",
+        "image": "images/products/hell.png",
+        "price": 290,
+        "discontedprice": 240
+    },
+    {
+        "id": 12,
+        "name" : "Balaton szelet",
+        "image": "images/products/balaton.png",
+        "price": 290,
+        "discontedprice": 240
+    },
+    {
+        "id": 13,
+        "name" : "Twix szelet",
+        "image": "images/products/twix.png",
+        "price": 290,
+        "discontedprice": 240
+    },
+    {
+        "id": 14,
+        "name" : "Coca-Cola 0,33dl",
+        "image": "images/products/cocacola.png",
+        "price": 290,
+        "discontedprice": 240
+    },
+    {
+        "id": 15,
+        "name" : "Hell energia ital",
+        "image": "images/products/hell.png",
+        "price": 290,
+        "discontedprice": 240
+    },
+    {
+        "id": 16,
+        "name" : "Twix szelet",
+        "image": "images/products/twix.png",
+        "price": 290,
+        "discontedprice": 240
+    },
+    {
+        "id": 17,
+        "name" : "Mars szelet",
+        "image": "images/products/mars.png",
+        "price": 290,
+        "discontedprice": 240
+    },
+    {
+        "id": 18,
+        "name" : "Milky Way szelet",
+        "image": "images/products/milkyway.png",
+        "price": 290,
+        "discontedprice": 240
     }
 ]

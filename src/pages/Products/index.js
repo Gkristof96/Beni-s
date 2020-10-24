@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
-import Pagination from '../../components/Pagination';
-
+import React, { useState, useEffect } from 'react'
+import Pagination from '../../components/Pagination'
+import ProducCard from '../../components/ProductCard'
+import Search from '../../components/Hero/Search'
+import axios from 'axios'
 
 const Products = () => {
-    const [products, setProducts] = useState({})
+    const [products, setProducts] = useState([])
 
     const [currentPage, setCurrentPage] = useState(1);
     const paginate = (pageNumber) => {
@@ -13,16 +15,41 @@ const Products = () => {
         }
     };
 
+    async  function fetchProducts() {
+        await axios
+            .get("../data/products.json")
+            .then((response) => {
+                setProducts(response.data);
+            })
+            .catch((error) => console.log(error));
+    }
+
+    useEffect(() => {
+        fetchProducts();
+    },[])
+
     const numberOfPages = products.length / 6;
     const indexOfLastPost = currentPage * 6;
     const indexOfFirstPost = indexOfLastPost - 6;
-    {/*const currentPost = products.slice(indexOfFirstPost, indexOfLastPost);*/}
+    const currentPost = products.slice(indexOfFirstPost, indexOfLastPost);
     return (
         <>
-            <div className='products'>
-                {/*{currentPost.map((product) => (<h1>product</h1>))}*/}
-            </div>
-            <Pagination />
+            <section className='products-section'>
+                <h1 className='products-title'>Édességek</h1>
+                <Search />
+                <div className='products-container'>
+                    {currentPost.map((product,i) => (<ProducCard key={i} product={product} />))}
+                </div>
+                <div className='pagination-container'>
+                    <Pagination
+                        totalPosts={products.length}
+                        paginate={paginate}
+                        currentPage={currentPage}
+                    />
+                </div>
+            </section>
+            
+          
         </>
     )
 }

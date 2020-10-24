@@ -9,7 +9,7 @@ const Pagination = ({totalPosts, currentPage, paginate}) => {
         <>
             <div className='paginator-container'>
                 <div className={`pager ${pageNumbers[0] === currentPage && "disabled"}`}>
-                    <HiOutlineArrowNarrowLeft className='pager-icon'/>
+                    <HiOutlineArrowNarrowLeft className='pager-icon' onClick={() => paginate(currentPage - 1)}/>
                 </div>
                 <ul>
                     {pageNumbers.map((number) => (
@@ -23,7 +23,7 @@ const Pagination = ({totalPosts, currentPage, paginate}) => {
                     ))}
                 </ul>
                 <div className={`pager ${pageNumbers.reverse()[0] === currentPage && "disabled"}`}>
-                    <HiOutlineArrowNarrowRight className='pager-icon'/>
+                    <HiOutlineArrowNarrowRight className='pager-icon' onClick={() => paginate(currentPage + 1)}/>
                 </div>
             </div>
 

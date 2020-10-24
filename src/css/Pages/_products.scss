@@ -1,0 +1,25 @@
+.products-section {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 200px;
+
+    .products-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .pagination-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .products-title {
+        text-align: left;
+        font: normal normal bold 36px/48px Poppins;
+        letter-spacing: 0px;
+        color: #460B1C;
+    }
+}
