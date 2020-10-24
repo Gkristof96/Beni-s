@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import './css/style.css'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Header from './components/header'
-import Gyik from './pages/GYIK';
-import Home from './pages/Home';
+import Gyik from './pages/GYIK'
+import Home from './pages/Home'
 import Products from './pages/Products'
 import Contact from './pages/Contact'
-import Nav from './components/Nav';
-import Footer from './components/footer';
+import Nav from './components/Nav'
+import Footer from './components/footer'
+import Product from './pages/Product'
 import Authentication from './components/Authentication'
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/gyik' component={Gyik} />
-          <Route path='/products' component={Products} />
+          <Route path='/products' exact component={Products} />
+          <Route path='/product' component={Product} />
           <Route path='/contact' component={Contact} />
         </Switch>
         <Footer />
