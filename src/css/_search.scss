@@ -94,18 +94,34 @@
                 img {
                     width: auto;
                     height: 70px;
-                    flex: 1;
                 }
-                h1 {
+                .suggestion-name {
                     flex: 2;
+                    align-self: center;
                 }
-                div {
-                    display: flex;
+                .price-wrapper {
                     flex: 1;
+                    display: flex;
+                    align-items: flex-start;
                     flex-direction: column;
-                    justify-content: flex-start;
+                    justify-content: center;
+                    
+                    .price {
+                        text-align: left;
+                        text-decoration: line-through;
+                        font-size: 20px;
+                        letter-spacing: 0px;
+                        color: #181818;
+                        margin-top: -50px;
+                    }
+                    .disconted-price {
+                        text-align: left;
+                        font-size: 20px;
+                        letter-spacing: 0px;
+                        color: #DC386D;
+                        margin-top: 10;
+                    }
                 }
-
                 .btn {
                     flex: 1;
                     width: 280px;

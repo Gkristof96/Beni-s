@@ -11,11 +11,13 @@ const Suggestion = ({ suggestions, suggestionChanged, display }) => {
           {suggestions.map((item, i) => (
             <li key={i} onClick={() => suggestionChanged(item)}>
               <img src={item.image} />
-              <h1>{item.name}</h1>
-              <div>
-                  <h1>{item.price}</h1>
-                  <h1>{item.discontedprice}</h1>
+              <h1 className='suggestion-name'>{item.name}</h1>
+              <div className='price-wrapper'>
+                <h1 className='disconted-price'>{item.discontedprice} Ft/db</h1>
+                <h1 className='price'>{item.price} Ft/db</h1>
               </div>
+                  
+                  
               <button className='btn'>kosárba rakom</button>
             </li>
           ))}

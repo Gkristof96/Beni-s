@@ -6,6 +6,7 @@ import axios from 'axios'
 
 const Products = () => {
     const [products, setProducts] = useState([])
+    const [search, setSearch] = useState('')
 
     const [currentPage, setCurrentPage] = useState(1);
     const paginate = (pageNumber) => {
@@ -36,7 +37,12 @@ const Products = () => {
         <>
             <section className='white-header'>
                     <h1 className='products-title'>Édességek</h1>
-                    <Search />
+                    <Search
+                        search={search}
+                        setSearch={setSearch}
+                        placeholder="Keress az édességek között!"
+                        type="text"
+                    />
             </section>
             <section className='products-section'>
                 <div className='products-container'>

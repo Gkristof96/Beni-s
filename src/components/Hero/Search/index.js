@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { IoMdSearch } from 'react-icons/io'
 import Suggestion from './Suggestion'
 import axios from 'axios'
@@ -33,11 +33,29 @@ const Search = ({ placeholder, search, setSearch, type }) => {
 
     const suggestionChanged = (value) => {
         if (suggestions.length > 1) {
-        setSearch(value);
+        setSearch(value.name);
         setSuggestions([]);
         setDisplay(false);
         }
         setDisplay(false);
+    };
+
+    const wrapperRef = useRef(null);
+
+
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [])
+
+    const handleClickOutside = (e) => {
+        const { current: wrap } = wrapperRef;
+        if (wrap && !wrap.contains(e.target)) {
+            setSuggestions([])
+            setSearch('')
+        }
     };
     return (
         <>
@@ -55,7 +73,7 @@ const Search = ({ placeholder, search, setSearch, type }) => {
                         <button className='search__btn'><IoMdSearch className='search__icon'/></button>
                     </div>
                 </div>
-                <div className='suggestion'>
+                <div className='suggestion' ref={wrapperRef}>
                     <Suggestion
                         suggestions={suggestions}
                         suggestionChanged={suggestionChanged}
