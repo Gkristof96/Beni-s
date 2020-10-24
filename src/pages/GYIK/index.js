@@ -5,7 +5,7 @@ import GyikItem from '../../components/GYIK/GyikCategory/GyikItem'
 const Gyik = () => {
     return (
         <>
-            <section>
+            <section className='gyik-section'>
                 <div className='gyik-container'>
                     <h1 className='gyik-title'>Gyakran ismételt kérdések</h1>
                     <div className='gradient-line' />

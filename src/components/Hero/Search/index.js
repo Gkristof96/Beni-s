@@ -1,21 +1,69 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { IoMdSearch } from 'react-icons/io'
+import Suggestion from './Suggestion'
+import axios from 'axios'
 
-const Search = () => {
-    const [search, setSearch] = useState('');
+const Search = ({ placeholder, search, setSearch, type }) => {
+    const [suggestions, setSuggestions] = useState([]);
+    const [display, setDisplay] = useState(false);
+    const [products, setProducts] = useState([])
+
+    async  function fetchProducts() {
+        await axios
+            .get("../data/products.json")
+            .then((response) => {
+                setProducts(response.data);
+            })
+            .catch((error) => console.log(error));
+    }
+
+    
+    useEffect(() => {
+        fetchProducts();
+    }, [])
+
+    const onTextChange = (e) => {
+        const value = e.target.value;
+        if (value.length > 0) {
+          const regex = new RegExp(`^${value}`, "i");
+          setSuggestions(products.sort().filter((v) => regex.test(v.name)));
+        }
+        setSearch(value);
+      };
+
+    const suggestionChanged = (value) => {
+        if (suggestions.length > 1) {
+        setSearch(value);
+        setSuggestions([]);
+        setDisplay(false);
+        }
+        setDisplay(false);
+    };
     return (
         <>
-            <div className='search'>
-                <div className='search__container'>
-                    <input className='search__input'
-                        value={search}
-                        onChange={(e) => setSearch(e.target.value)}
-                        placeholder='Keres az édességek között!'
-                    >
-                    </input>
-                    <button className='search__btn'><IoMdSearch className='search__icon'/></button>
+            <div className='search-wrapper'>
+                <div className='search'>
+                    <div className='search__container'>
+                        <input
+                            value={search}
+                            type={type}
+                            onChange={onTextChange}
+                            onClick={() => setDisplay(true)}
+                            placeholder={placeholder}
+                            className='search__input'
+                         />
+                        <button className='search__btn'><IoMdSearch className='search__icon'/></button>
+                    </div>
+                </div>
+                <div className='suggestion'>
+                    <Suggestion
+                        suggestions={suggestions}
+                        suggestionChanged={suggestionChanged}
+                        display={display}
+                    />
                 </div>
             </div>
+           
         </>
     )
 }

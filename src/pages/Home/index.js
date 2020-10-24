@@ -23,11 +23,13 @@ const Home = () => {
         <>
             <Hero />
             <section className='recomended-section'>
-                <h1 className='recomended-title'>Ajánlott édességek</h1>
-                <div className='products-container'>
-                        {currentPost.map((product,i) => (<ProducCard key={i} product={product} />))}
+                <div className='recomended-container'>
+                    <h1 className='recomended-title'>Ajánlott édességek</h1>
+                    <div className='products-container'>
+                            {currentPost.map((product,i) => (<ProducCard key={i} product={product} />))}
+                    </div>
+                    <a className='recomended-btn'>összes édesség</a>
                 </div>
-                <a className='recomended-btn'>összes édesség</a>
             </section>
             <Partners />
         </>

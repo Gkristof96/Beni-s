@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState, useEffect} from 'react'
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 import ArrowButton from './ArrowButton'
 import Search from './Search'
+import axios from 'axios'
 
 const Hero = () => {
+    const [search, setSearch] = useState('') 
     return (
         <>
             <section className='hero-section'>
@@ -22,7 +24,12 @@ const Hero = () => {
                         </div>
                         
                     </div>
-                    <Search />
+                    <Search 
+                        search={search}
+                        setSearch={setSearch}
+                        placeholder="Keress az édességek között!"
+                        type="text"
+                    />
                 </div>
             </section>
         </>

@@ -34,18 +34,23 @@ const Products = () => {
     const currentPost = products.slice(indexOfFirstPost, indexOfLastPost);
     return (
         <>
+            <section className='white-header'>
+                    <h1 className='products-title'>Édességek</h1>
+                    <Search />
+            </section>
             <section className='products-section'>
-                <h1 className='products-title'>Édességek</h1>
-                <Search />
                 <div className='products-container'>
-                    {currentPost.map((product,i) => (<ProducCard key={i} product={product} />))}
-                </div>
-                <div className='pagination-container'>
-                    <Pagination
-                        totalPosts={products.length}
-                        paginate={paginate}
-                        currentPage={currentPage}
-                    />
+                    
+                    <div className='products-wrapper'>
+                        {currentPost.map((product,i) => (<ProducCard key={i} product={product} />))}
+                    </div>
+                    <div className='pagination-wrapper'>
+                        <Pagination
+                            totalPosts={products.length}
+                            paginate={paginate}
+                            currentPage={currentPage}
+                        />
+                    </div>
                 </div>
             </section>
             

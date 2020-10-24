@@ -6,19 +6,18 @@
         width: 100%;
         position: absolute;
         z-index: -1;
-        top: -150px;
-        clip: rect(0px,100vw,calc(100vh + 150px),0px);
+        top: -200px;
         left: 0;
+        clip: rect(200px,100vw,100vh,0px);
     }
     .hero-container {
         display: grid;
         width: 80%;
-        height: 100%;
         margin: 0 auto;
         height: calc(100vh - 200px);
-        grid-template-areas: 'nem nem' 'content null' 'search search';
+        grid-template-areas: 'content null' 'search search';
         grid-template-columns: 40% 60%;
-        grid-template-rows: 200px 6fr 1fr;
+        grid-template-rows:6fr 3fr;
         .content {
             grid-area: content;
             align-self: center;

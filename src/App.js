@@ -10,6 +10,7 @@ import Nav from './components/Nav'
 import Footer from './components/footer'
 import Product from './pages/Product'
 import Authentication from './components/Authentication'
+import Search from './components/Hero/Search';
 
 function App() {
   const [authVisible, setVisible] = useState(false)
@@ -26,6 +27,7 @@ function App() {
           <Route path='/products' exact component={Products} />
           <Route path='/product' component={Product} />
           <Route path='/contact' component={Contact} />
+          <Route path='/test' component={Search} />
         </Switch>
         <Footer />
       </Router>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Partners from '../../components/Partners/index'
 import { GoPrimitiveDot } from 'react-icons/go'
 
 const Product = () => {
@@ -46,6 +47,7 @@ const Product = () => {
                     </div>
                 </div>
             </section>
+            <Partners />
         </>
     )
 }
