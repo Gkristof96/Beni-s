@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const ProfileButton = ({ setIsLoggedIn}) => {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -25,7 +26,7 @@ const ProfileButton = ({ setIsLoggedIn}) => {
                 <h1 >John Smith {menuOpen ? <FaChevronUp /> : <FaChevronDown />}</h1>
                 <div className={`dropdown ${(menuOpen? 'open' : null)}`}>
                     <ul>
-                        <li>Profilom</li>
+                        <li><Link to='/profile'>Profilom</Link></li>
                         <li>Rendeléseim</li>
                         <li onClick={() => setIsLoggedIn(false)}>Kijelentkezés</li>
                     </ul>

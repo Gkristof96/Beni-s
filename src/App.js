@@ -11,14 +11,16 @@ import Footer from './components/footer'
 import Product from './pages/Product'
 import Authentication from './components/Authentication'
 import Search from './components/Hero/Search';
+import Profile from './pages/Profile';
 
 function App() {
   const [authVisible, setVisible] = useState(false)
+  const [basket, setBasket] = useState([]);
   return (
     <>
       <Router>
         {authVisible ? <Authentication setVisible={setVisible} /> : null}
-        <Header setVisible={setVisible}/>
+        <Header basket={basket} setBasket={setBasket} setVisible={setVisible}/>
         <Nav />
         
         <Switch>
@@ -27,7 +29,7 @@ function App() {
           <Route path='/products' exact component={Products} />
           <Route path='/product' component={Product} />
           <Route path='/contact' component={Contact} />
-          <Route path='/test' component={Search} />
+          <Route path='/profile' component={Profile} />
         </Switch>
         <Footer />
       </Router>
