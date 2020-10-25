@@ -1438,6 +1438,62 @@ section .contact-container .inputs .btn {
   color: #181818;
 }
 
+.basket {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  height: 100%;
+}
+
+.basket .basket-container {
+  display: none;
+  max-width: 134px;
+  margin: 0;
+  -webkit-box-shadow: 0px 10px 20px #00000033;
+          box-shadow: 0px 10px 20px #00000033;
+  background-color: #fff;
+}
+
+.basket .basket-container ul {
+  list-style: none;
+}
+
+.basket .basket-container ul li {
+  text-align: right;
+  padding: 10px 20px;
+  color: #001926;
+  font: normal normal normal 14px/21px Poppins;
+  letter-spacing: 0.56px;
+}
+
+.basket .basket-container ul ul::after {
+  position: absolute;
+  right: 0;
+  top: -10px;
+  width: 0;
+  height: 0;
+  content: '';
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid #fff;
+}
+
+.basket .basket-container.open {
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: red;
+  top: 50px;
+  right: 0;
+}
+
 *,
 *::before,
 *::after {

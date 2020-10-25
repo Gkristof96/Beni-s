@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 
-const ProfileButton = () => {
+const ProfileButton = ({ setIsLoggedIn}) => {
     const [menuOpen, setMenuOpen] = useState(false)
     const wrapperRef = useRef(null);
 
@@ -27,7 +27,7 @@ const ProfileButton = () => {
                     <ul>
                         <li>Profilom</li>
                         <li>Rendeléseim</li>
-                        <li>Kijelentkezés</li>
+                        <li onClick={() => setIsLoggedIn(false)}>Kijelentkezés</li>
                     </ul>
                 </div>
             </div>

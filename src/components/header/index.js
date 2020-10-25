@@ -6,12 +6,12 @@ import LoginButton from './LoginButton'
 import ProfileButton from './ProfileButton'
 
 const Header = ({ setVisible }) => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false)
+    const [isLoggedIn, setIsLoggedIn] = useState(true)
     return (
         <>
             <header>
                 <div className='top-container'>
-                    {isLoggedIn ?  <ProfileButton /> : <LoginButton setVisible={setVisible}/>}
+                    {isLoggedIn ?  <ProfileButton setIsLoggedIn={setIsLoggedIn} /> : <LoginButton setVisible={setVisible}/>}
                     <Basket />
                     <LanguageButton />
                     <CurrencyButton  />
