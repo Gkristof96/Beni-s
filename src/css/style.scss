@@ -9,22 +9,22 @@ $colors: (
     @return map-get($colors, $color-name);
 }
 
-@import './header';
-@import './hero';
-@import './nav';
-@import './buttons';
-@import './search';
-@import './footer';
-@import './partners';
-@import './productcard';
-@import './recomended';
-@import './gyik';
-@import './contact';
-@import './authentication';
-@import './pagination';
+@import './Components/header';
+@import './Components/home/hero';
+@import './Components/nav';
+@import './Components/buttons';
+@import './Components/search';
+@import './Components/footer';
+@import './Components/partners';
+@import './Components/productcard';
+@import './Components/home/recomended';
+@import './Pages/gyik';
+@import './Pages/contact';
+@import './Components/authentication/authentication';
+@import './Components/pagination';
 @import './Pages/products';
 @import './Pages/product';
-@import './basket';
+@import './Components/basket';
 
 *,
 *::before,

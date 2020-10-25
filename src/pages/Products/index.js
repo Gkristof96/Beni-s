@@ -4,7 +4,7 @@ import ProducCard from '../../components/ProductCard'
 import Search from '../../components/Hero/Search'
 import axios from 'axios'
 
-const Products = () => {
+const Products = ({basket, setBasket}) => {
     const [products, setProducts] = useState([])
     const [search, setSearch] = useState('')
 
@@ -48,7 +48,7 @@ const Products = () => {
                 <div className='products-container'>
                     
                     <div className='products-wrapper'>
-                        {currentPost.map((product,i) => (<ProducCard key={i} product={product} />))}
+                        {currentPost.map((product,i) => (<ProducCard key={i} basket={basket} setBasket={setBasket} product={product} />))}
                     </div>
                     <div className='pagination-wrapper'>
                         <Pagination

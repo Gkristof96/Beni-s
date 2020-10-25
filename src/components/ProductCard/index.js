@@ -1,6 +1,13 @@
 import React from 'react'
 
-const ProductCard = ({key, product}) => {
+const ProductCard = ({product, setBasket, basket}) => {
+
+    const addProduct = (product) => {
+        if(basket.includes(product.name)){
+            console.log('igen')
+        }
+        setBasket([...basket, { img: product.image, name: product.name , count: 1, id: Date.now() }])
+    }
     return (
         <>
             <div className='product-card'>
@@ -12,7 +19,7 @@ const ProductCard = ({key, product}) => {
                     <h2 className='full'>{product.discontedprice}</h2>
                 </div>
                 
-                <button className='btn'>kosárba rakom</button>
+                <button className='btn' onClick={() => addProduct(product)}>kosárba rakom</button>
             </div>
         </>
     )

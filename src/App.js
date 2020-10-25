@@ -16,6 +16,7 @@ import Profile from './pages/Profile';
 function App() {
   const [authVisible, setVisible] = useState(false)
   const [basket, setBasket] = useState([]);
+  console.log(basket)
   return (
     <>
       <Router>
@@ -24,9 +25,29 @@ function App() {
         <Nav />
         
         <Switch>
-          <Route path='/' exact component={Home} />
+          <Route
+            path="/"
+            exact
+            render={(props) => (
+              <Home
+                {...props}
+                setBasket={setBasket}
+                basket={basket}
+              />
+            )}
+          />
+          <Route
+            path="/products"
+            exact
+            render={(props) => (
+              <Products
+                {...props}
+                setBasket={setBasket}
+                basket={basket}
+              />
+            )}
+          />
           <Route path='/gyik' component={Gyik} />
-          <Route path='/products' exact component={Products} />
           <Route path='/product' component={Product} />
           <Route path='/contact' component={Contact} />
           <Route path='/profile' component={Profile} />

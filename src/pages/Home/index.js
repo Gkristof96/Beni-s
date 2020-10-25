@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react'
 import Hero from '../../components/Hero'
 import Partners from '../../components/Partners'
 import axios from 'axios'
-import ProducCard from '../../components/ProductCard'
-const Home = () => {
+import ProductCard from '../../components/ProductCard'
+const Home = ({ setBasket, basket }) => {
     const [products, setProducts] = useState([])
     async  function fetchProducts() {
         await axios
@@ -26,7 +26,7 @@ const Home = () => {
                 <div className='recomended-container'>
                     <h1 className='recomended-title'>Ajánlott édességek</h1>
                     <div className='products-container'>
-                            {currentPost.map((product,i) => (<ProducCard key={i} product={product} />))}
+                            {currentPost.map((product,i) => (<ProductCard setBasket={setBasket} basket={basket} key={i} product={product} />))}
                     </div>
                     <a className='recomended-btn'>összes édesség</a>
                 </div>

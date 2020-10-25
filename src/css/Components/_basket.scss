@@ -5,12 +5,11 @@
     transition: 0.5s ease-in-out;
     height: 100%;
     .basket-btn {
-
+        font-size: 20px;
     }
 
     .basket-container {
         display: none;
-        max-width: 134px;
         margin: 0;
         box-shadow: 0px 10px 20px #00000033;
         background-color: #fff;
@@ -26,25 +25,58 @@
                 font: normal normal normal 14px/21px Poppins;
                 letter-spacing: 0.56px;
             }
-            ul::after {
-                position: absolute;
-                right: 0;
-                top: -10px;
-                width: 0;
-                height: 0;
-                content: '';
-                border-left: 5px solid transparent;
-                border-right: 5px solid transparent;
-                border-bottom: 10px solid #fff;
+            .cart-item {
+                height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                box-shadow: 0px 10px 20px #00000033;
+                margin: 25px;
+
+                .item-img {
+                    height: 70px;
+                }
+                .item-name {
+                    width: 200px;
+                    flex: 1;
+                    text-align: left;
+                    font-size: 20px;
+                    font-weight: 600;
+                    letter-spacing: 0px;
+                    color: #181818;
+                }
+
+                .item-count {
+                    width: 70px;
+                    height: 70px;
+                    text-align: center;
+
+                    background: #F5F5F5 0% 0% no-repeat padding-box;
+                    border-radius: 5px;
+                    border: none;
+                    &:focus {
+                        outline: none;
+                    }
+                }
             }
+            
+        }
+
+        ul::after {
+            position: absolute;
+            right: 0;
+            top: -10px;
+            width: 0;
+            height: 0;
+            content: '';
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 10px solid #fff;
         }
     }
     .basket-container.open {
         display: block;
         position: absolute;
-        width: 100px;
-        height: 100px;
-        background: red;
         top: 50px;
         right: 0;
     }

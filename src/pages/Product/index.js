@@ -4,6 +4,7 @@ import { GoPrimitiveDot } from 'react-icons/go'
 
 const Product = () => {
     const [step,setStep] = useState(1)
+    const [count, setCount] = useState(1)
     return (
         <>
             <section className='product-section'>
@@ -28,7 +29,7 @@ const Product = () => {
                         </div>
 
                         <div className='basket-count'>
-                            <input type="text" />
+                            <input type="text" value={count} onChange={(e) => setCount(e.target.value)}/>
                             <span>db</span>
                         </div>
                         
