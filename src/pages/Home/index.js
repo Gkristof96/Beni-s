@@ -3,6 +3,8 @@ import Hero from '../../components/Hero'
 import Partners from '../../components/Partners'
 import axios from 'axios'
 import ProductCard from '../../components/ProductCard'
+import { Link } from 'react-router-dom'
+
 const Home = ({ setBasket, basket }) => {
     const [products, setProducts] = useState([])
     async  function fetchProducts() {
@@ -22,16 +24,16 @@ const Home = ({ setBasket, basket }) => {
     return (
         <>
             <Hero />
-            {/*<section className='recomended-section'>
+            <section className='recomended-section'>
                 <div className='recomended-container'>
                     <h1 className='recomended-title'>Ajánlott édességek</h1>
                     <div className='products-container'>
                             {currentPost.map((product,i) => (<ProductCard setBasket={setBasket} basket={basket} key={i} product={product} />))}
                     </div>
-                    <a className='recomended-btn'>összes édesség</a>
+                    <Link to='products' className='recomended-btn'>összes édesség</Link>
                 </div>
             </section>
-    <Partners />*/}
+            {/*<Partners />*/}
         </>
     )
 }

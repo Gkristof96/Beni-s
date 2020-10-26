@@ -151,6 +151,7 @@ header .top-container .topbar-button .dropdown.open {
 
 @media (max-width: 768px) {
   .hero-section {
+    background-position: left;
     margin-top: 150px;
     height: calc(100vh - 150px);
   }
@@ -712,8 +713,8 @@ h1 {
 
 .recomended-section {
   width: 100%;
-  margin-top: -200px;
-  background: url("background.png") center no-repeat;
+  background: linear-gradient(135deg, rgba(122, 35, 60, 0.9) 0%, rgba(122, 35, 60, 0.9) 100%), url("background.png") center no-repeat;
+  background-size: cover;
 }
 
 .recomended-section .recomended-container {
@@ -759,11 +760,18 @@ h1 {
   background: #DC386D 0% 0% no-repeat padding-box;
   border-radius: 6px;
   text-align: center;
+  text-decoration: none;
   padding: 25px 0;
   font: normal normal bold 16px/25px Poppins;
   letter-spacing: 0.48px;
   color: #FFFFFF;
   text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .recomended-section .recomended-container .recomended-title {
+    font-size: 18px;
+  }
 }
 
 .gyik-section {
