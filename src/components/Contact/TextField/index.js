@@ -14,7 +14,7 @@ const TextField = ({placeholder}) => {
     }
     return (
         <>
-            <div className={`input-container ${focus ? 'focus' : null}`} style={{'grid-row': "3/4"},{'grid-column': "1/3"}}>
+            <div className={`textbox input-container ${focus ? 'focus' : null}`}>
                 <textarea onChange={(e) => setInput(e.target.value)} value={input}onBlur={() => handleInput()} onFocus={() => handleInput()} data-gramm_editor="false" />
                 <span className='textarea-span' data-placeholder={placeholder}></span>
             </div>

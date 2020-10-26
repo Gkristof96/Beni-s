@@ -3,7 +3,7 @@
 .contact-section {
     margin-top: 200px;
     .contact-container {
-            width: 1000px;
+            width: 75%;
             margin: 0 auto;
             .contact-title {
                 width: 100%;
@@ -48,5 +48,19 @@
                     height: 70px;
                 }
             }
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        .contact-container {
+            width: 90%;
+            .inputs {
+                width: 100%;
+                grid-column-gap: 0;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            }
+        }
     }
 }
