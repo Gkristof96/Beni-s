@@ -12,6 +12,7 @@ import Product from './pages/Product'
 import Authentication from './components/Authentication'
 import Search from './components/Hero/Search';
 import Profile from './pages/Profile';
+import { CartProvider } from './components/cartContext';
 
 function App() {
   const [authVisible, setVisible] = useState(false)
@@ -19,42 +20,46 @@ function App() {
   console.log(basket)
   return (
     <>
-      <Router>
-        {authVisible ? <Authentication setVisible={setVisible} /> : null}
-        <Header basket={basket} setBasket={setBasket} setVisible={setVisible}/>
-        <Nav />
+       <CartProvider>
+        <Router>
+          {authVisible ? <Authentication setVisible={setVisible} /> : null}
+         
+            <Header setVisible={setVisible}/>
+          
+          
+          <Nav />
         
-        <Switch>
-          <Route
-            path="/"
-            exact
-            render={(props) => (
-              <Home
-                {...props}
-                setBasket={setBasket}
-                basket={basket}
-              />
-            )}
-          />
-          <Route
-            path="/products"
-            exact
-            render={(props) => (
-              <Products
-                {...props}
-                setBasket={setBasket}
-                basket={basket}
-              />
-            )}
-          />
-          <Route path='/gyik' component={Gyik} />
-          <Route path='/product' component={Product} />
-          <Route path='/contact' component={Contact} />
-          <Route path='/profile' component={Profile} />
-        </Switch>
-        <Footer />
-      </Router>
-        
+          {/*<Switch>
+            <Route
+              path="/"
+              exact
+              render={(props) => (
+                <Home
+                  {...props}
+                  setBasket={setBasket}
+                  basket={basket}
+                />
+              )}
+            />
+            <Route
+              path="/products"
+              exact
+              render={(props) => (
+                <Products
+                  {...props}
+                  setBasket={setBasket}
+                  basket={basket}
+                />
+              )}
+            />
+            <Route path='/gyik' component={Gyik} />
+            <Route path='/product' component={Product} />
+            <Route path='/contact' component={Contact} />
+            <Route path='/profile' component={Profile} />
+              </Switch>*/}
+          {/*<Footer />*/}
+        </Router>
+        </CartProvider>
     </>
   );
 }

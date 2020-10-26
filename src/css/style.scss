@@ -24,7 +24,8 @@ $colors: (
 @import './Components/pagination';
 @import './Pages/products';
 @import './Pages/product';
-@import './Components/basket';
+@import './Components/cart';
+@import './Pages/profile';
 
 *,
 *::before,

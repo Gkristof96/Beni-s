@@ -1,14 +1,14 @@
-.basket {
+.cart {
     position: relative;
     display: flex;
     align-items: center;
     transition: 0.5s ease-in-out;
     height: 100%;
-    .basket-btn {
-        font-size: 20px;
+    .cart-btn {
+        font-size: 12px;
     }
 
-    .basket-container {
+    .cart-container {
         display: none;
         margin: 0;
         box-shadow: 0px 10px 20px #00000033;
@@ -16,7 +16,6 @@
                 
         ul {
             list-style: none;
-
                     
             li {
                 text-align: right;
@@ -50,6 +49,7 @@
                     width: 70px;
                     height: 70px;
                     text-align: center;
+                    margin: 0 5px;
 
                     background: #F5F5F5 0% 0% no-repeat padding-box;
                     border-radius: 5px;
@@ -57,6 +57,25 @@
                     &:focus {
                         outline: none;
                     }
+                }
+                .item-btn {
+                    width: 35px;
+                    height: 35px;
+                    text-align: center;
+                    margin: 0 7px;
+
+                    background: #F5F5F5 0% 0% no-repeat padding-box;
+                    border-radius: 5px;
+                    border: none;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                .item-icon {
+                    width: 25px;
+                    height: 25px;
+                    color: #DC386D;
                 }
             }
             
@@ -73,11 +92,28 @@
             border-right: 5px solid transparent;
             border-bottom: 10px solid #fff;
         }
+
+        h2 {
+            margin: 25px;
+            padding: 10px 0;
+            padding-left: 10px;
+            box-shadow: 0px 10px 20px #00000033;
+
+        }
     }
-    .basket-container.open {
+    .cart-container.open {
         display: block;
         position: absolute;
         top: 50px;
         right: 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .cart {
+        .cart-btn {
+            font-size: 8px;
+        }
     }
 }

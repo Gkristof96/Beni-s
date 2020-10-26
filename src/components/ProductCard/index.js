@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CartContext } from '../cartContext'
 
-const ProductCard = ({product, setBasket, basket}) => {
+const ProductCard = ({product}) => {
 
-    const addProduct = (product) => {
-        if(basket.includes(product.name)){
-            console.log('igen')
-        }
-        setBasket([...basket, { img: product.image, name: product.name , count: 1, id: Date.now() }])
+    const [cart, setCart] = useContext(CartContext);
+
+    const addToCart = () => {
+        const tshirt = {img: product.image, name: product.name, price: product.price };
+        setCart(currentState => [...currentState, tshirt]);
+        console.log(cart)
     }
     return (
         <>
@@ -19,7 +21,7 @@ const ProductCard = ({product, setBasket, basket}) => {
                     <h2 className='full'>{product.discontedprice}</h2>
                 </div>
                 
-                <button className='btn' onClick={() => addProduct(product)}>kosárba rakom</button>
+                <button className='btn' onClick={() => addToCart()}>kosárba rakom</button>
             </div>
         </>
     )

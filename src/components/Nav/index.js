@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 import Logo from './Logo'
+import { FaBars } from 'react-icons/fa'
 
 const Nav = () => {
     return (
@@ -8,6 +9,7 @@ const Nav = () => {
             <nav>
                 <div className='nav-container'>
                     <Logo />
+                    <FaBars className='hamburger-icon'/>
                     <Navbar />
                 </div>
             </nav>
