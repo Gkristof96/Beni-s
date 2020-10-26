@@ -57,7 +57,7 @@ function App() {
             <Route path='/contact' component={Contact} />
             <Route path='/profile' component={Profile} />
               </Switch>*/}
-          {/*<Footer />*/}
+          <Footer />
         </Router>
         </CartProvider>
     </>
