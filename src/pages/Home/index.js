@@ -22,7 +22,7 @@ const Home = ({ setBasket, basket }) => {
     return (
         <>
             <Hero />
-            <section className='recomended-section'>
+            {/*<section className='recomended-section'>
                 <div className='recomended-container'>
                     <h1 className='recomended-title'>Ajánlott édességek</h1>
                     <div className='products-container'>
@@ -31,7 +31,7 @@ const Home = ({ setBasket, basket }) => {
                     <a className='recomended-btn'>összes édesség</a>
                 </div>
             </section>
-            <Partners />
+    <Partners />*/}
         </>
     )
 }

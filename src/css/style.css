@@ -93,17 +93,10 @@ header .top-container .topbar-button .dropdown.open {
 
 .hero-section {
   width: 100%;
-  height: 100vh;
-  position: relative;
-}
-
-.hero-section .background-container {
-  width: 100%;
-  position: absolute;
-  z-index: -1;
-  top: -200px;
-  left: 0;
-  clip: rect(200px, 100vw, 100vh, 0px);
+  height: calc(100vh - 200px);
+  background: url("background_hero.png") center no-repeat;
+  background-size: cover;
+  margin-top: 200px;
 }
 
 .hero-section .hero-container {
@@ -111,7 +104,7 @@ header .top-container .topbar-button .dropdown.open {
   display: grid;
   width: 80%;
   margin: 0 auto;
-  height: calc(100vh - 200px);
+  height: 100%;
       grid-template-areas: 'content null' 'search search';
   -ms-grid-columns: 40% 60%;
       grid-template-columns: 40% 60%;
@@ -126,7 +119,7 @@ header .top-container .topbar-button .dropdown.open {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin-left: 100px;
+  margin: 0 50px;
 }
 
 .hero-section .hero-container .content h1 {
@@ -154,6 +147,29 @@ header .top-container .topbar-button .dropdown.open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    margin-top: 150px;
+    height: calc(100vh - 150px);
+  }
+  .hero-section .hero-container {
+        grid-template-areas: 'content' 'search';
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 5fr 3fr;
+        grid-template-rows: 5fr 3fr;
+  }
+  .hero-section .hero-container .content {
+    margin: 0;
+  }
+  .hero-section .hero-container .content h1 {
+    font-size: 24px;
+  }
+  .hero-section .hero-container .content p {
+    font-size: 14px;
+  }
 }
 
 nav {
@@ -272,8 +288,16 @@ nav .nav-container .hamburger-icon {
   font-size: 32px;
 }
 
+@media (max-width: 768px) {
+  .btn {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 .search-wrapper {
-  width: 1146px;
+  max-width: 1146px;
+  width: 100%;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -303,7 +327,7 @@ nav .nav-container .hamburger-icon {
 }
 
 .search-wrapper .search__container {
-  width: 1020px;
+  width: 90%;
   height: 70px;
   position: relative;
   background: #F5F5F5 0% 0% no-repeat padding-box;
@@ -349,7 +373,7 @@ nav .nav-container .hamburger-icon {
 }
 
 .search-wrapper .suggestion {
-  width: 1146px;
+  width: 100%;
   height: auto;
   max-height: 520px;
   overflow: auto;
@@ -449,6 +473,30 @@ nav .nav-container .hamburger-icon {
   letter-spacing: 0.48px;
   color: #FFFFFF;
   text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .search-wrapper {
+    width: 100%;
+  }
+  .search-wrapper .search {
+    height: 100px;
+  }
+  .search-wrapper .search__container {
+    height: 50px;
+  }
+  .search-wrapper .search__input {
+    font-size: 12px;
+    padding: 18px 0;
+    padding-left: 10px;
+  }
+  .search-wrapper .search__btn {
+    width: 50px;
+    height: 50px;
+  }
+  .search-wrapper .search__icon {
+    font-size: 24px;
+  }
 }
 
 footer {
@@ -952,16 +1000,16 @@ h1 {
   width: 100%;
 }
 
-section {
+.contact-section {
   margin-top: 200px;
 }
 
-section .contact-container {
+.contact-section .contact-container {
   width: 1000px;
   margin: 0 auto;
 }
 
-section .contact-container .contact-title {
+.contact-section .contact-container .contact-title {
   width: 100%;
   text-align: left;
   font: normal normal medium 36px/48px Poppins;
@@ -970,12 +1018,12 @@ section .contact-container .contact-title {
   margin: 15px 0;
 }
 
-section .contact-container .line {
+.contact-section .contact-container .line {
   background: #DC386D;
   height: 6px;
 }
 
-section .contact-container p {
+.contact-section .contact-container p {
   margin: 20px 0;
   text-align: left;
   font: normal normal medium 16px/25px Poppins;
@@ -984,7 +1032,7 @@ section .contact-container p {
   font-weight: bold;
 }
 
-section .contact-container .inputs {
+.contact-section .contact-container .inputs {
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -996,7 +1044,7 @@ section .contact-container .inputs {
   margin-bottom: 50px;
 }
 
-section .contact-container .inputs .btn {
+.contact-section .contact-container .inputs .btn {
   background: var(--unnamed-color-dc386d) 0% 0% no-repeat padding-box;
   border: 6px solid var(--unnamed-color-dc386d);
   background: #DC386D 0% 0% no-repeat padding-box;

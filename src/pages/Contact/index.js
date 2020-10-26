@@ -5,7 +5,7 @@ import TextField from '../../components/Contact/TextField'
 const Contact = () => {
     return (
         <>
-            <section>
+            <section className='contact-section'>
                 <div className='contact-container'>
                     <h1 className='contact-title'>Kapcsolat</h1>
                     <div className='line' />

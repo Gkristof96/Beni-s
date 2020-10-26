@@ -29,7 +29,7 @@ function App() {
           
           <Nav />
         
-          {/*<Switch>
+          <Switch>
             <Route
               path="/"
               exact
@@ -56,7 +56,7 @@ function App() {
             <Route path='/product' component={Product} />
             <Route path='/contact' component={Contact} />
             <Route path='/profile' component={Profile} />
-              </Switch>*/}
+              </Switch>
           <Footer />
         </Router>
         </CartProvider>

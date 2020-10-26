@@ -1,5 +1,6 @@
 .search-wrapper {
-    width: 1146px;
+    max-width: 1146px;
+    width: 100%;
     grid-area: search;
     margin: auto;
     position: relative;
@@ -16,7 +17,7 @@
         justify-content: center;
         align-items: center;
         &__container {
-            width: 1020px;
+            width: 90%;
             height: 70px;
             position: relative;
 
@@ -62,7 +63,7 @@
         }
     }
     .suggestion {
-        width: 1146px;
+        width: 100%;
         height: auto;
         max-height: 520px;
         overflow: auto;
@@ -135,6 +136,31 @@
                     color: #FFFFFF;
                     text-transform: uppercase;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .search-wrapper {
+        width: 100%;
+
+        .search {
+            height: 100px;
+            &__container {
+                height: 50px;
+            }
+            &__input {
+                font-size: 12px;
+                padding: 18px 0;
+                padding-left: 10px;
+            }
+            &__btn {
+                width: 50px;
+                height: 50px;
+            }
+            &__icon {
+                font-size: 24px;
             }
         }
     }
