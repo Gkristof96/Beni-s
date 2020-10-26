@@ -16,3 +16,13 @@ h1 {
     justify-content: space-around;
     align-items: center;
 }
+
+@media (max-width: 768px) {
+    .logo-container {
+        height: auto;
+        flex-direction: column;
+        img {
+            margin: 10px 0;
+        }
+    }
+}

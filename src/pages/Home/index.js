@@ -33,7 +33,7 @@ const Home = ({ setBasket, basket }) => {
                     <Link to='products' className='recomended-btn'>összes édesség</Link>
                 </div>
             </section>
-            {/*<Partners />*/}
+            <Partners />
         </>
     )
 }
