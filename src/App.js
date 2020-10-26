@@ -13,21 +13,21 @@ import Authentication from './components/Authentication'
 import Search from './components/Hero/Search';
 import Profile from './pages/Profile';
 import { CartProvider } from './components/cartContext';
+import SideBar from './components/SideBar';
 
 function App() {
   const [authVisible, setVisible] = useState(false)
   const [basket, setBasket] = useState([]);
+  const [isSideBarOpen, setOpen] = useState(false)
   console.log(basket)
   return (
     <>
        <CartProvider>
         <Router>
           {authVisible ? <Authentication setVisible={setVisible} /> : null}
-         
-            <Header setVisible={setVisible}/>
-          
-          
-          <Nav />
+          <Header setVisible={setVisible}/>
+          <Nav setOpen={setOpen}/>
+          <SideBar isSideBarOpen={isSideBarOpen} setOpen={setOpen}/>
         
           <Switch>
             <Route
