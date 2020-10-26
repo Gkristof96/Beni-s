@@ -43,6 +43,7 @@ header .top-container .topbar-button {
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   height: 100%;
+  cursor: pointer;
 }
 
 header .top-container .topbar-button .dropdown {
@@ -478,7 +479,7 @@ nav .nav-container .hamburger-icon {
 
 @media (max-width: 768px) {
   .search-wrapper {
-    width: 100%;
+    width: calc(100% - 20px);
   }
   .search-wrapper .search {
     height: 100px;
@@ -1264,6 +1265,7 @@ h1 {
 .paginator-container .pager {
   width: 70px;
   height: 70px;
+  cursor: pointer;
   border: 6px solid var(--unnamed-color-dc386d);
   background: #DC386D 0% 0% no-repeat padding-box;
   border: 6px solid #DC386D;
@@ -1293,6 +1295,40 @@ h1 {
 
 .paginator-container ul .pagination-item {
   padding: 20px;
+  text-align: center;
+  font: normal normal medium 14px/21px Poppins;
+  letter-spacing: 2.8px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.paginator-container ul .pagination-item.active {
+  text-align: center;
+  font: normal normal medium 14px/21px Poppins;
+  letter-spacing: 2.8px;
+  color: #DC386D;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .paginator-container {
+    height: auto;
+    margin: 50px 0;
+  }
+  .paginator-container .pager {
+    width: 50px;
+    height: 50px;
+  }
+  .paginator-container ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .paginator-container ul .pagination-item {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
 
 .white-header {
@@ -1312,7 +1348,7 @@ h1 {
 
 .white-header .search-wrapper {
   position: absolute;
-  bottom: -75px;
+  bottom: -50px;
   left: 50%;
   z-index: 4;
   -webkit-transform: translateX(-50%);
@@ -1320,18 +1356,29 @@ h1 {
 }
 
 .products-section {
-  background: url("background.png") center no-repeat;
+  background: linear-gradient(135deg, rgba(122, 35, 60, 0.9) 0%, rgba(122, 35, 60, 0.9) 100%), url("background.png") center no-repeat;
   background-size: cover;
   margin-top: 0;
 }
 
 .products-section .products-container {
-  width: 1180px;
   margin: 0 auto;
   padding-top: 150px;
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .products-section .products-container .products-wrapper {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

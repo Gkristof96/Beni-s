@@ -143,10 +143,10 @@
 
 @media (max-width: 768px) {
     .search-wrapper {
-        width: 100%;
-
+        width: calc(100% - 20px);
         .search {
             height: 100px;
+            
             &__container {
                 height: 50px;
             }
