@@ -7,7 +7,7 @@ const RegistrationCard = ({ setLoginActive, setVisible }) => {
         <>
             <div className='registration-card'>
                 <IoMdClose className='close-btn' onClick={() => setVisible(false)}/>
-                <h1 className='registration-card_title'>Regisztráció</h1>
+                <h1 className='registration-card__title'>Regisztráció</h1>
                 <InputField type='email' placeholder='Email'/>
                 <InputField type='password' placeholder='Jelszó'/>
                 <InputField type='password' placeholder='Jelszó újra'/>

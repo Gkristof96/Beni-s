@@ -63,3 +63,19 @@
         color: #001926;
     }
 }
+
+@media (max-width: 768px) {
+    .registration-card {
+        max-width: 300px;
+
+        &__title {
+            font-size: 18px;
+        }
+        .btn {
+            margin: 10px 0;
+        }
+        .text {
+            margin: 10px 0;
+        }
+    }
+}

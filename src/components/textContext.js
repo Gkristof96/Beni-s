@@ -5,7 +5,7 @@ export const TestContext = React.createContext();
 export const TestProvider = ({children}) => {
 
     const [cart, setCart] = useState([])
-    const [total,setTotal] = useState(0)
+    const [total] = useState(0)
 
     const addItem = (product) => {
         const check = cart.some(item =>{
@@ -17,6 +17,7 @@ export const TestProvider = ({children}) => {
                 if(product.name === item.name) {
                     return {...item, count: item.count+1}
                 }
+                return item;
             }))
         }else{
             console.log('nincs')

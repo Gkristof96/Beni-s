@@ -1206,6 +1206,15 @@ h1 {
   color: #001926;
 }
 
+@media (max-width: 768px) {
+  .login-card {
+    max-width: 300px;
+  }
+  .login-card__title {
+    font-size: 18px;
+  }
+}
+
 .registration-card {
   width: 510px;
   height: 760px;
@@ -1280,6 +1289,21 @@ h1 {
   font: normal normal normal 16px/25px Poppins;
   letter-spacing: 0px;
   color: #001926;
+}
+
+@media (max-width: 768px) {
+  .registration-card {
+    max-width: 300px;
+  }
+  .registration-card__title {
+    font-size: 18px;
+  }
+  .registration-card .btn {
+    margin: 10px 0;
+  }
+  .registration-card .text {
+    margin: 10px 0;
+  }
 }
 
 .authentication {
