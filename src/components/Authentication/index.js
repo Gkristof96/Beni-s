@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext} from 'react'
+import AuthContext from '../../contexts/authContext'
 import LoginCard from './LoginCard'
 import RegistrationCard from './RegisterCard'
 
-const Authentication = ({ setVisible }) => {
-    const [loginActive, setLoginActive] = useState(true)
+const Authentication = () => {
+    const {loginActive}  = useContext(AuthContext)
     return (
         <>
             <section className='authentication'>
-                {loginActive ? <LoginCard setVisible={setVisible} setLoginActive={setLoginActive}/> : <RegistrationCard setVisible={setVisible} setLoginActive={setLoginActive} />}
+                {loginActive ? <LoginCard/> : <RegistrationCard/>}
             </section>
         </>
     )

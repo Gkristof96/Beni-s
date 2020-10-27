@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import InputField from '../../Contact/InputField'
 import { IoMdClose } from 'react-icons/io'
+import AuthContext from '../../../contexts/authContext'
 
-const RegistrationCard = ({ setLoginActive, setVisible }) => {
+const RegistrationCard = () => {
+    const { setLoginActive, setVisible } = useContext(AuthContext)
     return (
         <>
             <div className='registration-card'>

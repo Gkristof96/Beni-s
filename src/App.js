@@ -9,21 +9,20 @@ import Contact from './pages/Contact'
 import Nav from './components/Nav'
 import Footer from './components/footer'
 import Product from './pages/Product'
-import Authentication from './components/Authentication'
 import Profile from './pages/Profile';
 import SideBar from './components/SideBar';
 import { CartProvider } from './contexts/cartContext';
+import { AuthProvider } from './contexts/authContext';
 
 function App() {
-  const [authVisible, setVisible] = useState(false)
-  const [basket, setBasket] = useState([]);
   const [isSideBarOpen, setOpen] = useState(false)
   return (
     <>
       <CartProvider>
         <Router>
-          {authVisible ? <Authentication setVisible={setVisible} /> : null}
-          <Header setVisible={setVisible}/>
+          <AuthProvider>
+            <Header/>
+          </AuthProvider>
           <Nav setOpen={setOpen}/>
           <SideBar isSideBarOpen={isSideBarOpen} setOpen={setOpen}/>
           
@@ -31,24 +30,12 @@ function App() {
             <Route
               path="/"
               exact
-              render={(props) => (
-                <Home
-                  {...props}
-                  setBasket={setBasket}
-                  basket={basket}
-                />
-              )}
+              component={Home}
             />
             <Route
               path="/products"
               exact
-              render={(props) => (
-                <Products
-                  {...props}
-                  setBasket={setBasket}
-                  basket={basket}
-                />
-              )}
+              component={Products}
             />
             <Route path='/gyik' component={Gyik} />
             <Route path='/product/:id' component={Product} />

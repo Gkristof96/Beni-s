@@ -1,10 +1,14 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useContext} from 'react'
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import AuthContext from '../../../contexts/authContext'
 
-const ProfileButton = ({ setIsLoggedIn}) => {
+
+const ProfileButton = () => {
     const [menuOpen, setMenuOpen] = useState(false)
     const wrapperRef = useRef(null);
+
+    const {handleLogout} = useContext(AuthContext)
 
 
   useEffect(() => {
@@ -28,7 +32,7 @@ const ProfileButton = ({ setIsLoggedIn}) => {
                     <ul>
                         <li><Link to='/profile'>Profilom</Link></li>
                         <li>Rendeléseim</li>
-                        <li onClick={() => setIsLoggedIn(false)}>Kijelentkezés</li>
+                        <li onClick={() => handleLogout()}>Kijelentkezés</li>
                     </ul>
                 </div>
             </div>
