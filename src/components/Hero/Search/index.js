@@ -48,6 +48,7 @@ const Search = ({ placeholder, search, setSearch, type }) => {
         return () => {
         document.removeEventListener("mousedown", handleClickOutside);
         };
+        // eslint-disable-next-line
     }, [])
 
     const handleClickOutside = (e) => {

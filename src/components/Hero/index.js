@@ -1,8 +1,7 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState} from 'react'
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 import ArrowButton from './ArrowButton'
 import Search from './Search'
-import axios from 'axios'
 
 const Hero = () => {
     const [search, setSearch] = useState('') 

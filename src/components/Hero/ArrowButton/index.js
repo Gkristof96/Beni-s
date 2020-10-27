@@ -4,7 +4,7 @@ const ArrowButton = ({icon}) => {
     return (
         <> 
             <div className='btn'>
-                <a href='#' className='icon'>{icon}</a>
+                <a href='/' className='icon'>{icon}</a>
             </div>
         </>
     )

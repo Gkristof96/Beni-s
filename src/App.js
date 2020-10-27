@@ -10,25 +10,23 @@ import Nav from './components/Nav'
 import Footer from './components/footer'
 import Product from './pages/Product'
 import Authentication from './components/Authentication'
-import Search from './components/Hero/Search';
 import Profile from './pages/Profile';
-import { CartProvider } from './components/cartContext';
+import { TestProvider } from './components/textContext';
 import SideBar from './components/SideBar';
 
 function App() {
   const [authVisible, setVisible] = useState(false)
   const [basket, setBasket] = useState([]);
   const [isSideBarOpen, setOpen] = useState(false)
-  console.log(basket)
   return (
     <>
-       <CartProvider>
+       <TestProvider>
         <Router>
           {authVisible ? <Authentication setVisible={setVisible} /> : null}
           <Header setVisible={setVisible}/>
           <Nav setOpen={setOpen}/>
           <SideBar isSideBarOpen={isSideBarOpen} setOpen={setOpen}/>
-        
+          
           <Switch>
             <Route
               path="/"
@@ -57,9 +55,9 @@ function App() {
             <Route path='/contact' component={Contact} />
             <Route path='/profile' component={Profile} />
               </Switch>
-          <Footer />
+              <Footer />
         </Router>
-        </CartProvider>
+        </TestProvider>
     </>
   );
 }

@@ -1,15 +1,8 @@
 import React, { useContext } from 'react'
-import { CartContext } from '../cartContext'
+import TestContext from '../textContext';
 
 const ProductCard = ({product}) => {
-
-    const [cart, setCart] = useContext(CartContext);
-
-    const addToCart = () => {
-        const tshirt = {img: product.image, name: product.name, price: product.price };
-        setCart(currentState => [...currentState, tshirt]);
-        console.log(cart)
-    }
+    const {addItem} = useContext(TestContext);
     return (
         <>
             <div className='product-card'>
@@ -21,7 +14,7 @@ const ProductCard = ({product}) => {
                     <h2 className='full'>{product.discontedprice}</h2>
                 </div>
                 
-                <button className='btn' onClick={() => addToCart()}>kosárba rakom</button>
+                <button className='btn' onClick={() => addItem(product)}>kosárba rakom</button>
             </div>
         </>
     )

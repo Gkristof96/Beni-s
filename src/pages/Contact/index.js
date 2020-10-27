@@ -16,7 +16,7 @@ const Contact = () => {
                         <InputField type='email' placeholder='Email'/>
                         <InputField type='text' placeholder='Rendelés azonosító'/>
                         <TextField placeholder='Üzenet'/>
-                        <div><input type='checkbox' />Elfogadom az <a>Adatvédelmi Nyilatkozat</a>-ot.</div>
+                        <div><input type='checkbox' />Elfogadom az <a href='/'>Adatvédelmi Nyilatkozat</a>-ot.</div>
                         <input type='submit' className='btn' value='Küldés'/>
                     </div>
                     
