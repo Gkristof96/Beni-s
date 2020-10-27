@@ -11,8 +11,8 @@ import Footer from './components/footer'
 import Product from './pages/Product'
 import Authentication from './components/Authentication'
 import Profile from './pages/Profile';
-import { TestProvider } from './components/textContext';
 import SideBar from './components/SideBar';
+import { CartProvider } from './contexts/cartContext';
 
 function App() {
   const [authVisible, setVisible] = useState(false)
@@ -20,7 +20,7 @@ function App() {
   const [isSideBarOpen, setOpen] = useState(false)
   return (
     <>
-       <TestProvider>
+      <CartProvider>
         <Router>
           {authVisible ? <Authentication setVisible={setVisible} /> : null}
           <Header setVisible={setVisible}/>
@@ -51,13 +51,13 @@ function App() {
               )}
             />
             <Route path='/gyik' component={Gyik} />
-            <Route path='/product' component={Product} />
+            <Route path='/product/:id' component={Product} />
             <Route path='/contact' component={Contact} />
             <Route path='/profile' component={Profile} />
               </Switch>
               <Footer />
         </Router>
-        </TestProvider>
+      </CartProvider> 
     </>
   );
 }

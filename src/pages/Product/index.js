@@ -1,17 +1,36 @@
-import React, { useState } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
+import { useParams } from "react-router-dom";
+import axios from 'axios'
 import Partners from '../../components/Partners/index'
 import { GoPrimitiveDot } from 'react-icons/go'
+import CartContext from '../../contexts/cartContext'
 
 const Product = () => {
     const [step,setStep] = useState(1)
     const [count, setCount] = useState(1)
+    const {addItem} = useContext(CartContext)
+    const [product,setProduct] = useState({})
+    const { id } = useParams();
+
+    async function fetchProduct() {
+        await axios
+          .get("../data/products.json")
+          .then((response) => {
+            setProduct(response.data[id - 1]);
+          })
+          .catch((error) => console.log(error));
+    }
+    useEffect(() => {
+        fetchProduct();
+        // eslint-disable-next-line
+     }, []);
     return (
         <>
             <section className='product-section'>
                 <h1 className='route'>Főoldal  Termékek</h1>
                 <div className='product-container'>
                     <div className='image-wrapper'>
-                        <img src='images/products/balaton.png' alt='balaton' />
+                        <img src={`../${product.image}`} alt={product.name} />
                         <div className='pager'>
                             <GoPrimitiveDot />
                             <GoPrimitiveDot />
@@ -20,12 +39,12 @@ const Product = () => {
                     </div>
                     <div className='info-wrapper'>
                         <div className='new-tag'>új!</div>
-                        <h1 className='product-title'>Név</h1>
+                        <h1 className='product-title'>{product.name}</h1>
                         <p className='small-desc'>Aenean viverra libero sit amet erat pulvinar dapibus. Fusce eros tellus, consequat vitae risus nec, pulvinar placerat turpis, Vivamus varius lacus blandit nisl tempus.</p>
                         
                         <div className='prices'>
-                            <h2 className='discont'>240 Ft/db</h2>
-                            <h2 className='full'>290 Ft/db</h2>
+                            <h2 className='discont'>{product.discontedprice}</h2>
+                            <h2 className='full'>{product.price}</h2>
                         </div>
 
                         <div className='basket-count'>
@@ -33,7 +52,7 @@ const Product = () => {
                             <span>db</span>
                         </div>
                         
-                        <button className='btn'>kosárba rakom</button>
+                        <button className='btn' onClick={() => addItem(product)}>kosárba rakom</button>
                     </div>
                     <div className='text-wrapper'>
                         <ul>

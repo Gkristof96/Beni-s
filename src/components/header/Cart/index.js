@@ -1,15 +1,18 @@
 import React, { useState, useContext } from 'react'
 import CartItem from './CartItem'
-import { TestContext } from '../../textContext' 
+import CartContext from '../../../contexts/cartContext'
 
 const Cart = () => {
     const [isbasketOpen, setBasketOpen] = useState(false)
-    const {cart, total} = useContext(TestContext)
+    const {cart} = useContext(CartContext)
     const handleBasketOpen = () => {
       if(cart.length > 0) {
         setBasketOpen(!isbasketOpen)
       }
     }
+    const total = cart.reduce((prev, item) => {
+      return prev + (item.price * item.count);
+    },0)
     return (
         <>
             <div className='cart'>

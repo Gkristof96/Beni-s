@@ -1,5 +1,4 @@
-import React, { useContext } from 'react'
-import TestContext from '../../../textContext';
+import React from 'react'
 
 const Suggestion = ({ suggestions, suggestionChanged, display }) => {
   if (suggestions.length === 0) {

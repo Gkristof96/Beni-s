@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import { ImBin } from 'react-icons/im'
-import { TestContext } from '../../../textContext'
+import CartContext from '../../../../contexts/cartContext'
 
 const CartItem = ({item}) => {
-    const { increase, decrease, deleteItem } = useContext(TestContext)
+    const { increase, decrease, deleteItem } = useContext(CartContext)
     return (
         <>
             <li className='cart-item'>
