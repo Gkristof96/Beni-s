@@ -6,19 +6,20 @@ const ProductCard = ({product}) => {
     const {addItem} = useContext(CartContext);
     return (
         <>
-            <Link to={`/product/${product.id}`}>
+            
                 <div className='product-card'>
-                    <div className='new-tag'>új!</div>
-                    <img className='product-image' src={product.image} alt={product.name}></img>
-                    <h1 className='product-title'>{product.name}</h1>
-                    <div className='prices'>
-                        <h2 className='discont'>{product.price}</h2>
-                        <h2 className='full'>{product.discontedprice}</h2>
-                    </div>
-                    
-                    <button className='btn' onClick={() => addItem(product)}>kosárba rakom</button>
+                    <Link to={`/product/${product.id}`}>
+                        <div className='new-tag'>új!</div>
+                        <img className='product-image' src={product.image} alt={product.name}></img>
+                        <h1 className='product-title'>{product.name}</h1>
+                        <div className='prices'>
+                            <h2 className='discont'>{product.discontedprice} Ft/db</h2>
+                            <h2 className='full'>{product.price} Ft/db</h2>
+                        </div>
+                    </Link>
+                    <button className='btn' onClick={() => addItem(product,1)}>kosárba rakom</button>
                 </div>
-            </Link>
+            
         </>
     )
 }

@@ -52,7 +52,7 @@ const Product = () => {
                             <span>db</span>
                         </div>
                         
-                        <button className='btn' onClick={() => addItem(product)}>kosárba rakom</button>
+                        <button className='btn' onClick={() => addItem(product,count)}>kosárba rakom</button>
                     </div>
                     <div className='text-wrapper'>
                         <ul>

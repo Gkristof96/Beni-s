@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import CartContext from '../../../../contexts/cartContext';
+import { Link } from 'react-router-dom'
 
 const Suggestion = ({ suggestions, suggestionChanged, display }) => {
+  const {addItem} = useContext(CartContext)
   if (suggestions.length === 0) {
     return null;
   }
@@ -11,15 +14,15 @@ const Suggestion = ({ suggestions, suggestionChanged, display }) => {
         <ul>
           {suggestions.map((item, i) => (
             <li key={i} onClick={() => suggestionChanged(item)}>
-              <img src={item.image} alt={item.name}/>
-              <h1 className='suggestion-name'>{item.name}</h1>
-              <div className='price-wrapper'>
-                <h1 className='disconted-price'>{item.discontedprice} Ft/db</h1>
-                <h1 className='price'>{item.price} Ft/db</h1>
-              </div>
-                  
-                  
-              <button className='btn'>kosárba rakom</button>
+              <Link to={`/product/${item.id}`}>
+                <img src={item.image} alt={item.name}/>
+                <h1 className='suggestion-name'>{item.name}</h1>
+                <div className='price-wrapper'>
+                  <h1 className='disconted-price'>{item.discontedprice} Ft/db</h1>
+                  <h1 className='price'>{item.price} Ft/db</h1>
+                </div>
+              </Link>
+              <button className='btn' onClick={() => addItem(item,1)}>kosárba rakom</button>
             </li>
           ))}
         </ul>

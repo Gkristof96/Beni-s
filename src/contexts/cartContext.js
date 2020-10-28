@@ -5,23 +5,21 @@ export const CartContext = React.createContext();
 export const CartProvider = ({children}) => {
 
     const [cart, setCart] = useState([])
-    const [total] = useState(0)
+    const [isbasketOpen, setBasketOpen] = useState(false)
 
-    const addItem = (product) => {
+    const addItem = (product, piece) => {
         const check = cart.some(item =>{
             return item.name === product.name
         })
         if(check){
-            console.log('van')
             setCart(cart.map((item) => {
                 if(product.name === item.name) {
-                    return {...item, count: item.count+1}
+                    return {...item, count: item.count + piece}
                 }
                 return item;
             }))
         }else{
-            console.log('nincs')
-            setCart([...cart, {img: product.image, name: product.name, count: 1, price: product.discontedprice}])
+            setCart([...cart, {img: product.image, name: product.name, count: piece, price: product.discontedprice}])
         }
         
     }
@@ -54,8 +52,9 @@ export const CartProvider = ({children}) => {
 
     const providerValue = {
         cart,
-        total,
         setCart,
+        isbasketOpen,
+        setBasketOpen,
         addItem,
         decrease,
         increase,

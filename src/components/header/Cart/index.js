@@ -1,10 +1,10 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 import CartItem from './CartItem'
 import CartContext from '../../../contexts/cartContext'
 
 const Cart = () => {
-    const [isbasketOpen, setBasketOpen] = useState(false)
-    const {cart} = useContext(CartContext)
+    
+    const {cart,isbasketOpen, setBasketOpen} = useContext(CartContext)
     const handleBasketOpen = () => {
       if(cart.length > 0) {
         setBasketOpen(!isbasketOpen)

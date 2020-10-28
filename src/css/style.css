@@ -647,16 +647,28 @@ h1 {
           box-shadow: 0px 20px 30px #00000033;
   border-radius: 5px;
   position: relative;
-  padding: 30px;
   padding-top: 0;
   margin: 15px;
 }
 
-.product-card .product-image {
-  width: 222px;
+.product-card a {
+  position: absolute;
+  text-decoration: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  padding: 40px;
 }
 
-.product-card .new-tag {
+.product-card a .product-image {
+  width: auto;
+  max-width: 280px;
+  margin-top: 55px;
+}
+
+.product-card a .new-tag {
   width: 60px;
   height: 45px;
   position: absolute;
@@ -676,20 +688,7 @@ h1 {
   text-transform: uppercase;
 }
 
-.product-card .btn {
-  width: 100%;
-  height: 70px;
-  background: #DC386D;
-  border-radius: 6px;
-  color: var(--unnamed-color-ffffff);
-  text-align: center;
-  font: normal normal bold 16px/25px Poppins;
-  letter-spacing: 0.48px;
-  color: #FFFFFF;
-  text-transform: uppercase;
-}
-
-.product-card .product-title {
+.product-card a .product-title {
   color: var(--unnamed-color-181818);
   text-align: left;
   font: normal normal bold 24px/32px Poppins;
@@ -699,29 +698,50 @@ h1 {
   font-weight: bold;
 }
 
-.product-card .prices {
+.product-card a .prices {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 10px;
 }
 
-.product-card .prices .discont {
+.product-card a .prices .discont {
   color: var(--unnamed-color-dc386d);
   text-align: left;
   font: normal normal bold 20px/32px Poppins;
   letter-spacing: 0px;
   color: #DC386D;
   margin-right: 20px;
+  padding-right: 10px;
 }
 
-.product-card .prices .full {
+.product-card a .prices .full {
   color: var(--unnamed-color-181818);
   text-align: left;
   text-decoration: line-through;
   font: normal normal medium 20px/32px Poppins;
   letter-spacing: 0px;
   color: #181818;
+}
+
+.product-card .btn {
+  width: 280px;
+  height: 70px;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  z-index: 100;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #DC386D;
+  border-radius: 6px;
+  border: none;
+  color: var(--unnamed-color-ffffff);
+  text-align: center;
+  font: normal normal bold 16px/25px Poppins;
+  letter-spacing: 0.48px;
+  color: #FFFFFF;
+  text-transform: uppercase;
 }
 
 .recomended-section {
