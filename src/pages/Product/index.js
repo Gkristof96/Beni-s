@@ -27,7 +27,6 @@ const Product = () => {
     return (
         <>
             <section className='product-section'>
-                <h1 className='route'>Főoldal  Termékek</h1>
                 <div className='product-container'>
                     <div className='image-wrapper'>
                         <img src={`../${product.image}`} alt={product.name} />

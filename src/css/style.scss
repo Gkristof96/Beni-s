@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap');
 
 $colors: (
-    primary: #7A233C,
-    text: #fff,
+  primary: #7A233C,
+  light-text: #FFFFFF,
+  secondary: #DC386D,
+  dark-text: #181818,
+  gradient: #FFB3B5,
+  colored-text: #460B1C,
+  gray: #F5F5F5,
 );
 
 @function color($color-name) {

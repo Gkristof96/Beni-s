@@ -6,7 +6,7 @@ import axios from 'axios'
 
 const Search = ({ placeholder, type }) => {
     const [suggestions, setSuggestions] = useState([]);
-    const [search, setSearch] = useState('kokusz') 
+    const [search, setSearch] = useState('')
     const [display, setDisplay] = useState(false);
     const [products, setProducts] = useState([])
 
