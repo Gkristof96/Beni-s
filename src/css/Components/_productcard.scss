@@ -21,6 +21,7 @@
 
         .product-image {
             width: auto;
+            height: 100px;
             max-width: 280px;
             margin-top: 55px;
         }
@@ -90,5 +91,9 @@
         letter-spacing: 0.48px;
         color: #FFFFFF;
         text-transform: uppercase;
+        cursor: pointer;
+        &:hover {
+            background: #dc567D;
+        }
     }
 }

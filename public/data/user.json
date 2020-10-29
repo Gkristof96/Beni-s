@@ -1,0 +1,24 @@
+{
+    "id": 0,
+    "firstname": "Endre",
+    "lastname": "Nagy",
+    "tel": "+36 30 123 4567",
+    "email": "endre@email.hu",
+    "order_count": 4,
+    "addresses": [
+        {
+            "country": "Magyarország",
+            "ir": 9000,
+            "city": "Győr",
+            "street": "Zöld utca 20.",
+            "other": ""
+        },
+        {
+            "country": "Magyarország",
+            "ir": 9000,
+            "city": "Győr",
+            "street": "Buda utca 45.",
+            "other": "Petshop kisállat kereskedés"
+        }
+    ]
+}
