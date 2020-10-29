@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { IoMdSearch } from 'react-icons/io'
 import Suggestion from './Suggestion'
 import axios from 'axios'
 
-const Search = ({ placeholder, search, setSearch, type }) => {
+const Search = ({ placeholder, type }) => {
     const [suggestions, setSuggestions] = useState([]);
+    const [search, setSearch] = useState('kokusz') 
     const [display, setDisplay] = useState(false);
     const [products, setProducts] = useState([])
 
@@ -71,7 +73,7 @@ const Search = ({ placeholder, search, setSearch, type }) => {
                             placeholder={placeholder}
                             className='search__input'
                          />
-                        <button className='search__btn'><IoMdSearch className='search__icon'/></button>
+                        <Link to={`/products?product=${search}`} className='search__btn'><IoMdSearch className='search__icon'/></Link>
                     </div>
                 </div>
                 <div className='suggestion' ref={wrapperRef}>

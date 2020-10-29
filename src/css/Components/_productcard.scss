@@ -17,7 +17,7 @@
         width: 100%;
         height: 100%;
         z-index: 1;
-        padding: 40px;
+        padding: 10%;
 
         .product-image {
             width: auto;
@@ -75,12 +75,12 @@
     }
     
     .btn {
-        width: 280px;
+        width: 80%;
         height: 70px;
         position: absolute;
         bottom: 40px;
         left: 50%;
-        z-index: 100;
+        z-index: 5;
         transform: translateX(-50%);
         background: #DC386D;
         border-radius: 6px;
@@ -94,6 +94,37 @@
         cursor: pointer;
         &:hover {
             background: #dc567D;
+        }
+    }
+    &:hover {
+        transform: scale(1.02,1.02);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        width: 280px;
+        height: 400px;
+        a {
+            .product-image {
+                max-width: 100%;
+            }
+
+            .product-title {
+                font-size: 18px;
+            }
+
+            .prices {
+                .full {
+                    font-size: 16px;
+                }
+                .discont {
+                    font-size: 16px;
+                }
+            }
+        }
+        .btn {
+            bottom: 20px;
         }
     }
 }

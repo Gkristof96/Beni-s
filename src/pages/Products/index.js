@@ -2,9 +2,16 @@ import React, { useState, useEffect } from 'react'
 import Pagination from '../../components/Pagination'
 import ProducCard from '../../components/ProductCard'
 import Search from '../../components/Hero/Search'
+import { useLocation } from "react-router-dom";
 import axios from 'axios'
 
+function useQuery() {
+    return new URLSearchParams(useLocation().search);
+}
+
 const Products = ({basket, setBasket}) => {
+    let query = useQuery();
+    const [filter] = useState(query.get("product"))
     const [products, setProducts] = useState([])
     const [search, setSearch] = useState('')
 
@@ -25,8 +32,16 @@ const Products = ({basket, setBasket}) => {
             .catch((error) => console.log(error));
     }
 
+    const filterData = () => {
+        console.log(filter)
+        console.log(products.name)
+        setProducts(products.filter((item) => item.name === "Mars szelet"))
+        console.log('filtered')
+    }
+
     useEffect(() => {
         fetchProducts();
+        filterData();
     },[])
 
     const numberOfPages = products.length / 6;
