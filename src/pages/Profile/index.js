@@ -29,7 +29,7 @@ const Profile = () => {
                 <div className='profile-container'>
                     <h1 className='profile-title'>Profil<BsFillGearFill onClick={() => setIsOpen(!isSettingOpen)}/></h1>
                     <div className='line' />
-                    {isSettingOpen ? <ProfileSettings /> : <ProfileData user={user} /> }
+                    {isSettingOpen ? <ProfileSettings user={user} setUser={setUser} setIsOpen={setIsOpen} /> : <ProfileData user={user} /> }
                     {isLoading ? null : <DeliveryData setUser={setUser} user={user} addresses={user.addresses} />}
                     
                 </div>

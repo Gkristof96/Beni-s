@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaPhoneAlt } from 'react-icons/fa'
+import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa'
 
 const ProfileData = ({user}) => {
     return (
@@ -13,6 +13,11 @@ const ProfileData = ({user}) => {
                     <FaPhoneAlt />
                     <h1>{user.tel}</h1>
                 </div>
+                <div className='text-wrapper'>
+                    <FaEnvelope />
+                    <h1>{user.email}</h1>
+                </div>
+                <h1>{user.order_count}</h1>
             </div>
         </>
     )
