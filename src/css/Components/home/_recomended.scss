@@ -8,7 +8,7 @@
     url('background.png') center no-repeat;
     background-size: cover;
     .recomended-container {
-        width: 75%;
+        width: 60%;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -26,7 +26,7 @@
         .products-container {
             width: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             flex-wrap: wrap;
         }
     
@@ -57,6 +57,9 @@
             width: 90%;
             .recomended-title {
                 font-size: 18px;
+            }
+            .products-container {
+                justify-content: center;
             }
         }
     }

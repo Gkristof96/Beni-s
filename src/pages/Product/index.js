@@ -16,7 +16,7 @@ const Product = () => {
         await axios
           .get("../data/products.json")
           .then((response) => {
-            setProduct(response.data[id - 1]);
+            setProduct(response.data[id]);
           })
           .catch((error) => console.log(error));
     }
@@ -42,8 +42,8 @@ const Product = () => {
                         <p className='small-desc'>Aenean viverra libero sit amet erat pulvinar dapibus. Fusce eros tellus, consequat vitae risus nec, pulvinar placerat turpis, Vivamus varius lacus blandit nisl tempus.</p>
                         
                         <div className='prices'>
-                            <h2 className='discont'>{product.discontedprice}</h2>
-                            <h2 className='full'>{product.price}</h2>
+                            <h2 className='discont'>{product.discontedprice} Ft/db</h2>
+                            <h2 className='full'>{product.price} Ft/db</h2>
                         </div>
 
                         <div className='basket-count'>
