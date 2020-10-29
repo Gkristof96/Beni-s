@@ -11,6 +11,7 @@ import Footer from './components/footer'
 import Product from './pages/Product'
 import Profile from './pages/Profile';
 import SideBar from './components/SideBar';
+import NotFound from './pages/404'
 import { CartProvider } from './contexts/cartContext';
 import { AuthProvider } from './contexts/authContext';
 
@@ -26,22 +27,23 @@ function App() {
           <Nav setOpen={setOpen}/>
           <SideBar isSideBarOpen={isSideBarOpen} setOpen={setOpen}/>
           
-          <Switch>
-            <Route
-              path="/"
-              exact
-              component={Home}
-            />
-            <Route
-              path="/products"
-              exact
-              component={Products}
-            />
-            <Route path='/gyik' component={Gyik} />
-            <Route path='/product/:id' component={Product} />
-            <Route path='/contact' component={Contact} />
-            <Route path='/profile' component={Profile} />
-              </Switch>
+                <Switch>
+                  <Route
+                    path="/"
+                    exact
+                    component={Home}
+                  />
+                  <Route
+                    path="/products"
+                    exact
+                    component={Products}
+                  />
+                  <Route path='/gyik' component={Gyik} />
+                  <Route path='/product/:id' component={Product} />
+                  <Route path='/contact' component={Contact} />
+                  <Route path='/profile' component={Profile} />
+                  <Route component={NotFound} />
+                </Switch>
               <Footer />
         </Router>
       </CartProvider> 
