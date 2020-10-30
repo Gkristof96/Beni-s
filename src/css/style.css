@@ -763,7 +763,7 @@ h1 {
   text-decoration: line-through;
   font: normal normal medium 20px/32px Poppins;
   letter-spacing: 0px;
-  color: #DC386D;
+  color: #181818;
 }
 
 .product-card .btn {
@@ -787,7 +787,7 @@ h1 {
 }
 
 .product-card .btn:hover {
-  background: #FFB3B5;
+  background: #e04e7d;
 }
 
 .product-card:hover {
@@ -1448,7 +1448,6 @@ h1 {
   height: 70px;
   cursor: pointer;
   background: #DC386D 0% 0% no-repeat padding-box;
-  border: 6px solid #DC386D;
   border-radius: 6px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1466,6 +1465,15 @@ h1 {
   font-size: 32px;
 }
 
+.paginator-container .pager:hover {
+  -webkit-transform: scale(1.03, 1.03);
+          transform: scale(1.03, 1.03);
+}
+
+.paginator-container .pager.disabled {
+  background: #d5255e;
+}
+
 .paginator-container ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1480,6 +1488,11 @@ h1 {
   letter-spacing: 2.8px;
   color: #FFFFFF;
   text-transform: uppercase;
+}
+
+.paginator-container ul .pagination-item:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
 }
 
 .paginator-container ul .pagination-item.active {
@@ -1757,7 +1770,6 @@ h1 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: desc;
-  position: relative;
 }
 
 .product-section .product-container .text-wrapper ul {
@@ -1787,6 +1799,7 @@ h1 {
   letter-spacing: 0.48px;
   color: #FFFFFF;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .product-section .product-container .text-wrapper ul li.active {
@@ -1799,10 +1812,6 @@ h1 {
   -webkit-box-shadow: 0px 20px 60px #0000001F;
           box-shadow: 0px 20px 60px #0000001F;
   padding: 40px;
-  position: absolute;
-  left: 0;
-  top: 70px;
-  z-index: 1;
 }
 
 .product-section .product-container .text-wrapper p {
@@ -1820,8 +1829,8 @@ h1 {
     width: 90%;
     height: 100%;
         grid-template-areas: 'img' 'info' 'desc';
-    -ms-grid-rows: auto  1fr 3fr;
-        grid-template-rows: auto  1fr 3fr;
+    -ms-grid-rows: auto  1fr auto;
+        grid-template-rows: auto  1fr auto;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     grid-row-gap: 20px;
@@ -1842,9 +1851,6 @@ h1 {
     width: 100px;
     height: 50px;
     font-size: 12px;
-  }
-  .product-section .product-container .text-wrapper .description-wrapper {
-    top: 50px;
   }
 }
 

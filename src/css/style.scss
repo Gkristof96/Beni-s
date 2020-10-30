@@ -4,6 +4,8 @@ $colors: (
   primary: #7A233C,
   light-text: #FFFFFF,
   secondary: #DC386D,
+  dark-secondary: darken(#dc386d, 5%),
+  light-secondary: lighten(#dc386d,5%),
   dark-text: #181818,
   gradient: #FFB3B5,
   colored-text: #460B1C,

@@ -32,11 +32,10 @@ const Products = ({basket, setBasket}) => {
             .catch((error) => console.log(error));
     }
 
-    const filterData = () => {
+    async function filterData(){
         console.log(filter)
-        console.log(products.name)
-        setProducts(products.filter((item) => item.name === "Mars szelet"))
-        console.log('filtered')
+        console.log(products)
+        await setProducts(products.filter((item) => item.name === filter))
     }
 
     useEffect(() => {
@@ -48,6 +47,7 @@ const Products = ({basket, setBasket}) => {
     const indexOfLastPost = currentPage * 6;
     const indexOfFirstPost = indexOfLastPost - 6;
     const currentPost = products.slice(indexOfFirstPost, indexOfLastPost);
+
     return (
         <>
             <section className='white-header'>
@@ -65,6 +65,7 @@ const Products = ({basket, setBasket}) => {
                     <div className='products-wrapper'>
                         {currentPost.map((product,i) => (<ProducCard key={i} basket={basket} setBasket={setBasket} product={product} />))}
                     </div>
+                    <button onClick={() => filterData()}>írd ki</button>
                     <div className='pagination-wrapper'>
                         <Pagination
                             totalPosts={products.length}

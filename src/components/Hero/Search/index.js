@@ -35,6 +35,7 @@ const Search = ({ placeholder, type }) => {
 
     const suggestionChanged = (value) => {
         if (suggestions.length > 1) {
+        console.log(value)
         setSearch(value.name);
         setSuggestions([]);
         setDisplay(false);
@@ -45,21 +46,7 @@ const Search = ({ placeholder, type }) => {
     const wrapperRef = useRef(null);
 
 
-    useEffect(() => {
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-        };
-        // eslint-disable-next-line
-    }, [])
-
-    const handleClickOutside = (e) => {
-        const { current: wrap } = wrapperRef;
-        if (wrap && !wrap.contains(e.target)) {
-            setSuggestions([])
-            setSearch('')
-        }
-    };
+    
     return (
         <>
             <div className='search-wrapper'>
@@ -73,6 +60,7 @@ const Search = ({ placeholder, type }) => {
                             placeholder={placeholder}
                             className='search__input'
                          />
+                         <button onClick={() => console.log(search)}>mivan</button>
                         <Link to={`/products?product=${search}`} className='search__btn'><IoMdSearch className='search__icon'/></Link>
                     </div>
                 </div>

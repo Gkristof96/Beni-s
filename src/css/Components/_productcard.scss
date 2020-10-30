@@ -64,7 +64,7 @@
                 text-decoration: line-through;
                 font: normal normal medium 20px/32px Poppins;
                 letter-spacing: 0px;
-                color:  color(secondary);
+                color:  color(dark-text);
             }
         }
     
@@ -88,7 +88,7 @@
         text-transform: uppercase;
         cursor: pointer;
         &:hover {
-            background: color(gradient);
+            background: color(light-secondary);
         }
     }
     &:hover {
