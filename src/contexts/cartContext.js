@@ -14,12 +14,12 @@ export const CartProvider = ({children}) => {
         if(check){
             setCart(cart.map((item) => {
                 if(product.name === item.name) {
-                    return {...item, count: item.count + piece}
+                    return {...item, count: item.count + parseInt(piece)}
                 }
                 return item;
             }))
         }else{
-            setCart([...cart, {img: product.image, name: product.name, count: piece, price: product.discontedprice}])
+            setCart([...cart, {img: product.image, name: product.name, count: parseInt(piece), price: product.discontedprice}])
         }
         
     }

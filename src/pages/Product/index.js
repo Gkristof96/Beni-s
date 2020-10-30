@@ -47,7 +47,7 @@ const Product = () => {
                         </div>
 
                         <div className='basket-count'>
-                            <input type="text" value={count} onChange={(e) => setCount(e.target.value)}/>
+                            <input type="number" value={count} onChange={(e) => setCount(e.target.value)}/>
                             <span>db</span>
                         </div>
                         
