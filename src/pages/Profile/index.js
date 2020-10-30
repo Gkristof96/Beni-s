@@ -1,24 +1,13 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React, { useState, useEffect, useContext } from 'react'
 import DeliveryData from '../../components/Profile/DeliveryData'
 import ProfileData from '../../components/Profile/ProfileData'
-import { BsFillGearFill } from 'react-icons/bs'
 import ProfileSettings from '../../components/Profile/ProfileSettings'
+import { AuthContext } from '../../contexts/authContext'
 
 const Profile = () => {
     const [ isSettingOpen, setIsOpen] = useState(false)
-    const [user, setUser] = useState({})
-    const [isLoading, setLoading] = useState(true)
+    const {isLoading, user, setUser, fetchUser} = useContext(AuthContext)
 
-    async  function fetchUser() {
-        await axios
-            .get("../data/user.json")
-            .then((response) => {
-                setUser(response.data);
-                setLoading(false)
-            })
-            .catch((error) => console.log(error));
-    }
 
     useEffect(() => {
         fetchUser();
@@ -26,13 +15,12 @@ const Profile = () => {
     return (
         <>
             <section className='profile-section'>
-                <div className='profile-container'>
-                    <h1 className='profile-title'>Profil<BsFillGearFill onClick={() => setIsOpen(!isSettingOpen)}/></h1>
+                    <h1 className='page-title'>Profil</h1>
                     <div className='line' />
-                    {isSettingOpen ? <ProfileSettings user={user} setUser={setUser} setIsOpen={setIsOpen} /> : <ProfileData user={user} /> }
-                    {isLoading ? null : <DeliveryData setUser={setUser} user={user} addresses={user.addresses} />}
-                    
-                </div>
+                    <div className='profile-container'>
+                        {isSettingOpen ? <ProfileSettings user={user} setUser={setUser} setIsOpen={setIsOpen} /> : <ProfileData setIsOpen={setIsOpen} isSettingOpen={isSettingOpen} user={user} /> }
+                        {isLoading ? null : <DeliveryData setUser={setUser} user={user} addresses={user.addresses} />}
+                    </div>
             </section>
         </>
     )

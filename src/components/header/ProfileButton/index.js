@@ -7,16 +7,16 @@ import AuthContext from '../../../contexts/authContext'
 const ProfileButton = () => {
     const [menuOpen, setMenuOpen] = useState(false)
     const wrapperRef = useRef(null);
+    const {handleLogout, user, fetchUser} = useContext(AuthContext)
 
-    const {handleLogout} = useContext(AuthContext)
 
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [])
+    useEffect(() => {
+        fetchUser()
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [])
 
     const handleClickOutside = (e) => {
         const { current: wrap } = wrapperRef;
@@ -27,7 +27,7 @@ const ProfileButton = () => {
     return (
         <>
             <div className='topbar-button' onClick={() => setMenuOpen(!menuOpen)} ref={wrapperRef}>
-                <h1 >John Smith {menuOpen ? <FaChevronUp /> : <FaChevronDown />}</h1>
+                <h1 >{`${user.lastname} ${user.firstname}`} {menuOpen ? <FaChevronUp /> : <FaChevronDown />}</h1>
                 <div className={`dropdown ${(menuOpen? 'open' : null)}`}>
                     <ul>
                         <li><Link to='/profile'>Profilom</Link></li>

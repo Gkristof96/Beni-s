@@ -77,9 +77,10 @@
         z-index: 5;
 
         ul {
-            width: 95%;
+            width: 90%;
             margin: 0 auto;
             list-style: none;
+            padding-bottom: 50px;
 
             li {
                 margin-bottom: 10px;
@@ -98,9 +99,10 @@
                     width: auto;
                     height: 70px;
                 }
-                .suggestion-name {
+                .product-title {
                     flex: 2;
                     align-self: center;
+                    text-align: center;
                 }
                 .price-wrapper {
                     flex: 1;
@@ -129,14 +131,6 @@
                     flex: 1;
                     width: 280px;
                     height: 70px;
-                    background: #DC386D;
-                    border-radius: 6px;
-                    color: var(--unnamed-color-ffffff);
-                    text-align: center;
-                    font: normal normal bold 16px/25px Poppins;
-                    letter-spacing: 0.48px;
-                    color: #FFFFFF;
-                    text-transform: uppercase;
                 }
             }
         }

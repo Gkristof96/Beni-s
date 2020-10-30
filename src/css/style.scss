@@ -48,30 +48,37 @@ html {
     font-family: 'Poppins', sans-serif;
 }
 
-/* width */
+/* Szélesség */
 ::-webkit-scrollbar {
     width: 5px;
   }
   
-  /* Track */
+  /*  Mező */
   ::-webkit-scrollbar-track {
     background: #f1f1f1;
   }
   
-  /* Handle */
+  /* Csúszka */
   ::-webkit-scrollbar-thumb {
     background: #DC386D;
   }
   
-  /* Handle on hover */
+  /* Csúszka ha rajta a kurzor */
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
 
   .btn {
+    //gomb beállításai
     background: color(secondary);
-    color: color(ligh-text);
+    color: color(light-text);
     border-radius: 6px;
+    cursor: pointer;
+    //szöveg beállításai
+    text-align: center;
+    text-transform: uppercase;
+    font: normal normal bold 16px/25px Poppins;
+    letter-spacing: 0.48px;
 
     &:focus,
     &:active {
@@ -80,4 +87,24 @@ html {
     &:hover {
       background: color(light-secondary);
     }
+  }
+
+  .product-title {
+    font: normal normal bold 24px/32px Poppins;
+    text-align: left;
+    letter-spacing: 0px;
+    color: color(dark-text);
+  }
+
+  .page-title {
+    font: normal normal medium 36px/48px Poppins;
+    text-align: left;
+    letter-spacing: 0px;
+    color: color(dark-text);
+  }
+
+  .section-title {
+    font: normal normal 600 28px/48px Poppins;
+    text-align: center;
+    letter-spacing: 0px;
   }

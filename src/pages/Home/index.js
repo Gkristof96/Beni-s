@@ -26,7 +26,7 @@ const Home = ({ setBasket, basket }) => {
             <Hero />
             <section className='recomended-section'>
                 <div className='recomended-container'>
-                    <h1 className='recomended-title'>Ajánlott édességek</h1>
+                    <h1 className='section-title'>Ajánlott édességek</h1>
                     <div className='products-container'>
                             {currentPost.map((product,i) => (<ProductCard setBasket={setBasket} basket={basket} key={i} product={product} />))}
                     </div>

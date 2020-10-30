@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap");
 header {
   width: 100%;
@@ -404,9 +405,10 @@ nav .nav-container .hamburger-icon {
 }
 
 .search-wrapper .suggestion ul {
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
   list-style: none;
+  padding-bottom: 50px;
 }
 
 .search-wrapper .suggestion ul li {
@@ -431,13 +433,14 @@ nav .nav-container .hamburger-icon {
   height: 70px;
 }
 
-.search-wrapper .suggestion ul li .suggestion-name {
+.search-wrapper .suggestion ul li .product-title {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  text-align: center;
 }
 
 .search-wrapper .suggestion ul li .price-wrapper {
@@ -482,14 +485,6 @@ nav .nav-container .hamburger-icon {
           flex: 1;
   width: 280px;
   height: 70px;
-  background: #DC386D;
-  border-radius: 6px;
-  color: var(--unnamed-color-ffffff);
-  text-align: center;
-  font: normal normal bold 16px/25px Poppins;
-  letter-spacing: 0.48px;
-  color: #FFFFFF;
-  text-transform: uppercase;
 }
 
 @media (max-width: 768px) {
@@ -648,11 +643,7 @@ footer .footer-container .copyright img {
   }
 }
 
-h1 {
-  text-align: center;
-  font: normal normal 600 28px/48px Poppins;
-  letter-spacing: 0px;
-  color: #181818;
+.section-title {
   margin: 30px 0;
 }
 
@@ -733,15 +724,6 @@ h1 {
   text-transform: uppercase;
 }
 
-.product-card a .product-title {
-  color: #181818;
-  text-align: left;
-  font: normal normal bold 24px/32px Poppins;
-  letter-spacing: 0px;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
 .product-card a .prices {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -775,19 +757,6 @@ h1 {
   z-index: 5;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background: #DC386D;
-  border-radius: 6px;
-  border: none;
-  text-align: center;
-  font: normal normal bold 16px/25px Poppins;
-  letter-spacing: 0.48px;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.product-card .btn:hover {
-  background: #e04e7d;
 }
 
 .product-card:hover {
@@ -838,10 +807,7 @@ h1 {
           align-items: center;
 }
 
-.recomended-section .recomended-container .recomended-title {
-  text-align: center;
-  font: normal normal 600 28px/48px Poppins;
-  letter-spacing: 0px;
+.recomended-section .recomended-container .section-title {
   color: #FFFFFF;
   margin-top: 70px;
   margin-bottom: 30px;
@@ -897,12 +863,7 @@ h1 {
   margin: 0 auto;
 }
 
-.gyik-section .gyik-container .gyik-title {
-  width: 100%;
-  text-align: left;
-  font: normal normal medium 36px/48px Poppins;
-  letter-spacing: 0px;
-  color: #181818;
+.gyik-section .gyik-container .page-title {
   margin: 15px 0;
 }
 
@@ -1179,6 +1140,7 @@ h1 {
 
 .contact-section {
   margin-top: 200px;
+  height: 700px;
 }
 
 .contact-section .contact-container {
@@ -1186,12 +1148,7 @@ h1 {
   margin: 0 auto;
 }
 
-.contact-section .contact-container .contact-title {
-  width: 100%;
-  text-align: left;
-  font: normal normal medium 36px/48px Poppins;
-  letter-spacing: 0px;
-  color: #181818;
+.contact-section .contact-container .page-title {
   margin: 15px 0;
 }
 
@@ -1222,16 +1179,9 @@ h1 {
 }
 
 .contact-section .contact-container .inputs .btn {
-  background: #DC386D 0% 0% no-repeat padding-box;
-  border: 6px solid #DC386D;
-  border-radius: 6px;
-  text-align: center;
-  font: normal normal bold 14px/21px Poppins;
-  letter-spacing: 2.8px;
-  color: #FFFFFF;
-  text-transform: uppercase;
   width: 100%;
   height: 70px;
+  margin: 25px 0;
 }
 
 .contact-section .contact-container .inputs a {
@@ -1279,11 +1229,12 @@ h1 {
   position: relative;
 }
 
-.login-card__title {
+.login-card .login-card-title {
   text-align: left;
   font: normal normal 600 28px/48px Poppins;
   letter-spacing: 0px;
   color: #181818;
+  margin: 10px 0;
 }
 
 .login-card .close-btn {
@@ -1304,18 +1255,7 @@ h1 {
 
 .login-card .btn {
   width: 100%;
-  background: #DC386D;
-  border-radius: 6px;
-  text-align: center;
-  font: normal normal bold 16px/25px Poppins;
-  letter-spacing: 0.48px;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  margin: 20px 0;
-}
-
-.login-card .btn:focus {
-  outline: none;
+  height: 70px;
 }
 
 .login-card .text {
@@ -1331,9 +1271,10 @@ h1 {
 
 @media (max-width: 768px) {
   .login-card {
+    padding: 70px 40px;
     max-width: 300px;
   }
-  .login-card__title {
+  .login-card .login-card-title {
     font-size: 18px;
   }
 }
@@ -1360,7 +1301,7 @@ h1 {
   position: relative;
 }
 
-.registration-card__title {
+.registration-card .registration-card-title {
   text-align: left;
   font: normal normal 600 28px/48px Poppins;
   letter-spacing: 0px;
@@ -1389,18 +1330,7 @@ h1 {
 
 .registration-card .btn {
   width: 100%;
-  background: #DC386D;
-  border-radius: 6px;
-  text-align: center;
-  font: normal normal bold 16px/25px Poppins;
-  letter-spacing: 0.48px;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  margin: 20px 0;
-}
-
-.registration-card .btn:focus {
-  outline: none;
+  height: 70px;
 }
 
 .registration-card .text {
@@ -1417,8 +1347,9 @@ h1 {
 @media (max-width: 768px) {
   .registration-card {
     max-width: 300px;
+    padding: 70px 40px;
   }
-  .registration-card__title {
+  .registration-card .registration-card-title {
     font-size: 18px;
   }
   .registration-card .btn {
@@ -1725,12 +1656,6 @@ h1 {
 .product-section .product-container .info-wrapper .btn {
   width: 280px;
   height: 70px;
-  background: #DC386D;
-  border-radius: 6px;
-  text-align: center;
-  font: normal normal bold 16px/25px Poppins;
-  letter-spacing: 0.48px;
-  text-transform: uppercase;
 }
 
 .product-section .product-container .info-wrapper .basket-count {
@@ -2010,13 +1935,19 @@ h1 {
 }
 
 .delivery-data {
-  width: 100%;
-  height: auto;
-  margin: 20px 0;
-  padding: 25px;
-  background: #F5F5F5 0% 0% no-repeat padding-box;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: addresses;
+  margin: 25px 0;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
   -webkit-box-shadow: 0px 20px 60px #0000001F;
           box-shadow: 0px 20px 60px #0000001F;
+}
+
+.delivery-data .btn {
+  width: 200px;
+  height: 50px;
+  margin: 20px;
 }
 
 .settings-container {
@@ -2047,6 +1978,7 @@ h1 {
 
 .address-container {
   width: 95%;
+  height: 200px;
   margin: 20px auto;
   background: #F5F5F5;
   padding: 25px;
@@ -2099,32 +2031,54 @@ h1 {
   width: 100%;
 }
 
-.profile-section .profile-container {
-  width: 1000px;
-  margin: 0 auto;
+.profile-section .page-title {
+  width: 60%;
+  margin: auto;
 }
 
-.profile-section .profile-container h1 {
-  text-align: left;
-}
-
-.profile-section .profile-container .profile-title {
-  text-align: left;
-}
-
-.profile-section .profile-container .line {
+.profile-section .line {
+  width: 60%;
+  margin: auto;
   background: #DC386D;
   height: 6px;
 }
 
+.profile-section .profile-container {
+  width: 60%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4fr 8fr;
+      grid-template-columns: 4fr 8fr;
+      grid-template-areas: 'profile addresses';
+  grid-column-gap: 25px;
+}
+
 .profile-section .profile-container .profile-data {
-  width: 100%;
-  height: 400px;
-  margin: 20px 0;
-  padding: 40px 25px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: profile;
+  margin: 25px 0;
+  max-height: 400px;
+  padding: 20px;
+  position: relative;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   -webkit-box-shadow: 0px 20px 60px #0000001F;
           box-shadow: 0px 20px 60px #0000001F;
+}
+
+.profile-section .profile-container .profile-data .settings {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+}
+
+.profile-section .profile-container .profile-data .profile-name {
+  font: normal normal bold 24px/32px Poppins;
+  letter-spacing: 0px;
+  color: #181818;
+  margin-bottom: 20px;
 }
 
 .profile-section .profile-container .profile-data .text-wrapper {
@@ -2137,22 +2091,54 @@ h1 {
   margin: 10px 0;
 }
 
-.profile-section .profile-container .profile-data .text-wrapper h1 {
+.profile-section .profile-container .profile-data .text-wrapper .profile-tel {
+  font: normal normal medium 18px/32px Poppins;
+  letter-spacing: 0px;
   text-align: left;
+  color: #181818;
   margin: 0;
+}
+
+.profile-section .profile-container .profile-data .text-wrapper .profile-icon {
+  margin-right: 5px;
+  color: #DC386D;
 }
 
 .profile-section .profile-container .profile-data .text-wrapper svg {
   font-size: 25px;
 }
 
+.profile-section .profile-container .profile-data .profile-order {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: calc(100% - 40px);
+  padding: 10px;
+  background: #DC386D;
+  color: #FFFFFF;
+}
+
 .profile-section .profile-container .profile-settings {
-  width: 100%;
-  height: 400px;
-  margin: 20px 0;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: profile;
+  max-height: 400px;
+  margin: 25px 0;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   -webkit-box-shadow: 0px 20px 60px #0000001F;
           box-shadow: 0px 20px 60px #0000001F;
+}
+
+.profile-section .profile-container .profile-settings form {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .sidebar {
@@ -2232,29 +2218,35 @@ html {
   font-family: 'Poppins', sans-serif;
 }
 
-/* width */
+/* Szélesség */
 ::-webkit-scrollbar {
   width: 5px;
 }
 
-/* Track */
+/*  Mező */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
-/* Handle */
+/* Csúszka */
 ::-webkit-scrollbar-thumb {
   background: #DC386D;
 }
 
-/* Handle on hover */
+/* Csúszka ha rajta a kurzor */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
 .btn {
   background: #DC386D;
+  color: #FFFFFF;
   border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  font: normal normal bold 16px/25px Poppins;
+  letter-spacing: 0.48px;
 }
 
 .btn:focus, .btn:active {
@@ -2263,5 +2255,25 @@ html {
 
 .btn:hover {
   background: #e04e7d;
+}
+
+.product-title {
+  font: normal normal bold 24px/32px Poppins;
+  text-align: left;
+  letter-spacing: 0px;
+  color: #181818;
+}
+
+.page-title {
+  font: normal normal medium 36px/48px Poppins;
+  text-align: left;
+  letter-spacing: 0px;
+  color: #181818;
+}
+
+.section-title {
+  font: normal normal 600 28px/48px Poppins;
+  text-align: center;
+  letter-spacing: 0px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -60,7 +60,6 @@ const Search = ({ placeholder, type }) => {
                             placeholder={placeholder}
                             className='search__input'
                          />
-                         <button onClick={() => console.log(search)}>mivan</button>
                         <Link to={`/products?product=${search}`} className='search__btn'><IoMdSearch className='search__icon'/></Link>
                     </div>
                 </div>

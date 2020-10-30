@@ -23,7 +23,7 @@ function App() {
         <Router>
           <AuthProvider>
             <Header/>
-          </AuthProvider>
+          
           <Nav setOpen={setOpen}/>
           <SideBar isSideBarOpen={isSideBarOpen} setOpen={setOpen}/>
           
@@ -45,7 +45,8 @@ function App() {
                   <Route component={NotFound} />
                 </Switch>
               <Footer />
-        </Router>
+              </AuthProvider>
+          </Router>
       </CartProvider> 
     </>
   );

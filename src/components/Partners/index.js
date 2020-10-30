@@ -4,7 +4,7 @@ import LogoItem from './LogoItem'
 const Partners = () => {
     return (
         <>
-            <h1>
+            <h1 className='section-title'>
                 Partnerek
             </h1>
             <div className='logo-container'>

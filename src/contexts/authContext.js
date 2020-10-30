@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import axios from 'axios'
 
 export const AuthContext = React.createContext();
 
@@ -6,10 +7,22 @@ export const AuthProvider = ({children}) => {
     const [isLoggedIn,setLoggedIn] = useState(false)
     const [authVisible, setVisible] = useState(false)
     const [loginActive, setLoginActive] = useState(true)
+    const [user, setUser] = useState({})
+    const [isLoading, setLoading] = useState(true)
 
     const handleLogin = () => {
         setLoggedIn(true)
         setVisible(false)
+    }
+
+    async  function fetchUser() {
+        await axios
+            .get("../data/user.json")
+            .then((response) => {
+                setUser(response.data);
+                setLoading(false)
+            })
+            .catch((error) => console.log(error));
     }
 
     const handleLogout = () => {
@@ -25,7 +38,12 @@ export const AuthProvider = ({children}) => {
         loginActive,
         setLoginActive,
         handleLogin,
-        handleLogout
+        handleLogout,
+        fetchUser,
+        user,
+        setUser,
+        isLoading,
+        setLoading
     }
     return (
         <>

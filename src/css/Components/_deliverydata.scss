@@ -1,9 +1,12 @@
 .delivery-data {
-    width: 100%;
-    height: auto;
-    margin: 20px 0;
-    padding: 25px;
+    grid-area: addresses;
+    margin: 25px 0;
 
-    background: color(grayish) 0% 0% no-repeat padding-box;
+    background: color(light-text) 0% 0% no-repeat padding-box;
     box-shadow: 0px 20px 60px #0000001F;
+    .btn {
+        width: 200px;
+        height: 50px;
+        margin: 20px;
+    }
 }

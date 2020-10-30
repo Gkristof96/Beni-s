@@ -1,23 +1,22 @@
 import React from 'react'
 import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa'
+import { BsFillGearFill } from 'react-icons/bs'
 
-const ProfileData = ({user}) => {
+const ProfileData = ({user, isSettingOpen, setIsOpen}) => {
     return (
         <>  
-            <h1>Adatok</h1>
             <div className='profile-data'>
+                    <h1 className='profile-name'>{`${user.lastname} ${user.firstname}`}</h1>
+                    <BsFillGearFill className='settings' onClick={() => setIsOpen(!isSettingOpen)}/>
                 <div className='text-wrapper'>
-                    <h1>{`${user.lastname} ${user.firstname}`}</h1>
+                    <FaPhoneAlt className='profile-icon'/>
+                    <h1 className='profile-tel'>{user.tel}</h1>
                 </div>
                 <div className='text-wrapper'>
-                    <FaPhoneAlt />
-                    <h1>{user.tel}</h1>
+                    <FaEnvelope className='profile-icon'/>
+                    <h1 className='profile-email'>{user.email}</h1>
                 </div>
-                <div className='text-wrapper'>
-                    <FaEnvelope />
-                    <h1>{user.email}</h1>
-                </div>
-                <h1>{user.order_count}</h1>
+                <h1 className='profile-order'>Rendelések száma: {user.order_count}</h1>
             </div>
         </>
     )

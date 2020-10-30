@@ -15,7 +15,7 @@
     position: relative;
 
 
-    &__title {
+    .registration-card-title {
         text-align: left;
         font: normal normal 600 28px/48px Poppins;
         letter-spacing: 0px;
@@ -42,17 +42,7 @@
     }
     .btn {
         width: 100%;
-        background: color(secondary);
-        border-radius: 6px;
-        text-align: center;
-        font: normal normal bold 16px/25px Poppins;
-        letter-spacing: 0.48px;
-        color: color(light-text);
-        text-transform: uppercase;
-        margin: 20px 0;
-        &:focus {
-            outline: none;
-        }
+        height: 70px;
     }
     .text {
         margin: 20px 0;
@@ -67,8 +57,9 @@
 @media (max-width: 768px) {
     .registration-card {
         max-width: 300px;
+        padding: 70px 40px;
 
-        &__title {
+        .registration-card-title {
             font-size: 18px;
         }
         .btn {

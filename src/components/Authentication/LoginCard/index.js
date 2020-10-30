@@ -9,7 +9,7 @@ const LoginCard = () => {
         <>
             <div className='login-card'>
                 <IoMdClose className='close-btn' onClick={() => setVisible(false)}/>
-                <h1 className='login-card__title'>Bejelentkezés</h1>
+                <h1 className='login-card-title'>Bejelentkezés</h1>
                 <InputField type='email' placeholder='Email'/>
                 <InputField type='password' placeholder='Jelszó'/>
                 <span className='link-text'>Elfelejtett jelszó</span>

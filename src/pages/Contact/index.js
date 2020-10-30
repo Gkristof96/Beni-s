@@ -7,7 +7,7 @@ const Contact = () => {
         <>
             <section className='contact-section'>
                 <div className='contact-container'>
-                    <h1 className='contact-title'>Kapcsolat</h1>
+                    <h1 className='page-title'>Kapcsolat</h1>
                     <div className='line' />
                     <p>További kérdése van, részleges tájékoztatásra van szűksége? Írjon nekünk, keresse munkatársainkat!</p>
                     <div className='inputs'>

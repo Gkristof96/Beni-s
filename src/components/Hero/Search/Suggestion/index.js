@@ -14,7 +14,7 @@ const Suggestion = ({ suggestions, suggestionChanged, display }) => {
           {suggestions.map((item, i) => (
             <li key={i} onClick={() => suggestionChanged(item)}>
                 <img src={item.image} alt={item.name}/>
-                <h1 className='suggestion-name'>{item.name}</h1>
+                <h1 className='product-title'>{item.name}</h1>
                 <div className='price-wrapper'>
                   <h1 className='disconted-price'>{item.discontedprice} Ft/db</h1>
                   <h1 className='price'>{item.price} Ft/db</h1>

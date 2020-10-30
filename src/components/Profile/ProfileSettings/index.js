@@ -8,7 +8,6 @@ const ProfileSettings = ({ setUser, user, setIsOpen}) => {
     }
     return (
         <>
-            <h1>Beállítások</h1>
             <div className='profile-settings'>
                 <form onSubmit={handleSubmit}>
                     <input name='firstname' value={input.firstname} onChange={(e) => setInput({...input, firstname: e.target.value})} />
