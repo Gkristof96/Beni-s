@@ -67,3 +67,17 @@ html {
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+
+  .btn {
+    background: color(secondary);
+    color: color(ligh-text);
+    border-radius: 6px;
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+    &:hover {
+      background: color(light-secondary);
+    }
+  }

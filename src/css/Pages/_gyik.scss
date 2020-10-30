@@ -15,6 +15,7 @@
             background: color(secondary) 0% 0% no-repeat padding-box;
         }
         .category-container {
+            
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -30,43 +31,43 @@
                 
             }
             .question-container {
+                width: 1140px;
                 display: flex;
+                justify-content: center;
                 flex-direction: column;
                 margin-bottom: 5px;
                 transition: 0.5s;
         
                 .title-bar {
-                    width: 100%;
                     height: 80px;
                     position: relative;
                     background: color(grayish);
                     transition: 0.5s;
                     
-                    h1 {
+                    .title {
+                        margin: 0;
                         text-align: left;
-                        margin: 16px 0;
                         margin-left: 20px;
-                        text-align: left;
                         font-size: 20px;
-                        letter-spacing: 0px;
                         color: color(dark-text);
                         transition: 0.5s ease-in-out;
                     }
                     .gyik-icon {
                         position: absolute;
-                        top: 25px;
+                        top: 50%;
                         right: 25px;
+                        transform: translateY(-50%);
                         font-size: 30px;
                         
                     }
                 }
                 .title-bar.open {
-                    background: transparent linear-gradient(90deg,color(seconday) 0%, color(gradient) 100%);
+                    background: transparent linear-gradient(90deg,color(secondary) 0%, color(gradient) 100%);
                     transition: 0.5s;
-                    h1 {
+                    .title {
+                        margin: 0;
                         text-align: left;
                         font-size: 20px;
-                        margin: 16px 0;
                         margin-left: 20px;
                         letter-spacing: 0px;
                         color: color(light-text);
@@ -115,13 +116,25 @@
                 font-size: 18px;
             }
             .category-container {
+                margin-bottom: 10px;
                 .category-title {
-                    font-size: 18px;
+                    margin: 10px 0;
+                    font-size: 14px;
                 }
                 .question-container {
+                    width: 280px;
                     .title-bar {
-                        h1 {
-                            font-size: 14px;
+                        height: 50px;
+                        .title {
+                            font-size: 12px;
+                        }
+                        .gyik-icon {
+                            right: 10px;
+                        }
+                    }
+                    .title-bar.open {
+                        .title {
+                            font-size: 10px;
                         }
                     }
                     .dropdown.open {
