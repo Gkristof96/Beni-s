@@ -10,11 +10,11 @@
                 text-align: left;
                 font: normal normal medium 36px/48px Poppins;
                 letter-spacing: 0px;
-                color: #001926;
+                color: color(dark-text);
                 margin: 15px 0;
             }
             .line {
-                background: #DC386D;
+                background: color(secondary);
                 height: 6px;
             }
             p {
@@ -33,16 +33,13 @@
                 grid-column-gap: 25px;
                 margin-bottom: 50px;
                 .btn {
-                    background: var(--unnamed-color-dc386d) 0% 0% no-repeat padding-box;
-                    border: 6px solid var(--unnamed-color-dc386d);
-                    background: #DC386D 0% 0% no-repeat padding-box;
-                    border: 6px solid #DC386D;
+                    background: color(secondary) 0% 0% no-repeat padding-box;
+                    border: 6px solid color(secondary);
                     border-radius: 6px;
-                    color: var(--unnamed-color-ffffff);
                     text-align: center;
                     font: normal normal bold 14px/21px Poppins;
                     letter-spacing: 2.8px;
-                    color: #FFFFFF;
+                    color:  color(light-text);
                     text-transform: uppercase;
                     width: 100%;
                     height: 70px;

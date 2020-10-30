@@ -19,7 +19,7 @@ footer {
                 text-transform: uppercase;
                 font: normal normal 600 14px/21px Poppins;
                 letter-spacing: 0.42px;
-                color: #001926;
+                color: color(dark-text);
             }
         }
 
@@ -30,7 +30,7 @@ footer {
                 text-align: right;
                 font: normal normal normal 14px/28px Poppins;
                 letter-spacing: 0px;
-                color: #001926;
+                color: color(dark-text);
                 margin-right: 20px;
             }
             img {
@@ -45,7 +45,7 @@ footer {
     height: 6px;
     width: 100%;
 
-    background: transparent linear-gradient(90deg, #DC386D 0%, #FFB3B5 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(90deg, color(secondary) 0%, color(gradient) 100%) 0% 0% no-repeat padding-box;
 }
 
 

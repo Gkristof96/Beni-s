@@ -17,7 +17,7 @@ header {
         h1 {
             font-size: 12px;
             padding-left: 12px;
-            color: color(text);
+            color: color(light-text);
             font-weight: normal;
             text-transform: uppercase;
         }
@@ -33,7 +33,7 @@ header {
                 max-width: 134px;
                 margin: 0;
                 box-shadow: 0px 10px 20px #00000033;
-                background-color: #fff;
+                background-color: color(light-text);
                 
                 ul {
                     list-style: none;
@@ -42,7 +42,7 @@ header {
                     li {
                         text-align: right;
                         padding: 10px 20px;
-                        color: #001926;
+                        color: color(dark-text);
                         font: normal normal normal 14px/21px Poppins;
                         letter-spacing: 0.56px;
                     }
@@ -56,7 +56,7 @@ header {
                     content: '';
                     border-left: 5px solid transparent;
                     border-right: 5px solid transparent;
-                    border-bottom: 10px solid #fff;
+                    border-bottom: 10px solid color(light-text);
                 }
             }
             .dropdown.open {

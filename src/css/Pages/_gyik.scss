@@ -8,11 +8,11 @@
             text-align: left;
             font: normal normal medium 36px/48px Poppins;
             letter-spacing: 0px;
-            color: #001926;
+            color:  color(dark-text);
             margin: 15px 0;
         }
         .gradient-line {
-            background: #DC386D 0% 0% no-repeat padding-box;
+            background: color(secondary) 0% 0% no-repeat padding-box;
         }
         .category-container {
             display: flex;
@@ -25,7 +25,7 @@
                 text-align: left;
                 font-size: 28px;
                 letter-spacing: 0px;
-                color: #001926;
+                color: color(dark-text);
                 margin: 25px 0;
                 
             }
@@ -39,7 +39,7 @@
                     width: 100%;
                     height: 80px;
                     position: relative;
-                    background: #F5F5F5;
+                    background: color(grayish);
                     transition: 0.5s;
                     
                     h1 {
@@ -49,7 +49,7 @@
                         text-align: left;
                         font-size: 20px;
                         letter-spacing: 0px;
-                        color: #001926;
+                        color: color(dark-text);
                         transition: 0.5s ease-in-out;
                     }
                     .gyik-icon {
@@ -61,7 +61,7 @@
                     }
                 }
                 .title-bar.open {
-                    background: transparent linear-gradient(90deg, #DC386D 0%, #FFB3B5 100%);
+                    background: transparent linear-gradient(90deg,color(seconday) 0%, color(gradient) 100%);
                     transition: 0.5s;
                     h1 {
                         text-align: left;
@@ -69,30 +69,28 @@
                         margin: 16px 0;
                         margin-left: 20px;
                         letter-spacing: 0px;
-                        color: #FFFFFF;
+                        color: color(light-text);
                     }
                     .gyik-icon {
-                        color: #fff;
+                        color: color(light-text);
                     }
                 }
                 .dropdown {
                     height: 0px;
                     width: 100%;
                     display: none;
-                    background-color: #fff;
-                    transition: height 0.5s all ease-in-out;
+                    background-color: color(light-text);
                     padding: 25px;
-        
-                    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
-                    background: #FFFFFF 0% 0% no-repeat padding-box;
-                    box-shadow: 0px 3px 20px #DC386D69;
+
+                    background: color(light-text) 0% 0% no-repeat padding-box;
+                    box-shadow: 0px 3px 20px color(primary);
                     border-radius: 5px;
                     transition: 0.5s;
                     p {
                         text-align: left;
                         font: normal normal normal 16px/25px Poppins;
                         letter-spacing: 0px;
-                        color: #001926;
+                        color: color(dark-text);
                     }
                 }
                 .dropdown.open {

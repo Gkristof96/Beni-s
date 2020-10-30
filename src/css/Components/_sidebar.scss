@@ -8,7 +8,7 @@
     background: color(primary);
     transform: translateX(100%);
     transition: transform 0.5s ease-in-out;
-    border-top: 1px solid #fff;
+    border-top: 1px solid color(light-text);
     ul {
         list-style: none;
         width: 100%;
@@ -23,7 +23,7 @@
           padding: 15px 0;
           a {
             font-size: 1.2rem;
-            color: white;
+            color: color(light-text);
             text-decoration: none;
           }
           &:hover,
@@ -38,7 +38,7 @@
       &__icon {
           position: absolute;
           font-size: 32px;
-          color: #fff;
+          color: color(light-text);
           top: 20px;
           right: 20px;
           cursor: pointer;

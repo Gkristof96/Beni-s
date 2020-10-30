@@ -2,12 +2,12 @@
 .btn {
     width: 70px;
     height: 70px;
-    border: 2px solid #FFFFFF;
+    border: 2px solid color(light-text);
     position: relative;
     margin-right: 10px;
     border-radius: 5px;;
     .icon{
-        color: #ffffff;
+        color: color(light-text);
         position: absolute;
         top: 50%;
         left: 50%;

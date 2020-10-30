@@ -1,7 +1,7 @@
 .address-container {
     width: 95%;
     margin: 20px auto;
-    background: lightgrey;
+    background: color(grayish);
     padding: 25px;
 
     .person-data {
@@ -12,7 +12,7 @@
 
         &__icon {
             font-size: 32px;
-            color: #DC386D;
+            color: color(secondary);
         }
 
         &__title {
@@ -27,7 +27,7 @@
 
         &__icon {
             font-size: 32px;
-            color: #dc386d;
+            color: color(secondary);
         }
 
         &__wrapper {

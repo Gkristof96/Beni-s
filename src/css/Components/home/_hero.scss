@@ -27,20 +27,18 @@
             align-self: center;
             margin-left: 25px;
             h1 {
-                color: #fff;
+                color: color(light-text);
                 text-align: left;
                 font: normal normal 600 46px/54px Poppins;
                 letter-spacing: 0px;
-                color: #FFFFFF;
                 opacity: 1;
                 margin: 25px 0;
             }
             p {
-                color: var(--unnamed-color-ffffff);
                 text-align: left;
                 font: normal normal normal 18px/30px Poppins;
                 letter-spacing: 0px;
-                color: #FFFFFF;
+                color: color(light-text);
                 opacity: 1;
                 margin: 15px 0;
                 margin-right: 10px;

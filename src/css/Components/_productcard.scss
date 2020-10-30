@@ -2,8 +2,7 @@
     width: 360px;
     height: 466px;
 
-    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
+    background:color(light-text) 0% 0% no-repeat padding-box;
     box-shadow: 0px 20px 30px #00000033;
     border-radius: 5px;
     position: relative;
@@ -32,8 +31,8 @@
             position: absolute;
             top: 10px;
             left: 10px;
-            background-color: #181818;
-            color: #fff;
+            background-color: color(dark-text);
+            color: color(light-text);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -41,11 +40,10 @@
         }
 
         .product-title {
-            color: var(--unnamed-color-181818);
+            color: color(dark-text);
             text-align: left;
             font: normal normal bold 24px/32px Poppins;
             letter-spacing: 0px;
-            color: #181818;
             margin-bottom: 10px;
             font-weight: bold;
         }
@@ -54,21 +52,19 @@
             display: flex;
             margin-bottom: 10px;
             .discont {
-                color: var(--unnamed-color-dc386d);
                 text-align: left;
                 font: normal normal bold 20px/32px Poppins;
                 letter-spacing: 0px;
-                color: #DC386D;
+                color: color(secondary);
                 margin-right: 20px;
                 padding-right: 10px;
             }
             .full {
-                color: var(--unnamed-color-181818);
                 text-align: left;
                 text-decoration: line-through;
                 font: normal normal medium 20px/32px Poppins;
                 letter-spacing: 0px;
-                color: #181818;
+                color:  color(secondary);
             }
         }
     
@@ -82,18 +78,17 @@
         left: 50%;
         z-index: 5;
         transform: translateX(-50%);
-        background: #DC386D;
+        background: color(secondary);
         border-radius: 6px;
         border: none;
-        color: var(--unnamed-color-ffffff);
         text-align: center;
         font: normal normal bold 16px/25px Poppins;
         letter-spacing: 0.48px;
-        color: #FFFFFF;
+        color: color(light-text);
         text-transform: uppercase;
         cursor: pointer;
         &:hover {
-            background: #dc567D;
+            background: color(gradient);
         }
     }
     &:hover {

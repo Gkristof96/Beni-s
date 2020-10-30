@@ -1,6 +1,6 @@
 .white-header {
-    height: 150px;
-    background: #fff;
+    height: 200px;
+    background: color(light-text);
     position: relative;
     margin-top: 200px;
 
@@ -8,13 +8,14 @@
         text-align: left;
         font: normal normal bold 36px/48px Poppins;
         letter-spacing: 0px;
-        color: #460B1C;
+        color: color(colored-text);
+        margin: 20px 0;
         margin-left: 20%;
     }
 
     .search-wrapper {
         position: absolute;
-        bottom: -50px;
+        bottom: -75px;
         left: 50%;
         z-index: 4;
         transform: translateX(-50%)

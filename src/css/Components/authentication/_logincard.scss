@@ -3,7 +3,7 @@
     height: 645px;
     padding: 70px 60px;
 
-    background: #FFFFFF;
+    background: color(light-text);
     box-shadow: 0px 20px 40px #0000004D;
     border-radius: 5px;
     opacity: 1;
@@ -32,18 +32,18 @@
         text-align: left;
         font: normal normal bold 16px/25px Poppins;
         letter-spacing: 0px;
-        color: #DC386D;
+        color: color(secondary);
         margin: 20px 0;
         font-weight: bold;
     }
     .btn {
         width: 100%;
-        background: #DC386D;
+        background:color(secondary);
         border-radius: 6px;
         text-align: center;
         font: normal normal bold 16px/25px Poppins;
         letter-spacing: 0.48px;
-        color: #FFFFFF;
+        color: color(light-text);
         text-transform: uppercase;
         margin: 20px 0;
         &:focus {
@@ -56,7 +56,7 @@
         align-self: center;
         font: normal normal normal 16px/25px Poppins;
         letter-spacing: 0px;
-        color: #001926;
+        color: color(dark-text);
     }
 }
 
