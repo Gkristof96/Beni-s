@@ -56,7 +56,11 @@
     }
 }
 @media (max-width: 768px) {
-
+    .white-header {
+        .search-wrapper {
+            bottom: -50px;
+        }
+    }
     .products-section {
         .products-container {
             width: 90%;
