@@ -7,7 +7,7 @@
     border-radius: 5px;
     position: relative;
     padding-top: 0;
-    margin: 20px 0;
+    margin: 20px 10px;
     a {
         position: absolute;
         text-decoration: none;
@@ -79,6 +79,7 @@
     .product-card {
         width: 280px;
         height: 400px;
+        margin: 20px 0;
         a {
             .product-image {
                 max-width: 100%;

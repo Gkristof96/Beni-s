@@ -74,9 +74,13 @@ header .top-container .topbar-button .dropdown ul {
 header .top-container .topbar-button .dropdown ul li {
   text-align: right;
   padding: 10px 20px;
-  color: #181818;
   font: normal normal normal 14px/21px Poppins;
   letter-spacing: 0.56px;
+}
+
+header .top-container .topbar-button .dropdown ul li a {
+  text-decoration: none;
+  color: #181818;
 }
 
 header .top-container .topbar-button .dropdown ul::after {
@@ -96,7 +100,7 @@ header .top-container .topbar-button .dropdown.open {
 }
 
 @media (max-width: 768px) {
-  header .top-container h1 {
+  header .top-container .topbar-title {
     font-size: 8px;
   }
 }
@@ -112,12 +116,12 @@ header .top-container .topbar-button .dropdown.open {
 .hero-section .hero-container {
   display: -ms-grid;
   display: grid;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   height: 100%;
       grid-template-areas: 'content null' 'search search';
-  -ms-grid-columns: 40% 60%;
-      grid-template-columns: 40% 60%;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 6fr 3fr;
       grid-template-rows: 6fr 3fr;
 }
@@ -157,6 +161,15 @@ header .top-container .topbar-button .dropdown.open {
   display: flex;
 }
 
+@media (max-width: 1376px) {
+  .hero-section .hero-container .content h1 {
+    font-size: 36px;
+  }
+  .hero-section .hero-container .content p {
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-section {
     background-position: left;
@@ -165,6 +178,7 @@ header .top-container .topbar-button .dropdown.open {
   }
   .hero-section .hero-container {
     width: 90%;
+    margin: auto;
         grid-template-areas: 'content' 'search';
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -306,21 +320,21 @@ nav .nav-container .hamburger-icon {
   font-size: 32px;
 }
 
-@media (max-width: 768px) {
-  .btn {
+@media (max-width: 1376px) {
+  .arrow-btn {
     width: 50px;
     height: 50px;
   }
 }
 
 .search-wrapper {
-  max-width: 1146px;
+  max-width: 1140px;
   width: 100%;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: search;
-  margin: auto;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -705,7 +719,7 @@ footer .footer-container .copyright img {
   border-radius: 5px;
   position: relative;
   padding-top: 0;
-  margin: 20px 0;
+  margin: 20px 10px;
 }
 
 .product-card a {
@@ -790,6 +804,7 @@ footer .footer-container .copyright img {
   .product-card {
     width: 280px;
     height: 400px;
+    margin: 20px 0;
   }
   .product-card a .product-image {
     max-width: 100%;
@@ -840,6 +855,7 @@ footer .footer-container .copyright img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1489,15 +1505,16 @@ footer .footer-container .copyright img {
   background: #FFFFFF;
   position: relative;
   margin-top: 200px;
+  padding: 0 10px;
 }
 
 .white-header .products-title {
+  max-width: 1140px;
   text-align: left;
   font: normal normal bold 36px/48px Poppins;
   letter-spacing: 0px;
   color: #460B1C;
-  margin: 20px 0;
-  margin-left: 20%;
+  margin: 20px auto;
 }
 
 .white-header .search-wrapper {
@@ -1519,7 +1536,7 @@ footer .footer-container .copyright img {
   margin: 0 auto;
   padding-top: 150px;
   max-width: 1140px;
-  width: 90%;
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1559,12 +1576,11 @@ footer .footer-container .copyright img {
     bottom: -50px;
   }
   .products-section .products-container {
-    width: 90%;
+    width: 95%;
   }
   .products-section .products-container .products-wrapper {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
@@ -1949,7 +1965,7 @@ footer .footer-container .copyright img {
   .cart {
     position: static;
   }
-  .cart .cart-btn {
+  .cart .topbar-btn {
     font-size: 8px;
   }
   .cart .cart-container {

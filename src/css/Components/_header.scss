@@ -44,9 +44,12 @@ header {
                 ul {
                     list-style: none;
                     li {
+                        a {
+                            text-decoration: none;
+                            color: color(dark-text);
+                        }
                         text-align: right;
                         padding: 10px 20px;
-                        color: color(dark-text);
                         font: normal normal normal 14px/21px Poppins;
                         letter-spacing: 0.56px;
                     }
@@ -73,7 +76,7 @@ header {
 @media (max-width: 768px) {
     header {
         .top-container {
-            h1 {
+            .topbar-title {
                 font-size: 8px;
             }
         }

@@ -8,11 +8,6 @@ const Hero = () => {
     return (
         <>
             <section className='hero-section'>
-                {/*<img 
-                    className='background-container'
-                    src='images/background.png' 
-                    alt='background' 
-                />*/}
                 <div className='hero-container'>
                     <div className='content'>
                         <h1>
