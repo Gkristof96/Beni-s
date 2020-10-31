@@ -8,7 +8,7 @@ const Gyik = () => {
             <section className='gyik-section'>
                 <div className='gyik-container'>
                     <h1 className='page-title'>Gyakran ismételt kérdések</h1>
-                    <div className='gradient-line' />
+                    <div className='line' />
                     <GyikCategory title={'Fizetés és kézbesítés'}>
                         <GyikItem 
                             question={'Milyen fizetési lehetőségeim vannak?'} 

@@ -14,7 +14,7 @@ const CartItem = ({item}) => {
                     onClick={() => decrease(item)}
                 >-</button>
                 <span 
-                    className='item-count' 
+                    className='item-counter' 
                     type='text'>
                     {item.count}
                 </span>

@@ -18,7 +18,6 @@ const Search = ({ placeholder, type }) => {
             })
             .catch((error) => console.log(error));
     }
-
     
     useEffect(() => {
         fetchProducts();
@@ -51,19 +50,19 @@ const Search = ({ placeholder, type }) => {
         <>
             <div className='search-wrapper'>
                 <div className='search'>
-                    <div className='search__container'>
+                    <div className='search-container'>
                         <input
                             value={search}
                             type={type}
                             onChange={onTextChange}
                             onClick={() => setDisplay(true)}
                             placeholder={placeholder}
-                            className='search__input'
+                            className='search-input'
                          />
                         <Link 
                             to={`/products?product=${search}`} 
-                            className='search__btn'>
-                            <IoMdSearch className='search__icon'/>
+                            className='search-btn'>
+                            <IoMdSearch className='search-icon'/>
                         </Link>
                     </div>
                 </div>

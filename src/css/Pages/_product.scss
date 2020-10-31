@@ -106,7 +106,6 @@
                     margin-right: 20px;
                 }
                 .full {
-                    color: var(--unnamed-color-181818);
                     text-align: left;
                     text-decoration: line-through;
                     font: normal normal medium 20px/32px Poppins;
@@ -124,6 +123,7 @@
                 li {
                     width: 240px;
                     height: 70px;
+                    
                     display: flex;
                     justify-content: center;
                     align-items: center;

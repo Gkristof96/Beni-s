@@ -1,10 +1,11 @@
-import React, { useContext} from 'react'
+import React, { useContext, useState} from 'react'
 import { IoMdClose } from 'react-icons/io'
 import AuthContext from '../../../contexts/authContext'
 import InputField from '../../Contact/InputField'
 
 const LoginCard = () => {
     const {setVisible,setLoginActive, handleLogin} = useContext(AuthContext)
+    const [error, setError] = useState("")
     return (
         <>
             <div className='login-card'>
@@ -21,7 +22,8 @@ const LoginCard = () => {
                     type='password'
                     placeholder='Jelszó'
                 />
-                <span className='link-text'>Elfelejtett jelszó</span>
+                {error && <p>{error}</p>}
+                <span className='highlight-text'>Elfelejtett jelszó</span>
                 <input
                     className='btn'
                     onClick={() => handleLogin()} 
@@ -30,7 +32,7 @@ const LoginCard = () => {
                 <span className='text'>
                     Nincs még fiókod?
                     <span
-                        className='link-text'
+                        className='highlight-text'
                         onClick={() => setLoginActive(false)}>
                         Regisztrálok
                     </span>

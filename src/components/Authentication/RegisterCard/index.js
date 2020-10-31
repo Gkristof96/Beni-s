@@ -29,7 +29,7 @@ const RegistrationCard = () => {
                     <input type='checkbox' />
                     <span className='text'>
                         Elfogadom az 
-                        <span className='link-text'>
+                        <span className='highlight-text'>
                             Adatvédelmi Nyilatkozatot.
                         </span>
                     </span>
@@ -38,7 +38,7 @@ const RegistrationCard = () => {
                 <span 
                     className='text'>Van már fiókod? 
                     <span
-                        className='link-text' 
+                        className='highlight-text' 
                         onClick={() => setLoginActive(true)}>
                         Bejelentkezés
                     </span>
