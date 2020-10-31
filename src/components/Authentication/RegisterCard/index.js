@@ -13,15 +13,36 @@ const RegistrationCard = () => {
                     setLoginActive(true)
                 }}/>
                 <h1 className='registration-card-title'>Regisztráció</h1>
-                <InputField type='email' placeholder='Email'/>
-                <InputField type='password' placeholder='Jelszó'/>
-                <InputField type='password' placeholder='Jelszó újra'/>
+                <InputField
+                    type='email'
+                    placeholder='Email'
+                />
+                <InputField 
+                    type='password' 
+                    placeholder='Jelszó'
+                />
+                <InputField 
+                    type='password' 
+                    placeholder='Jelszó újra'
+                />
                 <div className='checkbox-bar'>
                     <input type='checkbox' />
-                    <span className='text'> Elfogadom az <span className='link-text'>Adatvédelmi Nyilatkozatot.</span></span>
+                    <span className='text'>
+                        Elfogadom az 
+                        <span className='link-text'>
+                            Adatvédelmi Nyilatkozatot.
+                        </span>
+                    </span>
                 </div>
                 <input className='btn' type='submit' value='regisztráció' />
-                <span className='text'>Van már fiókod? <span className='link-text' onClick={() => setLoginActive(true)}>Bejelentkezés</span></span>
+                <span 
+                    className='text'>Van már fiókod? 
+                    <span
+                        className='link-text' 
+                        onClick={() => setLoginActive(true)}>
+                        Bejelentkezés
+                    </span>
+                </span>
             </div>
         </>
     )

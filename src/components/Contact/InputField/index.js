@@ -15,8 +15,16 @@ const InputField = ({type, placeholder}) => {
     return (
         <>
             <div className={`input-container ${focus ? 'focus' : null}`}>
-                <input onChange={(e) => setInput(e.target.value)} value={input} type={type} onBlur={() => handleInput()} onFocus={() => handleInput()}/>
-                <span className='input-span' data-placeholder={placeholder}></span>
+                <input
+                    onChange={(e) => setInput(e.target.value)}
+                    value={input} type={type}
+                    onBlur={() => handleInput()}
+                    onFocus={() => handleInput()}
+                />
+                <span 
+                    className='input-span' 
+                    data-placeholder={placeholder} 
+                />
             </div>
         </>
     )

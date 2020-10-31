@@ -19,7 +19,11 @@ const Suggestion = ({ suggestions, suggestionChanged, display }) => {
                   <h1 className='disconted-price'>{item.discontedprice} Ft/db</h1>
                   <h1 className='price'>{item.price} Ft/db</h1>
                 </div>
-              <button className='btn' onClick={() => addItem(item,1)}>kosárba rakom</button>
+              <button 
+                className='btn'
+                onClick={() => addItem(item,1)}
+              >kosárba rakom
+              </button>
             </li>
           ))}
         </ul>

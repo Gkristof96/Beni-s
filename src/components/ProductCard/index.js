@@ -17,7 +17,11 @@ const ProductCard = ({product}) => {
                             <h2 className='full'>{product.price} Ft/db</h2>
                         </div>
                     </Link>
-                    <button className='btn' onClick={() => addItem(product,1)}>kosárba rakom</button>
+                    <button 
+                        className='btn' 
+                        onClick={() => addItem(product,1)}
+                        >kosárba rakom
+                    </button>
                 </div>
             
         </>

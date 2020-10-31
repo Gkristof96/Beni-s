@@ -28,7 +28,14 @@ const Home = ({ setBasket, basket }) => {
                 <div className='recomended-container'>
                     <h1 className='section-title'>Ajánlott édességek</h1>
                     <div className='products-container'>
-                            {currentPost.map((product,i) => (<ProductCard setBasket={setBasket} basket={basket} key={i} product={product} />))}
+                            {currentPost.map((product,i) => (
+                                <ProductCard 
+                                    setBasket={setBasket} 
+                                    basket={basket} 
+                                    key={i} 
+                                    product={product} 
+                                />
+                            ))}
                     </div>
                     <Link to='products' className='recomended-btn'>összes édesség</Link>
                 </div>

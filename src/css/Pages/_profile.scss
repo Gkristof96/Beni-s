@@ -82,12 +82,21 @@
 
             background: color(light-text) 0% 0% no-repeat padding-box;
             box-shadow: 0px 20px 60px #0000001F;
+            position: relative;
 
             form {
                 width: 80%;
                 margin: 0 auto;
                 display: flex;
                 flex-direction: column;
+
+                .btn {
+                    width: calc(100% - 40px);
+                    height: 50px;
+                    position: absolute;
+                    bottom: 20px;
+                    left: 20px;
+                }
             }
         }
     }

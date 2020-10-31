@@ -8,7 +8,17 @@ const GyikItem = ({ question, description}) => {
             <div className='question-container'>
                 <div className={`title-bar ${open ? 'open' : ''}`}>
                     <h1 className='title'>{question}</h1>
-                    {open ? <FiMinus className='gyik-icon' onClick={() => setOpen(!open)}/> : <FiPlus onClick={() => setOpen(!open)} className='gyik-icon'/>}
+                    {open ? 
+                    <FiMinus 
+                        className='gyik-icon' 
+                        onClick={() => setOpen(!open)}
+                    />
+                    : 
+                    <FiPlus 
+                        onClick={() => setOpen(!open)} 
+                        className='gyik-icon'
+                    />
+                    }
                 </div>
                 <div className={`dropdown ${open ? 'open' : null}`}>
                     <p>{description}</p>

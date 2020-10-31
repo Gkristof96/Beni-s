@@ -16,7 +16,11 @@ const Cart = () => {
     return (
         <>
             <div className='cart'>
-                <h1 className='cart-btn' onClick={() => handleBasketOpen()}>Kosár ({cart.length})</h1>
+                <h1 
+                  className='cart-btn' 
+                  onClick={() => handleBasketOpen()}>
+                  Kosár ({cart.length})
+                </h1>
                 <div className={`cart-container ${isbasketOpen? 'open' : null}`}>
                   <ul>
                     {cart.map((item,i) => <CartItem key={i} item={item} />)}

@@ -9,7 +9,10 @@ const Nav = ({setOpen}) => {
             <nav>
                 <div className='nav-container'>
                     <Logo />
-                    <FaBars className='hamburger-icon'onClick={() => setOpen(true)}/>
+                    <FaBars 
+                        className='hamburger-icon'
+                        onClick={() => setOpen(true)}
+                    />
                     <Navbar />
                 </div>
             </nav>

@@ -22,7 +22,10 @@ const LanguageButton = () => {
     };
     return (
         <>
-            <div className='topbar-button' onClick={() => setMenuOpen(!menuOpen)} ref={wrapperRef}>
+            <div
+                className='topbar-button' 
+                onClick={() => setMenuOpen(!menuOpen)} 
+                ref={wrapperRef}>
                 <h1 >{language} {menuOpen ? <FaChevronUp /> : <FaChevronDown />}</h1>
                 <div className={`dropdown ${(menuOpen? 'open' : null)}`}>
                     <ul>

@@ -63,7 +63,14 @@ const Products = ({basket, setBasket}) => {
                 <div className='products-container'>
                     
                     <div className='products-wrapper'>
-                        {currentPost.map((product,i) => (<ProducCard key={i} basket={basket} setBasket={setBasket} product={product} />))}
+                        {currentPost.map((product,i) => (
+                            <ProducCard 
+                                key={i} 
+                                basket={basket} 
+                                setBasket={setBasket} 
+                                product={product} 
+                            />
+                        ))}
                     </div>
                     <button onClick={() => filterData()}>írd ki</button>
                     <div className='pagination-wrapper'>

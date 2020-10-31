@@ -18,8 +18,27 @@ const Profile = () => {
                     <h1 className='page-title'>Profil</h1>
                     <div className='line' />
                     <div className='profile-container'>
-                        {isSettingOpen ? <ProfileSettings user={user} setUser={setUser} setIsOpen={setIsOpen} /> : <ProfileData setIsOpen={setIsOpen} isSettingOpen={isSettingOpen} user={user} /> }
-                        {isLoading ? null : <DeliveryData setUser={setUser} user={user} addresses={user.addresses} />}
+                        {isSettingOpen ? 
+                        <ProfileSettings 
+                            user={user} 
+                            setUser={setUser} 
+                            setIsOpen={setIsOpen} 
+                        /> 
+                        : 
+                        <ProfileData 
+                            setIsOpen={setIsOpen} 
+                            isSettingOpen={isSettingOpen} 
+                            user={user} 
+                        /> 
+                        }
+                        {isLoading ?
+                        null 
+                        :
+                        <DeliveryData 
+                            setUser={setUser} 
+                            user={user} 
+                            addresses={user.addresses} 
+                        />}
                     </div>
             </section>
         </>

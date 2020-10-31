@@ -60,7 +60,11 @@ const Search = ({ placeholder, type }) => {
                             placeholder={placeholder}
                             className='search__input'
                          />
-                        <Link to={`/products?product=${search}`} className='search__btn'><IoMdSearch className='search__icon'/></Link>
+                        <Link 
+                            to={`/products?product=${search}`} 
+                            className='search__btn'>
+                            <IoMdSearch className='search__icon'/>
+                        </Link>
                     </div>
                 </div>
                 <div className='suggestion' ref={wrapperRef}>

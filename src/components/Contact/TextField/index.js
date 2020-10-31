@@ -15,8 +15,16 @@ const TextField = ({placeholder}) => {
     return (
         <>
             <div className={`textbox input-container ${focus ? 'focus' : null}`}>
-                <textarea onChange={(e) => setInput(e.target.value)} value={input}onBlur={() => handleInput()} onFocus={() => handleInput()} data-gramm_editor="false" />
-                <span className='textarea-span' data-placeholder={placeholder}></span>
+                <textarea 
+                    onChange={(e) => setInput(e.target.value)} 
+                    value={input}onBlur={() => handleInput()} 
+                    onFocus={() => handleInput()} 
+                    data-gramm_editor="false" 
+                />
+                <span 
+                    className='textarea-span' 
+                    data-placeholder={placeholder}
+                />
             </div>
         </>
     )

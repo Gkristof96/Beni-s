@@ -22,16 +22,19 @@ const CurrencyButton = () => {
     };
     return (
         <>
-          <div className='topbar-button' onClick={() => setMenuOpen(!menuOpen)} ref={wrapperRef}>
-                <h1 >{currency} {menuOpen ? <FaChevronUp /> : <FaChevronDown />}</h1>
-                <div className={`dropdown ${(menuOpen? 'open' : null)}`}>
-                    <ul>
-                        <li onClick={() => setCurrency('HUF')}>HUF</li>
-                        <li onClick={() => setCurrency('USD')}>USD</li>
-                        <li onClick={() => setCurrency('EUR')}>EUR</li>
-                    </ul>
-                </div>
-            </div>
+          <div 
+            className='topbar-button' 
+            onClick={() => setMenuOpen(!menuOpen)} 
+            ref={wrapperRef}>
+            <h1 >{currency} {menuOpen ? <FaChevronUp /> : <FaChevronDown />}</h1>
+              <div className={`dropdown ${(menuOpen? 'open' : null)}`}>
+                  <ul>
+                      <li onClick={() => setCurrency('HUF')}>HUF</li>
+                      <li onClick={() => setCurrency('USD')}>USD</li>
+                      <li onClick={() => setCurrency('EUR')}>EUR</li>
+                  </ul>
+              </div>
+          </div>
         </>
     )
 }
