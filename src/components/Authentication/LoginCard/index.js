@@ -12,7 +12,7 @@ const LoginCard = () => {
                     className='close-btn'
                     onClick={() => setVisible(false)}
                 />
-                <h1 className='login-card-title'>Bejelentkezés</h1>
+                <h1 className='title'>Bejelentkezés</h1>
                 <InputField
                     type='email'
                     placeholder='Email'

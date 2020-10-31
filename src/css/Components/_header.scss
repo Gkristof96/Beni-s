@@ -13,13 +13,16 @@ header {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-
-        h1 {
+        .topbar-title {
             font-size: 12px;
             padding-left: 12px;
             color: color(light-text);
             font-weight: normal;
             text-transform: uppercase;
+            .topbar-icon {
+                opacity: 1;
+                transition: all 0.2s ease-in;
+            }
         }
         .topbar-button {
             position: relative;
@@ -32,13 +35,14 @@ header {
                 display: none;
                 max-width: 134px;
                 margin: 0;
+                position: absolute;
+                top: 50px;
+                right: 0;
                 box-shadow: 0px 10px 20px #00000033;
                 background-color: color(light-text);
-                
+                transition: 0.3s ease-in-out;
                 ul {
                     list-style: none;
-
-                    
                     li {
                         text-align: right;
                         padding: 10px 20px;
@@ -61,10 +65,6 @@ header {
             }
             .dropdown.open {
                 display: block;
-                position: absolute;
-                top: 50px;
-                right: 0;
-                
             }
         }
     }

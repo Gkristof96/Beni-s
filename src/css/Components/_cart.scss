@@ -4,8 +4,12 @@
     align-items: center;
     transition: 0.5s ease-in-out;
     height: 100%;
-    .cart-btn {
+    .topbar-btn {
         font-size: 12px;
+        padding-left: 12px;
+        color: color(light-text);
+        font-weight: normal;
+        text-transform: uppercase;
     }
 
     .cart-container {

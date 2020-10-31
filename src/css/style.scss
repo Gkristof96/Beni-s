@@ -81,6 +81,7 @@ html {
     font: normal normal bold 16px/25px Poppins;
     letter-spacing: 0.48px;
 
+    transition: 0.2s ease-in-out;
     &:focus,
     &:active {
       outline: none;

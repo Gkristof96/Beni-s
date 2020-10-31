@@ -26,7 +26,7 @@ const CurrencyButton = () => {
             className='topbar-button' 
             onClick={() => setMenuOpen(!menuOpen)} 
             ref={wrapperRef}>
-            <h1 >{currency} {menuOpen ? <FaChevronUp /> : <FaChevronDown />}</h1>
+            <h1 className='topbar-title'>{currency} {menuOpen ? <FaChevronUp /> : <FaChevronDown />}</h1>
               <div className={`dropdown ${(menuOpen? 'open' : null)}`}>
                   <ul>
                       <li onClick={() => setCurrency('HUF')}>HUF</li>

@@ -21,6 +21,7 @@
     }
     .pager.disabled {
         background: color(dark-secondary);
+        cursor: context-menu;
     }
     ul {
         display: flex;

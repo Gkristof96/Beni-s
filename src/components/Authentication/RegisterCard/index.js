@@ -12,7 +12,7 @@ const RegistrationCard = () => {
                     setVisible(false)
                     setLoginActive(true)
                 }}/>
-                <h1 className='registration-card-title'>Regisztráció</h1>
+                <h1 className='title'>Regisztráció</h1>
                 <InputField
                     type='email'
                     placeholder='Email'

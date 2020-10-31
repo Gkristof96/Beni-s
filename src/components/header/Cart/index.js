@@ -17,7 +17,7 @@ const Cart = () => {
         <>
             <div className='cart'>
                 <h1 
-                  className='cart-btn' 
+                  className='topbar-btn'
                   onClick={() => handleBasketOpen()}>
                   Kosár ({cart.length})
                 </h1>

@@ -30,7 +30,7 @@ const ProfileButton = () => {
                 className='topbar-button' 
                 onClick={() => setMenuOpen(!menuOpen)} 
                 ref={wrapperRef}>
-                <h1 >{`${user.lastname} ${user.firstname}`} {menuOpen ? <FaChevronUp /> : <FaChevronDown />}</h1>
+                <h1 className='topbar-title'>{`${user.lastname} ${user.firstname}`} {menuOpen ? <FaChevronUp /> : <FaChevronDown />}</h1>
                 <div className={`dropdown ${(menuOpen? 'open' : null)}`}>
                     <ul>
                         <li><Link to='/profile'>Profilom</Link></li>

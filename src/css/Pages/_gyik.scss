@@ -31,21 +31,19 @@
                 justify-content: center;
                 flex-direction: column;
                 margin-bottom: 5px;
-                transition: 0.5s;
         
                 .title-bar {
                     height: 80px;
                     position: relative;
                     background: color(grayish);
-                    transition: 0.5s;
                     
                     .title {
                         margin: 0;
                         text-align: left;
+                        padding: 25px 0;
                         margin-left: 20px;
                         font-size: 20px;
                         color: color(dark-text);
-                        transition: 0.5s ease-in-out;
                     }
                     .gyik-icon {
                         position: absolute;
@@ -58,9 +56,9 @@
                 }
                 .title-bar.open {
                     background: transparent linear-gradient(90deg,color(secondary) 0%, color(gradient) 100%);
-                    transition: 0.5s;
                     .title {
                         margin: 0;
+                        padding: 25px 0;
                         text-align: left;
                         font-size: 20px;
                         margin-left: 20px;
@@ -72,6 +70,7 @@
                     }
                 }
                 .dropdown {
+                    opacity: 0;
                     height: 0px;
                     width: 100%;
                     display: none;
@@ -81,7 +80,6 @@
                     background: color(light-text) 0% 0% no-repeat padding-box;
                     box-shadow: 0px 3px 20px color(primary);
                     border-radius: 5px;
-                    transition: 0.5s;
                     p {
                         text-align: left;
                         font: normal normal normal 16px/25px Poppins;
@@ -90,12 +88,11 @@
                     }
                 }
                 .dropdown.open {
+                    opacity: 1;
                     height: 180px;
                     display: block;
-                    transition: 0.5s;
                 }
             }
-            
         }
     }
 }

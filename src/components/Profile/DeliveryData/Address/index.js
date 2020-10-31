@@ -7,7 +7,6 @@ const Address = ({item}) => {
     const {user,setUser} = useContext(AuthContext);
 
     const handleDelete = (id) => {
-        console.log(id)
         setUser({...user, addresses: [...user.addresses.filter((item) => item.id !== id)]})
     }
     return (

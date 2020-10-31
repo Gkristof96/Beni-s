@@ -4,7 +4,6 @@ const ProfileSettings = ({ setUser, user, setIsOpen}) => {
     const [input, setInput] = useState({firstname: "", lastname: "", tel: "", email: ""})
     const handleSubmit = e => {
         e.preventDefault();
-        console.log(e.target.name)
         //setUser({...user, firstname: input.fn, lastname: input.lastname, tel: input.tel, email: input.email})
         setIsOpen(false)
     }
