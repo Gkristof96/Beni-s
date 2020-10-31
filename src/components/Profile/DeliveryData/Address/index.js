@@ -16,7 +16,7 @@ const Address = ({item}) => {
                 <FaTimes className='delete-icon' onClick={() => handleDelete(item.id)}/>
                 <div className='person-data'>
                     <BsFillPersonFill className='person-data__icon'/>
-                    <h1 className='person-data__title'>Nagy Lajos {item.id}</h1>
+                    <h1 className='person-data__title'>{`${item.lastname} ${item.firstname}`}</h1>
                 </div>
                 <div className='address-data'>
                     <FaMapMarkerAlt className='address-data__icon'/>

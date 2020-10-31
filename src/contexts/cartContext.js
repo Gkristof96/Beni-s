@@ -9,24 +9,24 @@ export const CartProvider = ({children}) => {
 
     const addItem = (product, piece) => {
         const check = cart.some(item =>{
-            return item.name === product.name
+            return item.id === product.id
         })
         if(check){
             setCart(cart.map((item) => {
-                if(product.name === item.name) {
+                if(product.id === item.id) {
                     return {...item, count: item.count + parseInt(piece)}
                 }
                 return item;
             }))
         }else{
-            setCart([...cart, {img: product.image, name: product.name, count: parseInt(piece), price: product.discontedprice}])
+            setCart([...cart, {id: product.id, img: product.image, name: product.name, count: parseInt(piece), price: product.discontedprice}])
         }
         
     }
 
     const increase = (product) => {
         setCart(cart.map((item) => {
-            if(product.name === item.name) {
+            if(product.id === item.id) {
                 return {...item, count: item.count+1}
             }
             return item;
@@ -36,7 +36,7 @@ export const CartProvider = ({children}) => {
 
     const decrease = (product) => {
         setCart(cart.map((item) => {
-            if(product.name === item.name && item.count > 1) {
+            if(product.id === item.id && item.count > 1) {
                 return {...item, count: item.count-1}
             }
             return item;
@@ -44,7 +44,7 @@ export const CartProvider = ({children}) => {
     }
 
     const deleteItem = (product) => {
-        setCart(cart.filter((item) => item.name !== product.name))
+        setCart(cart.filter((item) => item.id !== product.id))
     }
 
     const getTotal = () => {

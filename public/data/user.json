@@ -8,6 +8,8 @@
     "addresses": [
         {
             "id": 0,
+            "firstname": "Lajos",
+            "lastname": "Nagy",
             "country": "Magyarország",
             "ir": 9000,
             "city": "Győr",
@@ -16,6 +18,8 @@
         },
         {
             "id": 1,
+            "firstname": "Endre",
+            "lastname": "Nagy", 
             "country": "Magyarország",
             "ir": 9000,
             "city": "Győr",

@@ -3,14 +3,20 @@ import { useParams } from "react-router-dom";
 import axios from 'axios'
 import Partners from '../../components/Partners/index'
 import { GoPrimitiveDot } from 'react-icons/go'
+import { useLocation } from "react-router-dom";
 import CartContext from '../../contexts/cartContext'
 
+function useQuery() {
+    return new URLSearchParams(useLocation().search);
+}
+
 const Product = () => {
+    let query = useQuery();
     const [step,setStep] = useState(1)
     const [count, setCount] = useState(1)
     const {addItem} = useContext(CartContext)
     const [product,setProduct] = useState({})
-    const { id } = useParams();
+    const [id] = useState(query.get("product"));
 
     async function fetchProduct() {
         await axios

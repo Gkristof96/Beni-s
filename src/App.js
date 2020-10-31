@@ -39,7 +39,7 @@ function App() {
                     component={Products}
                   />
                   <Route path='/gyik' component={Gyik} />
-                  <Route path='/product/:id' component={Product} />
+                  <Route path='/product' component={Product} />
                   <Route path='/contact' component={Contact} />
                   <Route path='/profile' component={Profile} />
                   <Route component={NotFound} />

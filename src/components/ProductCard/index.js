@@ -8,7 +8,7 @@ const ProductCard = ({product}) => {
         <>
             
                 <div className='product-card'>
-                    <Link to={`/product/${product.id}`}>
+                    <Link to={`/product?product=${product.id}`}>
                         <div className='new-tag'>új!</div>
                         <img className='product-image' src={product.image} alt={product.name}></img>
                         <h1 className='product-title'>{product.name}</h1>
