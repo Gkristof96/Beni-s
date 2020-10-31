@@ -1031,7 +1031,7 @@ footer .footer-container .copyright img {
   margin: 30px 0;
 }
 
-.input-container input {
+.input-container .input-field {
   font-size: 15px;
   color: #181818;
   border: none;
@@ -1942,7 +1942,7 @@ footer .footer-container .copyright img {
   -ms-grid-column: 2;
   grid-area: addresses;
   margin: 25px 0;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
+  background: transparent 0% 0% no-repeat padding-box;
   -webkit-box-shadow: 0px 20px 60px #0000001F;
           box-shadow: 0px 20px 60px #0000001F;
 }
@@ -1957,11 +1957,14 @@ footer .footer-container .copyright img {
   width: 95%;
   margin: 20px auto;
   padding: 20px;
-  background: #F5F5F5;
+  background: transparent;
+  -webkit-box-shadow: 0px 20px 60px #0000001F;
+          box-shadow: 0px 20px 60px #0000001F;
 }
 
 .settings-container h1 {
   text-align: left;
+  margin: 5px 0;
 }
 
 .settings-container form {
@@ -1978,6 +1981,14 @@ footer .footer-container .copyright img {
 
 .settings-container form input {
   width: 100%;
+}
+
+.settings-container .btn-wrapper {
+  margin: 0 auto;
+}
+
+.settings-container .input-container {
+  margin: 10px 0;
 }
 
 .address-container {
@@ -2028,6 +2039,43 @@ footer .footer-container .copyright img {
   margin: 0 5px;
   font-size: 18px;
   text-align: left;
+}
+
+.profile-settings {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: profile;
+  max-height: 400px;
+  margin: 25px 0;
+  padding: 20px;
+  background: transparent 0% 0% no-repeat padding-box;
+  -webkit-box-shadow: 0px 20px 60px #0000001F;
+          box-shadow: 0px 20px 60px #0000001F;
+  position: relative;
+}
+
+.profile-settings form {
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.profile-settings form .btn {
+  width: calc(100% - 40px);
+  height: 50px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.profile-settings form .input-container {
+  margin: 15px 0;
 }
 
 .profile-section {
@@ -2120,38 +2168,6 @@ footer .footer-container .copyright img {
   padding: 10px;
   background: #DC386D;
   color: #FFFFFF;
-}
-
-.profile-section .profile-container .profile-settings {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: profile;
-  max-height: 400px;
-  margin: 25px 0;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
-  -webkit-box-shadow: 0px 20px 60px #0000001F;
-          box-shadow: 0px 20px 60px #0000001F;
-  position: relative;
-}
-
-.profile-section .profile-container .profile-settings form {
-  width: 80%;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.profile-section .profile-container .profile-settings form .btn {
-  width: calc(100% - 40px);
-  height: 50px;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
 }
 
 .sidebar {

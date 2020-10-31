@@ -1,0 +1,29 @@
+.profile-settings {
+    grid-area: profile;
+    max-height: 400px;
+    margin: 25px 0;
+    padding: 20px;
+
+    background: transparent 0% 0% no-repeat padding-box;
+    box-shadow: 0px 20px 60px #0000001F;
+    position: relative;
+
+    form {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        .btn {
+            width: calc(100% - 40px);
+            height: 50px;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .input-container {
+            margin: 15px 0;
+        }
+    }
+}

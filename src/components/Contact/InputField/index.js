@@ -20,6 +20,7 @@ const InputField = ({type, placeholder}) => {
                     value={input} type={type}
                     onBlur={() => handleInput()}
                     onFocus={() => handleInput()}
+                    className='input-field'
                 />
                 <span 
                     className='input-span' 
