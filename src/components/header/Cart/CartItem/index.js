@@ -11,7 +11,7 @@ const CartItem = ({item}) => {
                 <h1 className='item-name'>{item.name}</h1>
                 <button 
                     className='item-btn' 
-                    onClick={() => decrease(item)}
+                    onClick={() => decrease(item.id)}
                 >-</button>
                 <span 
                     className='item-counter' 
@@ -20,11 +20,11 @@ const CartItem = ({item}) => {
                 </span>
                 <button 
                     className='item-btn' 
-                    onClick={() => increase(item)}
+                    onClick={() => increase(item.id)}
                 >+</button>
                 <ImBin 
                     className='item-icon' 
-                    onClick={() => deleteItem(item)}
+                    onClick={() => deleteItem(item.id)}
                 />
             </li>
         </>

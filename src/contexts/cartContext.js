@@ -7,10 +7,13 @@ export const CartProvider = ({children}) => {
     const [cart, setCart] = useState([])
     const [isbasketOpen, setBasketOpen] = useState(false)
 
+    // termék hozzáadása a kosárhoz (product a termék, piece a hozzáadni kívánt darabszám)
     const addItem = (product, piece) => {
+        // megnézzük hogy a kosárba van-e a termék
         const check = cart.some(item =>{
             return item.id === product.id
         })
+        // ha igen a darabszámot növeljük
         if(check){
             setCart(cart.map((item) => {
                 if(product.id === item.id) {
@@ -18,39 +21,38 @@ export const CartProvider = ({children}) => {
                 }
                 return item;
             }))
-        }else{
+        }
+        // ha nem akkor új terméket rakunk a kosárba
+        else{
             setCart([...cart, {id: product.id, img: product.image, name: product.name, count: parseInt(piece), price: product.discontedprice}])
         }
         
     }
-
-    const increase = (product) => {
+    // darabszám növelése
+    const increase = (id) => {
         setCart(cart.map((item) => {
-            if(product.id === item.id) {
+            if(id === item.id) {
                 return {...item, count: item.count+1}
             }
             return item;
             
         }))
     }
-
-    const decrease = (product) => {
+    // darabszám csökkentése
+    const decrease = (id) => {
         setCart(cart.map((item) => {
-            if(product.id === item.id && item.count > 1) {
+            if(id === item.id && item.count > 1) {
                 return {...item, count: item.count-1}
             }
             return item;
         }))
     }
-
-    const deleteItem = (product) => {
-        setCart(cart.filter((item) => item.id !== product.id))
+    // kosár termék törlő, ha üres a kosár bezárja a fület
+    const deleteItem = (id) => {
+        setCart(cart.filter((item) => item.id !== id))
         if(cart.length <= 1){
             setBasketOpen(false);
         }
-    }
-
-    const getTotal = () => {
     }
 
     const providerValue = {
@@ -61,8 +63,7 @@ export const CartProvider = ({children}) => {
         addItem,
         decrease,
         increase,
-        deleteItem,
-        getTotal
+        deleteItem
     };
 
     return (
