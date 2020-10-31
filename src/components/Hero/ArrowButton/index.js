@@ -3,7 +3,7 @@ import React from 'react'
 const ArrowButton = ({icon}) => {
     return (
         <> 
-            <div className='btn'>
+            <div className='arrow-btn'>
                 <a href='/' className='icon'>{icon}</a>
             </div>
         </>
