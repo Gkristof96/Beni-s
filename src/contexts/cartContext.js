@@ -45,6 +45,9 @@ export const CartProvider = ({children}) => {
 
     const deleteItem = (product) => {
         setCart(cart.filter((item) => item.id !== product.id))
+        if(cart.length <= 1){
+            setBasketOpen(false);
+        }
     }
 
     const getTotal = () => {
