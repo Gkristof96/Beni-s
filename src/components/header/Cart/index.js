@@ -25,7 +25,7 @@ const Cart = () => {
                   <ul>
                     {cart.map((item,i) => <CartItem key={i} item={item} />)}
                   </ul>
-                  <h2>Teljes ár: {total} Ft</h2>
+                  <h2 className='total-price'>Teljes ár: {total} Ft</h2>
                 </div>
             </div>
             

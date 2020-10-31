@@ -16,15 +16,12 @@
                 
         ul {
             list-style: none;
-                    
-            li {
+            .cart-item {
                 text-align: right;
                 padding: 10px 20px;
                 color: color(dark-text);
                 font: normal normal normal 14px/21px Poppins;
                 letter-spacing: 0.56px;
-            }
-            .cart-item {
                 height: 100px;
                 display: flex;
                 align-items: center;
@@ -50,7 +47,7 @@
                     height: 70px;
                     text-align: center;
                     margin: 0 5px;
-
+                    padding: 15px 0;
                     background: color(grayish) 0% 0% no-repeat padding-box;
                     border-radius: 5px;
                     border: none;
@@ -63,7 +60,7 @@
                     height: 35px;
                     text-align: center;
                     margin: 0 7px;
-
+                    
                     background: color(grayish) 0% 0% no-repeat padding-box;
                     border-radius: 5px;
                     border: none;
@@ -93,7 +90,7 @@
             border-bottom: 10px solid color(light-text);
         }
 
-        h2 {
+        .total-price {
             margin: 25px;
             padding: 10px 0;
             padding-left: 10px;
@@ -103,6 +100,7 @@
     }
     .cart-container.open {
         display: block;
+        padding: 0;
         position: absolute;
         top: 50px;
         right: 0;
@@ -112,8 +110,46 @@
 
 @media (max-width: 768px) {
     .cart {
+        position: static;
         .cart-btn {
             font-size: 8px;
+        }
+        .cart-container {
+            width: 100vw;
+            left: 0;
+            ul::after {
+                display: none;
+            }
+            ul {
+                width: 100%;
+                .cart-item {
+                    height: 70px;
+                    padding: 10px;
+                    margin: 15px;
+                    .item-img {
+                        height: 30px;
+                    }
+                    .item-name {
+                        font-size: 8px;
+                    }
+                    .item-count {
+                        width: 50px;
+                        height: 50px;
+                    }
+                    .item-btn {
+                        width: 20px;
+                        height: 20px;
+                        font-size: 10px;
+                    }
+                    .item-icon {
+                        height: 20px;
+                        width: 20px;
+                    }
+                }
+            }
+            .total-price {
+                margin: 15px;
+            }
         }
     }
 }

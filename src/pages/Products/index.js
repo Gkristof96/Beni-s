@@ -72,7 +72,6 @@ const Products = ({basket, setBasket}) => {
                             />
                         ))}
                     </div>
-                    <button onClick={() => filterData()}>írd ki</button>
                     <div className='pagination-wrapper'>
                         <Pagination
                             totalPosts={products.length}

@@ -26,7 +26,6 @@ const CartItem = ({item}) => {
                     className='item-icon' 
                     onClick={() => deleteItem(item)}
                 />
-                <h1>{item.price}</h1>
             </li>
         </>
     )
