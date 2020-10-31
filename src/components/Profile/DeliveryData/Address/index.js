@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { BsFillPersonFill } from 'react-icons/bs'
-import { FaMapMarkerAlt } from 'react-icons/fa'
+import { FaMapMarkerAlt, FaTimes } from 'react-icons/fa'
+import AuthContext from '../../../../contexts/authContext'
 
 const Address = ({item}) => {
+    const {user,setUser} = useContext(AuthContext);
+
+    const handleDelete = (id) => {
+        console.log(id)
+        setUser({...user, addresses: [...user.addresses.filter((item) => item.id !== id)]})
+    }
     return (
         <>
             <div className='address-container'>
+                <FaTimes className='delete-icon' onClick={() => handleDelete(item.id)}/>
                 <div className='person-data'>
                     <BsFillPersonFill className='person-data__icon'/>
-                    <h1 className='person-data__title'>Nagy Lajos</h1>
+                    <h1 className='person-data__title'>Nagy Lajos {item.id}</h1>
                 </div>
                 <div className='address-data'>
                     <FaMapMarkerAlt className='address-data__icon'/>

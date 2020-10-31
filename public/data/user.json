@@ -7,6 +7,7 @@
     "order_count": 4,
     "addresses": [
         {
+            "id": 0,
             "country": "Magyarország",
             "ir": 9000,
             "city": "Győr",
@@ -14,6 +15,7 @@
             "other": ""
         },
         {
+            "id": 1,
             "country": "Magyarország",
             "ir": 9000,
             "city": "Győr",

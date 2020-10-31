@@ -1997,6 +1997,14 @@ footer .footer-container .copyright img {
   margin: 20px auto;
   background: #F5F5F5;
   padding: 25px;
+  position: relative;
+}
+
+.address-container .delete-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
 }
 
 .address-container .person-data {

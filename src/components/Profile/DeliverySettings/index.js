@@ -5,7 +5,7 @@ const DeliverySettings = ({setOpen, user, setUser}) => {
     const [input, setInput] = useState({street: "", other: "", ir: "", city: "", country: ""})
     const handleSubmit = (e) => {
         e.preventDefault()
-        setUser({...user, addresses: [...user.addresses, {city: input.city, street: input.street, other: input.other, ir: input.ir, country: input.country}]})
+        setUser({...user, addresses: [...user.addresses, {id: user.addresses.length, city: input.city, street: input.street, other: input.other, ir: input.ir, country: input.country}]})
         //setUser()
         setOpen(false)
     }
