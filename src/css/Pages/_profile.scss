@@ -4,8 +4,9 @@
 @import '../Components/profile/profilesettings';
 
 .profile-section {
-    margin-top: 200px;
     width: 100%;
+    margin-top: 200px;
+    
     .page-title {
         width: 60%;
         margin: auto;
@@ -17,14 +18,16 @@
     .profile-container {
         width: 60%;
         margin: 0 auto;
+
         display: grid;
         grid-template-columns: 4fr 8fr;
         grid-template-areas: 'profile addresses';
         grid-column-gap: 25px;
+
         .profile-data {
             grid-area: profile;
-            margin: 25px 0;
             max-height: 400px;
+            margin: 25px 0;
             padding: 20px;
             position: relative;
 
@@ -36,24 +39,28 @@
                 position: absolute;
                 top: 20px;
                 right: 20px;
+
                 font-size: 32px;
             }
             .profile-name {
+                margin-bottom: 20px;
+
                 font: normal normal bold 24px/32px Poppins;
                 letter-spacing: 0px;
                 color: color(dark-text);
-                margin-bottom: 20px;
             }
             .text-wrapper {
+                margin: 10px 0;
+
                 display: flex;
                 align-items: center;
-                margin: 10px 0;
                 .profile-tel{
+                    margin: 0;
+
                     font: normal normal medium 18px/32px Poppins;
                     letter-spacing: 0px;
                     text-align: left;
                     color: color(dark-text);
-                    margin: 0;
                 }
                 .profile-icon {
                     margin-right: 5px;
@@ -65,11 +72,12 @@
             }
 
             .profile-order {
+                width: calc(100% - 40px);
+                padding: 10px;
                 position: absolute;
                 bottom: 20px;
                 left: 20px;
-                width: calc(100% - 40px);
-                padding: 10px;
+                
                 background: color(secondary);
                 color: color(light-text);
             }
@@ -87,6 +95,7 @@
         }
         .profile-container {
             width: 90%;
+            
             grid-template-columns: 1fr;
             grid-template-rows: 450px auto;
             grid-template-areas: 'profile' 'addresses';

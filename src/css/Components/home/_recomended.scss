@@ -1,5 +1,6 @@
 .recomended-section {
     width: 100%;
+
     background: linear-gradient(
       135deg,
       rgba(122, 35, 60, 0.9) 0%,
@@ -10,18 +11,21 @@
     .recomended-container {
         width: 60vw;
         margin: 0 auto;
+
         display: flex;
         flex-direction: column;
         align-items: center;
     
         .section-title {
-            color: color(light-text);
             margin-top: 70px;
             margin-bottom: 30px;
+
+            color: color(light-text);
         }
     
         .products-container {
             width: 100%;
+
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
@@ -29,21 +33,21 @@
     
     
         .recomended-btn {
-
-            margin: 50px 0;
             width: 280px;
             height: 70px;
-    
-            background: color(secondary) 0% 0% no-repeat padding-box;
-            border-radius: 6px;
-    
+            margin: 50px 0;
+            padding: 25px 0;
+
             text-align: center;
             text-decoration: none;
-            padding: 25px 0;
+            
+            background: color(secondary) 0% 0% no-repeat padding-box;
+            border-radius: 6px;
             font: normal normal bold 16px/25px Poppins;
             letter-spacing: 0.48px;
             color: color(light-text);
             text-transform: uppercase;
+            
             transition: transform 0.5s ease-in-out;
             &:hover {
                 background: color(light-secondary);

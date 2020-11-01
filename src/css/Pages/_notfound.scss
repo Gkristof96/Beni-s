@@ -12,23 +12,26 @@
         justify-content: center;
 
         .title {
+            margin-bottom: 25px;
+
             font: normal normal 600 46px/54px Poppins;
             letter-spacing: 0px;
             color: color(secondary);
-            margin-bottom: 25px;
         }
 
         .subtitle {
+            margin-bottom: 20px;
+
             font: normal normal normal 18px/30px Poppins;
             letter-spacing: 0px;
             color: color(secondary);
-            margin-bottom: 20px;
         }
         .btn {
             width: 280px;
             height: 70px;
-            text-decoration: none;
             padding: 25px 0;
+
+            text-decoration: none;
         }
     }
 }

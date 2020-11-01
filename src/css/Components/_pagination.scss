@@ -5,12 +5,14 @@
     .pager {
         width: 70px;
         height: 70px;
-        cursor: pointer;
-        background: color(secondary) 0% 0% no-repeat padding-box;
-        border-radius: 6px;
+
         display: flex;
         justify-content: center;
         align-items: center;
+
+        cursor: pointer;
+        background: color(secondary) 0% 0% no-repeat padding-box;
+        border-radius: 6px;
         .pager-icon {
             color: #fff;
             font-size: 32px;
@@ -29,6 +31,7 @@
 
         .pagination-item {
             padding: 20px;
+            
             text-align: center;
             font: normal normal medium 14px/21px Poppins;
             letter-spacing: 2.8px;

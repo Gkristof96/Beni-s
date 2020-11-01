@@ -1,17 +1,18 @@
 .white-header {
     height: 200px;
-    background: color(light-text);
-    position: relative;
     margin-top: 200px;
     padding: 0 10px;
 
+    background: color(light-text);
+    position: relative;
     .products-title {
         width: 60vw;
+        margin: 20px auto;
+
         text-align: left;
         font: normal normal bold 36px/48px Poppins;
         letter-spacing: 0px;
         color: color(colored-text);
-        margin: 20px auto;
     }
 
     .search-wrapper {
@@ -24,6 +25,8 @@
 }
 
 .products-section {
+    margin-top: 0;
+
     background: linear-gradient(
       135deg,
       rgba(122, 35, 60, 0.9) 0%,
@@ -31,11 +34,11 @@
     ),
     url('background.png') center no-repeat;
     background-size: cover;
-    margin-top: 0;
     .products-container {
+        width: 60vw;
         margin: 0 auto;
         padding-top: 150px;
-        width: 60vw;
+        
         display: flex;
         flex-direction: column;
         align-items: center;

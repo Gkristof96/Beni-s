@@ -5,31 +5,34 @@ nav {
     top: 50px;
     left: 0;
     z-index: 9;
+
     background-color: color(light-text);
     .nav-container {
         width: 80%;
         margin: 0 auto;
         height: 100%;
+
         display: flex;
         justify-content: space-between;
         align-items: center;
         .logo {
             height: 100%;
+
             display: flex;
             align-items: center;
             text-decoration: none;
             &__title {
+                margin-left: 1rem;
+
                 font-family: 'Pacifico', sans-serif;
                 color: color(primary);
                 font-size: 65px;
                 font-weight: normal;
-                margin-left: 1rem;
             }
 
             &__image {
                 height: 75px;
                 transform: rotate(-20deg);
-
             }
         }
         .navbar {
@@ -41,8 +44,8 @@ nav {
             &__item {
                 text-transform: uppercase;
                 padding-left: 1rem;
-                font-weight: bold;
-                font-size: 16px;
+                text-align: left;
+                font: normal normal bold 16px/25px Poppins;
                 letter-spacing: 0.96px;
                 a {
                     text-decoration: none;

@@ -5,19 +5,23 @@ header {
     top: 0;
     left: 0;
     z-index: 10;
+
     background-color: color(primary);
     .top-container {
         width: 80%;
         height: 100%;
         margin: 0 auto;
+
         display: flex;
         justify-content: flex-end;
         align-items: center;
         .topbar-title {
-            font-size: 12px;
             padding-left: 12px;
+
+            text-align: right;
+            font: normal normal normal 12px/18px Poppins;
+            letter-spacing: 0.48px;
             color: color(light-text);
-            font-weight: normal;
             text-transform: uppercase;
             .topbar-icon {
                 opacity: 1;
@@ -25,11 +29,12 @@ header {
             }
         }
         .topbar-button {
+            height: 100%;
             position: relative;
             display: flex;
             align-items: center;
+
             transition: 0.5s ease-in-out;
-            height: 100%;
             cursor: pointer;
             .dropdown {
                 display: none;
@@ -38,6 +43,7 @@ header {
                 position: absolute;
                 top: 50px;
                 right: 0;
+
                 box-shadow: 0px 10px 20px #00000033;
                 background-color: color(light-text);
                 transition: 1s ease-in-out;
@@ -48,8 +54,9 @@ header {
                             text-decoration: none;
                             color: color(dark-text);
                         }
-                        text-align: right;
                         padding: 10px 20px;
+                        
+                        text-align: right;
                         font: normal normal normal 14px/21px Poppins;
                         letter-spacing: 0.56px;
                     }

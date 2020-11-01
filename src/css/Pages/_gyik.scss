@@ -7,40 +7,41 @@
             margin: 15px 0;
         }
         .category-container {
-            
+            height: auto;
+            margin-bottom: 50px;
+
             display: flex;
             align-items: center;
             flex-direction: column;
-            height: auto;
-            margin-bottom: 50px;
             .category-title {
                 width: 100%;
+                margin: 25px 0;
+
                 text-align: left;
-                font-size: 28px;
+                font: normal normal medium 28px/48px Poppins;
                 letter-spacing: 0px;
                 color: color(dark-text);
-                margin: 25px 0;
-                
             }
             .question-container {
                 width: 60vw;
+                margin-bottom: 5px;
+
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
-                margin-bottom: 5px;
-        
                 .title-bar {
                     height: 80px;
                     position: relative;
-                    background: color(grayish);
                     display: flex;
                     align-items: center;
-                    
+
+                    background: color(grayish);
                     .title {
                         width: 80%;
                         margin: 0;
-                        text-align: left;
                         margin-left: 20px;
+
+                        text-align: left;
                         font-size: 20px;
                         color: color(dark-text);
                     }
@@ -49,17 +50,18 @@
                         top: 50%;
                         right: 25px;
                         transform: translateY(-50%);
+
                         font-size: 30px;
-                        
                     }
                 }
                 .title-bar.open {
                     background: transparent linear-gradient(90deg,color(secondary) 0%, color(gradient) 100%);
                     .title {
                         margin: 0;
-                        text-align: left;
-                        font-size: 20px;
                         margin-left: 20px;
+
+                        text-align: left;
+                        font: normal normal medium 20px/48px Poppins;
                         letter-spacing: 0px;
                         color: color(light-text);
                     }
@@ -68,9 +70,10 @@
                     }
                 }
                 .dropdown {
-                    animation: close 0.3s ease-in-out;
                     max-height: 0px;
                     width: 100%;
+
+                    animation: close 0.3s ease-in-out;
                     background-color: color(light-text);
                     background: color(light-text) 0% 0% no-repeat padding-box;
                     box-shadow: 0px 3px 20px color(primary);
@@ -78,6 +81,7 @@
                     p {
                         margin: 25px;
                         opacity: 0;
+
                         text-align: left;
                         font: normal normal normal 16px/25px Poppins;
                         letter-spacing: 0px;
@@ -85,12 +89,12 @@
                     }
                 }
                 .dropdown.open {
-                    animation: open 1s ease-in-out;
                     max-height: 500px;
+
+                    animation: open 1s ease-in-out;
                     p {
                         opacity: 1;
                     }
-                    transition: max-height 1s ease-in-out;
                 }
             }
         }
@@ -114,6 +118,7 @@
                 margin-bottom: 10px;
                 .category-title {
                     margin: 10px 0;
+
                     font-size: 14px;
                 }
                 .question-container {
@@ -122,6 +127,7 @@
                         height: 50px;
                         .title {
                             margin-left: 10px;
+                            
                             font-size: 12px;
                         }
                         .gyik-icon {
@@ -131,6 +137,7 @@
                     .title-bar.open {
                         .title {
                             margin-left: 10px;
+
                             font-size: 10px;
                         }
                     }
