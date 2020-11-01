@@ -336,6 +336,9 @@ nav .nav-container .hamburger-icon {
   grid-area: search;
   margin: 0 auto;
   position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .search-wrapper .search {
@@ -425,6 +428,8 @@ nav .nav-container .hamburger-icon {
   top: 150px;
   left: 0;
   z-index: 5;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .search-wrapper .suggestion ul {

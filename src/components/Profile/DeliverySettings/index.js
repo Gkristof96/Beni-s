@@ -1,31 +1,38 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import InputField from '../../Contact/InputField'
+import validateAddress from '../../validateAddress'
+import useAddress from '../../useAddress'
+import AuthContext from '../../../contexts/authContext'
 
-const DeliverySettings = ({setOpen, user, setUser}) => {
-    const [input, setInput] = useState({street: "", other: "", ir: "", city: "", country: ""})
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        setUser({...user, addresses: [...user.addresses, {id: user.addresses.length, city: input.city, street: input.street, other: input.other, ir: input.ir, country: input.country}]})
-        //setUser()
+const DeliverySettings = ({setOpen}) => {
+    const {user,setUser} = useContext(AuthContext)
+
+    const addAddress = () => {
+        setUser({...user, addresses: [...user.addresses, {id: user.addresses.length, firstname: values.firstname, lastname: values.lastname, city: values.city, street: values.street, other: values.other, ir: values.ir, country: values.country}]})
         setOpen(false)
     }
+    const { handleChange, handleSubmit, values, errors } = useAddress(
+        validateAddress,
+        addAddress
+    );
     return (
         <>
             <div className='settings-container'>
                 <h1>Új cím</h1>
                 <form onSubmit={handleSubmit}>
-                    <InputField type='text' placeholder='Vezetéknév'/>
-                    <InputField type='text' placeholder='Keresztnév'/>
-                    <InputField type='text' placeholder='Utca, házszám'/>
-                    <InputField type='text' placeholder='Megjegyzés'/>
-                    <InputField type='text' placeholder='Irányítószám'/>
-                    <InputField type='text' placeholder='Város'/>
-                    <InputField type='text' placeholder='Ország'/>
-                    {/*<input name='city' value={input.city} onChange={(e) => setInput({...input, city: e.target.value})}/>
-                    <input name='street' value={input.street} onChange={(e) => setInput({...input, street: e.target.value})}/>
-                    <input name='other' value={input.other} onChange={(e) => setInput({...input, other: e.target.value})}/>
-                    <input name='ir' value={input.ir} onChange={(e) => setInput({...input, ir: e.target.value})}/>
-    <input name='country' value={input.country} onChange={(e) => setInput({...input, country: e.target.value})}/>*/}
+                    <input type="text" name='firstname' value={values.firstname} onChange={handleChange}></input>
+                    {errors.firstname && <p>{errors.firstname}</p>}
+                    <input type="text" name='lastname' value={values.lastname} onChange={handleChange}></input>
+                    {errors.lastname && <p>{errors.lastname}</p>}
+                    <input type="text" name='street' value={values.street} onChange={handleChange}></input>
+                    {errors.street && <p>{errors.street}</p>}
+                    <input type="text" name='other' value={values.other} onChange={handleChange}></input>
+                    <input type="text" name='ir' value={values.ir} onChange={handleChange}></input>
+                    {errors.ir && <p>{errors.ir}</p>}
+                    <input type="text" name='city' value={values.city} onChange={handleChange}></input>
+                    {errors.city && <p>{errors.city}</p>}
+                    <input type="text" name='country' value={values.country} onChange={handleChange}></input>
+                    {errors.country && <p>{errors.country}</p>}
                     <div className='btn-wrapper'>
                         <button className='btn' onClick={() => setOpen(false)}>Töröl</button>
                         <button className='btn' type='submit'>Mentés</button>
