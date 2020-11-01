@@ -5,8 +5,8 @@ export const AuthContext = React.createContext();
 
 export const AuthProvider = ({children}) => {
     const [isLoggedIn,setLoggedIn] = useState(false)
-    const [authVisible, setVisible] = useState(false)
-    const [loginActive, setLoginActive] = useState(true)
+    const [isauthVisible, setVisible] = useState(false)
+    const [isloginActive, setLoginActive] = useState(true)
     const [user, setUser] = useState({})
     const [isLoading, setLoading] = useState(true)
 
@@ -34,9 +34,9 @@ export const AuthProvider = ({children}) => {
     const providerValue = {
         isLoggedIn,
         setLoggedIn,
-        authVisible,
+        isauthVisible,
         setVisible,
-        loginActive,
+        isloginActive,
         setLoginActive,
         handleLogin,
         handleLogout,

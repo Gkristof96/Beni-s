@@ -35,9 +35,7 @@ const Profile = () => {
                         {isLoading ?
                         null 
                         :
-                        <DeliveryData 
-                            setUser={setUser} 
-                            user={user} 
+                        <DeliveryData
                             addresses={user.addresses} 
                         />}
                     </div>

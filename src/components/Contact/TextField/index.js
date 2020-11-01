@@ -14,7 +14,7 @@ const TextField = ({placeholder}) => {
     }
     return (
         <>
-            <div className={`textbox input-container ${focus ? 'focus' : null}`}>
+            <div className={`textbox input-container ${focus && 'focus'}`}>
                 <textarea 
                     onChange={(e) => setInput(e.target.value)} 
                     value={input}onBlur={() => handleInput()} 

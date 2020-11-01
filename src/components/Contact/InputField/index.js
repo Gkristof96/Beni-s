@@ -13,7 +13,7 @@ const InputField = ({type, placeholder, name, value, handleChange}) => {
     }
     return (
         <>
-            <div className={`input-container ${focus ? 'focus' : null}`}>
+            <div className={`input-container ${focus && 'focus'}`}>
                 <input
                     name={name}
                     onChange={handleChange}

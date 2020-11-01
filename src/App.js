@@ -23,15 +23,13 @@ function App() {
       <CartProvider>
         <Router>
           <AuthProvider>
-            <Header/>
-          
-          <Nav setOpen={setOpen}/>
-          <SideBar isSideBarOpen={isSideBarOpen} setOpen={setOpen}/>
-          
+              <Header/>
+              <Nav setOpen={setOpen}/>
+              <SideBar isSideBarOpen={isSideBarOpen} setOpen={setOpen}/>
                 <Switch>
                   <Route
-                    path="/"
                     exact
+                    path="/"
                     component={Home}
                   />
                   <Route
@@ -42,8 +40,8 @@ function App() {
                   <Route path='/gyik' component={Gyik} />
                   <Route path='/product' component={Product} />
                   <Route path='/contact' component={Contact} />
-                  <PrivateRoute >
-                    <Route path='/profile' component={Profile} />
+                  <PrivateRoute path='/profile'>
+                    <Profile />
                   </PrivateRoute>
                   <Route component={NotFound} />
                 </Switch>

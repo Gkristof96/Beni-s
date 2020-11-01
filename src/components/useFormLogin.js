@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
 
-const useUser = (validateUser, user, changeUser) => {
+const useFormLogin = (validateLogin, handleLogin) => {
   const [values, setValues] = useState({
-    firstname: user.firstname,
-    lastname: user.lastname,
-    tel: user.tel,
-    email: user.email
+    email: '',
+    password: ''
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -21,13 +19,14 @@ const useUser = (validateUser, user, changeUser) => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    setErrors(validateUser(values));
+    setErrors(validateLogin(values));
     setIsSubmitting(true);
   };
 
   useEffect(() => {
+      // bejelentkeztetés ha nincs error
       if (Object.keys(errors).length === 0 && isSubmitting) {
-        changeUser();
+        handleLogin();
       }
       // eslint-disable-next-line
 },[errors]);
@@ -35,4 +34,4 @@ const useUser = (validateUser, user, changeUser) => {
   return { handleChange, handleSubmit, values, errors };
 };
 
-export default useUser;
+export default useFormLogin;

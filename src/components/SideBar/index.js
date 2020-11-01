@@ -6,7 +6,7 @@ const SideBar = ({isSideBarOpen, setOpen}) => {
     return (
         <>
             <div 
-                className={`sidebar ${isSideBarOpen ? 'open' : null}`} 
+                className={`sidebar ${isSideBarOpen && 'open'}`} 
                 onClick={() => setOpen(false)}>
                 <FaTimes className='sidebar__icon' onClick={() => setOpen(false)}
                 />

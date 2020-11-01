@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 
 const Home = ({ setBasket, basket }) => {
     const [products, setProducts] = useState([])
+    
     async  function fetchProducts() {
         await axios
             .get("../data/products.json")

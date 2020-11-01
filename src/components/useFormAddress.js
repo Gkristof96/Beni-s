@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const useAddress = (validateAddress, addAddress) => {
+const useFormAddress = (validateAddress, addAddress) => {
   const [values, setValues] = useState({
     firstname: '',
     lastname: '',
@@ -29,6 +29,7 @@ const useAddress = (validateAddress, addAddress) => {
   };
 
   useEffect(() => {
+      // új cím felvétele ha nincs error
       if (Object.keys(errors).length === 0 && isSubmitting) {
         addAddress();
       }
@@ -39,4 +40,4 @@ const useAddress = (validateAddress, addAddress) => {
   return { handleChange, handleSubmit, values, errors };
 };
 
-export default useAddress;
+export default useFormAddress;

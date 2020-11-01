@@ -1,5 +1,5 @@
 import React from 'react'
-import useUser from '../../useUser'
+import useFormUser from '../../useFormUser'
 import validateUser from '../../validateUser'
 
 const ProfileSettings = ({ setUser, user, setIsOpen}) => {
@@ -8,7 +8,7 @@ const ProfileSettings = ({ setUser, user, setIsOpen}) => {
         setIsOpen(false);
     }
 
-    const { handleChange, handleSubmit, values, errors } = useUser(
+    const { handleChange, handleSubmit, values, errors } = useFormUser(
         validateUser,
         user,
         changeUser

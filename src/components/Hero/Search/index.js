@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom'
 import { IoMdSearch } from 'react-icons/io'
 import Suggestion from './Suggestion'
 import axios from 'axios'
-import { FaSatelliteDish } from 'react-icons/fa'
 
 const Search = ({ placeholder, type }) => {
     const [suggestions, setSuggestions] = useState([]);
     const [search, setSearch] = useState('')
-    const [display, setDisplay] = useState(false);
+    const [isdisplay, setDisplay] = useState(false);
     const [products, setProducts] = useState([])
     const wrapperRef = useRef(null);
 
+    // termékek beolvasása
     async  function fetchProducts() {
         await axios
             .get("../data/products.json")
@@ -20,7 +20,7 @@ const Search = ({ placeholder, type }) => {
             })
             .catch((error) => console.log(error));
     }
-    
+    // kosáron kívül való kattintás eseményfigyelő hozzáadása
     useEffect(() => {
         fetchProducts();
         document.addEventListener("mousedown", handleClickOutside);
@@ -29,7 +29,8 @@ const Search = ({ placeholder, type }) => {
         };
         // eslint-disable-next-line
     }, [])
-
+    
+    // input változás kezelése, ajánlatok tömb feltöltése az input alapján
     const onTextChange = (e) => {
         const value = e.target.value;
         if (value.length > 0) {
@@ -39,9 +40,9 @@ const Search = ({ placeholder, type }) => {
         setSearch(value);
       };
 
+    // 
     const suggestionChanged = (value) => {
         if (suggestions.length > 1) {
-        console.log(value)
         setSearch(value.name);
         setSuggestions([]);
         setDisplay(false);
@@ -49,7 +50,7 @@ const Search = ({ placeholder, type }) => {
         setDisplay(false);
     };
 
-
+    // külső kattintás kezelése
     const handleClickOutside = (e) => {
         const { current: wrap } = wrapperRef;
         if (wrap && !wrap.contains(e.target)) {
@@ -81,7 +82,7 @@ const Search = ({ placeholder, type }) => {
                     <Suggestion
                         suggestions={suggestions}
                         suggestionChanged={suggestionChanged}
-                        display={display}
+                        display={isdisplay}
                     />
                 </div>
             </div>

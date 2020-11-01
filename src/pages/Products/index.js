@@ -7,8 +7,8 @@ import axios from 'axios'
 const Products = ({basket, setBasket}) => {
     const [products, setProducts] = useState([])
     const [search, setSearch] = useState('')
-
     const [currentPage, setCurrentPage] = useState(1);
+
     const paginate = (pageNumber) => {
         if (!(pageNumber < 1 || pageNumber > numberOfPages)) {
         setCurrentPage(pageNumber);
@@ -29,6 +29,7 @@ const Products = ({basket, setBasket}) => {
         fetchProducts();
     },[])
 
+    // lapozáshoz szükséges adatok kiszámítása
     const numberOfPages = products.length / 6;
     const indexOfLastPost = currentPage * 6;
     const indexOfFirstPost = indexOfLastPost - 6;

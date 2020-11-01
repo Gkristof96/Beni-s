@@ -2,6 +2,7 @@ import React from 'react'
 import { HiOutlineArrowNarrowLeft, HiOutlineArrowNarrowRight} from 'react-icons/hi'
 const Pagination = ({totalPosts, currentPage, paginate}) => {
     const pageNumbers = [];
+    // lapozó számsor létrehozása
     for (let i = 1; i <= Math.ceil(18 / 6); i++) {
         pageNumbers.push(i);
     }
@@ -18,7 +19,7 @@ const Pagination = ({totalPosts, currentPage, paginate}) => {
                     {pageNumbers.map((number) => (
                         <li
                         key={number}
-                        className={`pagination-item ${currentPage === number ? "active" : ''}`}
+                        className={`pagination-item ${currentPage === number && "active"}`}
                         onClick={() => paginate(number)}
                         >
                         {number}

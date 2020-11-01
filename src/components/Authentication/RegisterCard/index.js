@@ -16,7 +16,7 @@ const RegistrationCard = () => {
           ...values,
           [name]: value
         });
-      };
+    };
     return (
         <>
                 <IoMdClose className='close-btn' onClick={() => {

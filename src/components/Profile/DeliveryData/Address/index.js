@@ -6,6 +6,7 @@ import AuthContext from '../../../../contexts/authContext'
 const Address = ({item}) => {
     const {user,setUser} = useContext(AuthContext);
 
+    // cím törlése id alapján
     const handleDelete = (id) => {
         setUser({...user, addresses: [...user.addresses.filter((item) => item.id !== id)]})
     }

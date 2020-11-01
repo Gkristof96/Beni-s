@@ -4,7 +4,6 @@ import ArrowButton from './ArrowButton'
 import Search from './Search'
 
 const Hero = () => {
-    
     return (
         <>
             <section className='hero-section'>

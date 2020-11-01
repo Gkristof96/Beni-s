@@ -8,7 +8,7 @@ import AuthContext from '../../contexts/authContext'
 import Authentication from '../Authentication'
 
 const Header = () => {
-    const {isLoggedIn, authVisible, setVisible} = useContext(AuthContext)
+    const {isLoggedIn, isauthVisible, setVisible} = useContext(AuthContext)
     return (
         <>
             <header>
@@ -17,7 +17,7 @@ const Header = () => {
                     <Cart/>
                     <LanguageButton />
                     <CurrencyButton  />
-                    {authVisible ? <Authentication/> : null}
+                    {isauthVisible && <Authentication/>}
                 </div>
             </header>
         </>

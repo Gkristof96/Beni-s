@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 
-const useForm = (validate, handleLogin) => {
+const useFromUser = (validateUser, user, changeUser) => {
   const [values, setValues] = useState({
-    email: '',
-    password: ''
+    firstname: user.firstname,
+    lastname: user.lastname,
+    tel: user.tel,
+    email: user.email
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -18,14 +20,14 @@ const useForm = (validate, handleLogin) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-
-    setErrors(validate(values));
+    setErrors(validateUser(values));
     setIsSubmitting(true);
   };
 
   useEffect(() => {
+      // user adatainak felülírása ha nincs error
       if (Object.keys(errors).length === 0 && isSubmitting) {
-        handleLogin();
+        changeUser();
       }
       // eslint-disable-next-line
 },[errors]);
@@ -33,4 +35,4 @@ const useForm = (validate, handleLogin) => {
   return { handleChange, handleSubmit, values, errors };
 };
 
-export default useForm;
+export default useFromUser;
