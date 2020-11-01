@@ -10,12 +10,18 @@ export const AuthProvider = ({children}) => {
     const [user, setUser] = useState({})
     const [isLoading, setLoading] = useState(true)
 
+    
     const handleLogin = () => {
         setLoggedIn(true)
         setVisible(false)
     }
 
-    async  function fetchUser() {
+    const handleLogout = () => {
+        setLoggedIn(false)
+    }
+
+    // user adatok betöltése
+    async function fetchUser() {
         await axios
             .get("../data/user.json")
             .then((response) => {
@@ -23,11 +29,6 @@ export const AuthProvider = ({children}) => {
                 setLoading(false)
             })
             .catch((error) => console.log(error));
-    }
-
-    const handleLogout = () => {
-        setLoggedIn(false)
-        setVisible(false)
     }
 
     const providerValue = {

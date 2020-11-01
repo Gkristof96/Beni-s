@@ -27,6 +27,7 @@
             transform: scale(1.3,1.3);
         }
     }
+
     //kártya cím
     .title {
         text-align: left;
@@ -34,28 +35,37 @@
         letter-spacing: 0px;
         color: color(dark-text);
     }
-    //kártya gomb
-    .btn {
-        width: 100%;
-        height: 70px;
-    }
-    // kiemelt szöveg
-    .highlight-text {
-        text-align: left;
-        font: normal normal bold 16px/25px Poppins;
-        letter-spacing: 0px;
-        color: color(secondary);
-        margin: 20px 0;
-        font-weight: bold;
-    }
-    //normál szöveg
-    .text {
-        margin: 20px 0;
-        text-align: center;
-        align-self: center;
-        font: normal normal normal 16px/25px Poppins;
-        letter-spacing: 0px;
-        color: color(dark-text);
+
+    .login-card {
+        form {
+            //kártya gomb
+            .btn {
+                width: 100%;
+                height: 70px;
+            }
+            // kiemelt szöveg
+            .highlight-text {
+                text-align: left;
+                font: normal normal bold 16px/25px Poppins;
+                letter-spacing: 0px;
+                color: color(secondary);
+                margin: 20px 0;
+                margin-left: 2px;
+                font-weight: bold;
+            }
+            //normál szöveg
+            .text {
+                margin: 20px 0;
+                margin-left: 5px;
+                text-align: center;
+                align-self: center;
+                font: normal normal normal 16px/25px Poppins;
+                letter-spacing: 0px;
+                color: color(dark-text);
+            }
+        }
+        
+        
     }
     //authentikációs kártyák
     .login-card,

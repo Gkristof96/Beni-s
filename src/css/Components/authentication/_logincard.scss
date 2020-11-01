@@ -1,5 +1,11 @@
 .login-card {
     height: 645px;
+
+    .error-message {
+        color: color(secondary);
+        text-transform: uppercase;
+        text-align: center;
+    }
 }
 
 @media (max-width: 768px) {

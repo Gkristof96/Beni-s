@@ -1235,6 +1235,12 @@ footer .footer-container .copyright img {
   height: 645px;
 }
 
+.login-card .error-message {
+  color: #DC386D;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .login-card {
     padding: 70px 40px;
@@ -1313,22 +1319,24 @@ footer .footer-container .copyright img {
   color: #181818;
 }
 
-.authentication .btn {
+.authentication .login-card form .btn {
   width: 100%;
   height: 70px;
 }
 
-.authentication .highlight-text {
+.authentication .login-card form .highlight-text {
   text-align: left;
   font: normal normal bold 16px/25px Poppins;
   letter-spacing: 0px;
   color: #DC386D;
   margin: 20px 0;
+  margin-left: 2px;
   font-weight: bold;
 }
 
-.authentication .text {
+.authentication .login-card form .text {
   margin: 20px 0;
+  margin-left: 5px;
   text-align: center;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
