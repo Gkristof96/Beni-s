@@ -23,6 +23,7 @@ header {
             letter-spacing: 0.48px;
             color: color(light-text);
             text-transform: uppercase;
+            cursor: pointer;
             .topbar-icon {
                 opacity: 1;
                 transition: all 0.2s ease-in;
@@ -35,7 +36,6 @@ header {
             align-items: center;
 
             transition: 0.5s ease-in-out;
-            cursor: pointer;
             .dropdown {
                 display: none;
                 max-width: 134px;

@@ -32,6 +32,7 @@ header .top-container .topbar-title {
   letter-spacing: 0.48px;
   color: #FFFFFF;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 header .top-container .topbar-title .topbar-icon {
@@ -51,7 +52,6 @@ header .top-container .topbar-button {
           align-items: center;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  cursor: pointer;
 }
 
 header .top-container .topbar-button .dropdown {
@@ -1379,6 +1379,7 @@ footer .footer-container .copyright img {
   font-size: 30px;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .authentication .close-btn:hover {
@@ -1506,6 +1507,7 @@ footer .footer-container .copyright img {
   letter-spacing: 2.8px;
   color: #FFFFFF;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .paginator-container ul .pagination-item:hover {
@@ -1519,6 +1521,7 @@ footer .footer-container .copyright img {
   letter-spacing: 2.8px;
   color: #DC386D;
   text-transform: uppercase;
+  cursor: context-menu;
 }
 
 @media (max-width: 768px) {
@@ -1702,6 +1705,10 @@ footer .footer-container .copyright img {
       -ms-flex-pack: center;
           justify-content: center;
   bottom: 20px;
+}
+
+.product-section .product-container .image-wrapper .pager .dot {
+  color: #DC386D;
 }
 
 .product-section .product-container .info-wrapper {
@@ -2170,6 +2177,7 @@ footer .footer-container .copyright img {
   top: 20px;
   right: 20px;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .address-container .person-data {
@@ -2321,6 +2329,7 @@ footer .footer-container .copyright img {
   top: 20px;
   right: 20px;
   font-size: 32px;
+  cursor: pointer;
 }
 
 .profile-section .profile-container .profile-data .profile-name {

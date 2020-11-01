@@ -45,9 +45,9 @@ const Product = () => {
                     <div className='image-wrapper'>
                         <img src={`../${product.image}`} alt={product.name} />
                         <div className='pager'>
-                            <GoPrimitiveDot />
-                            <GoPrimitiveDot />
-                            <GoPrimitiveDot />
+                            <GoPrimitiveDot className='dot'/>
+                            <GoPrimitiveDot className='dot'/>
+                            <GoPrimitiveDot className='dot'/>
                         </div>
                     </div>
                     <div className='info-wrapper'>
@@ -62,7 +62,7 @@ const Product = () => {
                         </div>
 
                         <div className='basket-count'>
-                            <input type="number" value={count} onChange={(e) => setCount(e.target.value)}/>
+                            <input type="text" value={count} onChange={(e) => setCount(e.target.value)}/>
                             <span>db</span>
                         </div>
                         
