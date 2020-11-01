@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import CartContext from '../../../../contexts/cartContext';
 import { Link } from 'react-router-dom'
 
-const Suggestion = ({ suggestions, suggestionChanged, isdisplay }) => {
+const Suggestion = ({ suggestions, suggestionChanged, display }) => {
   const {addItem} = useContext(CartContext)
   
   if (suggestions.length === 0) {
@@ -11,7 +11,7 @@ const Suggestion = ({ suggestions, suggestionChanged, isdisplay }) => {
 
   return (
     <>
-      {isdisplay ? (
+      {display ? (
         <ul>
           {suggestions.map((item, i) => (
             <li key={i} onClick={() => suggestionChanged(item)}>

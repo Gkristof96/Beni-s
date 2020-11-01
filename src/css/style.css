@@ -559,8 +559,11 @@ nav .nav-container .hamburger-icon {
     padding: 15px 5px;
   }
   .search-wrapper .suggestion ul li a img {
-    max-width: 100px;
-    height: auto;
+    max-width: 50px;
+    height: 25px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .search-wrapper .suggestion ul li a .product-title {
     font-size: 8px;
