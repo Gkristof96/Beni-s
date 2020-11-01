@@ -21,18 +21,18 @@ const DeliverySettings = ({setOpen}) => {
                 <h1>Új cím</h1>
                 <form onSubmit={handleSubmit}>
                     <InputField name='firstname' placeholder='Keresztnév' handleChange={handleChange} value={values.firstname}/>
-                    {errors.firstname && <p>{errors.firstname}</p>}
+                    {errors.firstname && <p className='error-message'>{errors.firstname}</p>}
                     <InputField name='lastname' placeholder='Vezetéknév' handleChange={handleChange} value={values.lastname}/>
-                    {errors.lastname && <p>{errors.lastname}</p>}
+                    {errors.lastname && <p className='error-message'>{errors.lastname}</p>}
                     <InputField name='street' placeholder='Utca, házszám' handleChange={handleChange} value={values.street}/>
-                    {errors.street && <p>{errors.street}</p>}
+                    {errors.street && <p className='error-message'>{errors.street}</p>}
                     <InputField name='other' placeholder='Megjegyzés' handleChange={handleChange} value={values.other}/>
                     <InputField name='ir' placeholder='Irányítószám' handleChange={handleChange} value={values.ir}/>
-                    {errors.ir && <p>{errors.ir}</p>}
+                    {errors.ir && <p className='error-message'>{errors.ir}</p>}
                     <InputField name='city' placeholder='Város' handleChange={handleChange} value={values.city}/>
-                    {errors.city && <p>{errors.city}</p>}
+                    {errors.city && <p className='error-message'>{errors.city}</p>}
                     <InputField name='country' placeholder='Ország' handleChange={handleChange} value={values.country}/>
-                    {errors.country && <p>{errors.country}</p>}
+                    {errors.country && <p className='error-message'>{errors.country}</p>}
                     <div className='btn-wrapper'>
                         <button className='btn' onClick={() => setOpen(false)}>Töröl</button>
                         <button className='btn' type='submit'>Mentés</button>

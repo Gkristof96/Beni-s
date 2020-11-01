@@ -7,43 +7,43 @@ const RegistrationCard = () => {
     const { setLoginActive, setVisible } = useContext(AuthContext)
     return (
         <>
-            <div className='registration-card'>
                 <IoMdClose className='close-btn' onClick={() => {
                     setVisible(false)
                     setLoginActive(true)
                 }}/>
                 <h1 className='title'>Regisztráció</h1>
-                <InputField
-                    type='email'
-                    placeholder='Email'
-                />
-                <InputField 
-                    type='password' 
-                    placeholder='Jelszó'
-                />
-                <InputField 
-                    type='password' 
-                    placeholder='Jelszó újra'
-                />
-                <div className='checkbox-bar'>
-                    <input type='checkbox' />
-                    <span className='text'>
-                        Elfogadom az 
-                        <span className='highlight-text'>
-                            Adatvédelmi Nyilatkozatot.
+                <form>
+                    <InputField
+                        type='email'
+                        placeholder='Email'
+                    />
+                    <InputField 
+                        type='password' 
+                        placeholder='Jelszó'
+                    />
+                    <InputField 
+                        type='password' 
+                        placeholder='Jelszó újra'
+                    />
+                    <div className='checkbox-bar'>
+                        <input type='checkbox' />
+                        <span className='text'>
+                            Elfogadom az 
+                            <span className='highlight-text'>
+                                Adatvédelmi Nyilatkozatot.
+                            </span>
                         </span>
-                    </span>
-                </div>
-                <input className='btn' type='submit' value='regisztráció' />
-                <span 
-                    className='text'>Van már fiókod? 
-                    <span
-                        className='highlight-text' 
-                        onClick={() => setLoginActive(true)}>
-                        Bejelentkezés
-                    </span>
-                </span>
-            </div>
+                    </div>
+                    <input className='btn' type='submit' value='regisztráció' />
+                    <h1 
+                        className='text'>Van már fiókod? 
+                        <span
+                            className='highlight-text' 
+                            onClick={() => setLoginActive(true)}>
+                            Bejelentkezés
+                        </span>
+                    </h1>
+                </form>
         </>
     )
 }

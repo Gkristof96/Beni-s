@@ -8,7 +8,9 @@ const Authentication = () => {
     return (
         <>
             <section className='authentication'>
-                {loginActive ? <LoginCard/> : <RegistrationCard/>}
+                <div className={`authentication-card ${loginActive ? 'login' : 'registration'}`}>
+                    {loginActive ? <LoginCard/> : <RegistrationCard/>}
+                </div>
             </section>
         </>
     )

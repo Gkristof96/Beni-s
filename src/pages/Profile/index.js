@@ -11,6 +11,7 @@ const Profile = () => {
 
     useEffect(() => {
         fetchUser();
+        // eslint-disable-next-line
     }, [])
     return (
         <>

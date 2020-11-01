@@ -2,9 +2,23 @@
     width: 100%;
     height: 1100px;
     margin-top: 200px;
-    .route {
-        text-align: left;
+    .path-container {
+        display: flex;
+        align-items: center;
+        width: 60vw;
+        margin: 20px auto;
+
+        .path-title {
+            text-align: left;
+            font: normal normal 600 16px/48px Poppins;
+            letter-spacing: 0px;
+            color: color(dark-text);
+        }
+        .path-icon {
+            margin: 0 10px;
+        }
     }
+
     .product-container {
         width: 60%;
         margin: 0 auto;
@@ -163,6 +177,16 @@
 @media (max-width: 768px) {
     .product-section {
         height: auto;
+        .path-container {
+            width: 90vw;
+            margin: 5px auto;
+            .path-title {
+                font-size: 10px;
+            }
+            .path-icon {
+                margin: 0 5px;
+            }
+        }
         .product-container {
             width: 90%;
             height: 100%;

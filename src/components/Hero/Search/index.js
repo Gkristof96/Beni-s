@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom'
 import { IoMdSearch } from 'react-icons/io'
 import Suggestion from './Suggestion'
 import axios from 'axios'
+import { FaSatelliteDish } from 'react-icons/fa'
 
 const Search = ({ placeholder, type }) => {
     const [suggestions, setSuggestions] = useState([]);
     const [search, setSearch] = useState('')
     const [display, setDisplay] = useState(false);
     const [products, setProducts] = useState([])
+    const wrapperRef = useRef(null);
 
     async  function fetchProducts() {
         await axios
@@ -21,6 +23,11 @@ const Search = ({ placeholder, type }) => {
     
     useEffect(() => {
         fetchProducts();
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+        // eslint-disable-next-line
     }, [])
 
     const onTextChange = (e) => {
@@ -42,9 +49,13 @@ const Search = ({ placeholder, type }) => {
         setDisplay(false);
     };
 
-    const wrapperRef = useRef(null);
 
-
+    const handleClickOutside = (e) => {
+        const { current: wrap } = wrapperRef;
+        if (wrap && !wrap.contains(e.target)) {
+            setDisplay(false);
+        }
+    };
     
     return (
         <>
@@ -60,7 +71,7 @@ const Search = ({ placeholder, type }) => {
                             className='search-input'
                          />
                         <Link 
-                            to={`/products?product=${search}`} 
+                            to={`/products`}
                             className='search-btn'>
                             <IoMdSearch className='search-icon'/>
                         </Link>

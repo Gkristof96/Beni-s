@@ -5,9 +5,9 @@ import AuthContext from '../../../contexts/authContext'
 
 
 const ProfileButton = () => {
+    const {handleLogout, user, fetchUser} = useContext(AuthContext)
     const [menuOpen, setMenuOpen] = useState(false)
     const wrapperRef = useRef(null);
-    const {handleLogout, user, fetchUser} = useContext(AuthContext)
 
 
     useEffect(() => {
@@ -16,6 +16,7 @@ const ProfileButton = () => {
         return () => {
         document.removeEventListener("mousedown", handleClickOutside);
         };
+        // eslint-disable-next-line
     }, [])
 
     const handleClickOutside = (e) => {

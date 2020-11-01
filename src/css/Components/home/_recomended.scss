@@ -8,7 +8,7 @@
     url('background.png') center no-repeat;
     background-size: cover;
     .recomended-container {
-        width: 60%;
+        width: 60vw;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -23,7 +23,6 @@
         .products-container {
             width: 100%;
             display: flex;
-            margin: auto;
             justify-content: space-between;
             flex-wrap: wrap;
         }
@@ -45,6 +44,11 @@
             letter-spacing: 0.48px;
             color: color(light-text);
             text-transform: uppercase;
+            transition: transform 0.5s ease-in-out;
+            &:hover {
+                background: color(light-secondary);
+                transform: scale(1.02,1.02);
+            }
         }
     }
 }
@@ -52,12 +56,12 @@
 @media (max-width: 768px) {
     .recomended-section {
         .recomended-container {
-            width: 90%;
+            width: 95%;
             .recomended-title {
                 font-size: 18px;
             }
             .products-container {
-                justify-content: center;
+                justify-content: space-around;
             }
         }
     }

@@ -1,10 +1,11 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef, useEffect } from 'react'
 import CartItem from './CartItem'
 import CartContext from '../../../contexts/cartContext'
 
 const Cart = () => {
-    
     const {cart,isbasketOpen, setBasketOpen} = useContext(CartContext)
+    const wrapperRef = useRef(null);
+
     const handleBasketOpen = () => {
       if(cart.length > 0) {
         setBasketOpen(!isbasketOpen)
@@ -13,6 +14,21 @@ const Cart = () => {
     const total = cart.reduce((prev, item) => {
       return prev + (item.price * item.count);
     },0)
+
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+        };
+        // eslint-disable-next-line
+    }, [])
+
+    const handleClickOutside = (e) => {
+        const { current: wrap } = wrapperRef;
+        if (wrap && !wrap.contains(e.target)) {
+            setBasketOpen(false);
+        }
+    };
     return (
         <>
             <div className='cart'>
@@ -21,7 +37,7 @@ const Cart = () => {
                   onClick={() => handleBasketOpen()}>
                   Kosár ({cart.length})
                 </h1>
-                <div className={`cart-container ${isbasketOpen? 'open' : null}`}>
+                <div className={`cart-container ${isbasketOpen? 'open' : null}`} ref={wrapperRef}>
                   <ul>
                     {cart.map((item,i) => <CartItem key={i} item={item} />)}
                   </ul>

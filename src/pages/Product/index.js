@@ -1,8 +1,8 @@
 import React, { useState, useContext, useEffect } from 'react'
-import { useParams } from "react-router-dom";
 import axios from 'axios'
 import Partners from '../../components/Partners/index'
 import { GoPrimitiveDot } from 'react-icons/go'
+import { IoIosArrowForward } from 'react-icons/io'
 import { useLocation } from "react-router-dom";
 import CartContext from '../../contexts/cartContext'
 
@@ -33,6 +33,14 @@ const Product = () => {
     return (
         <>
             <section className='product-section'>
+                <div className='path-container'>
+                    <h1 className='path-title'>Főoldal</h1>
+                    <IoIosArrowForward className='path-icon' />
+                    <h1 className='path-title'>Termékek</h1>
+                    <IoIosArrowForward className='path-icon'/>
+                    <h1 className='path-title'>{product.name}</h1>
+                </div>
+                
                 <div className='product-container'>
                     <div className='image-wrapper'>
                         <img src={`../${product.image}`} alt={product.name} />

@@ -12,6 +12,7 @@ const CurrencyButton = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
+    // eslint-disable-next-line
   }, [])
 
     const handleClickOutside = (e) => {

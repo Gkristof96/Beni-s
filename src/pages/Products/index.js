@@ -2,16 +2,9 @@ import React, { useState, useEffect } from 'react'
 import Pagination from '../../components/Pagination'
 import ProducCard from '../../components/ProductCard'
 import Search from '../../components/Hero/Search'
-import { useLocation } from "react-router-dom";
 import axios from 'axios'
 
-function useQuery() {
-    return new URLSearchParams(useLocation().search);
-}
-
 const Products = ({basket, setBasket}) => {
-    let query = useQuery();
-    const [filter] = useState(query.get("product"))
     const [products, setProducts] = useState([])
     const [search, setSearch] = useState('')
 
@@ -32,15 +25,8 @@ const Products = ({basket, setBasket}) => {
             .catch((error) => console.log(error));
     }
 
-    async function filterData(){
-        console.log(filter)
-        console.log(products)
-        await setProducts(products.filter((item) => item.name === filter))
-    }
-
     useEffect(() => {
         fetchProducts();
-        filterData();
     },[])
 
     const numberOfPages = products.length / 6;
@@ -51,6 +37,7 @@ const Products = ({basket, setBasket}) => {
     return (
         <>
             <section className='white-header'>
+                    <h2 className='home-title'>Főoldal</h2>
                     <h1 className='products-title'>Édességek</h1>
                     <Search
                         search={search}

@@ -28,14 +28,13 @@ const useAddress = (validateAddress, addAddress) => {
     setIsSubmitting(true);
   };
 
-  useEffect(
-    () => {
+  useEffect(() => {
       if (Object.keys(errors).length === 0 && isSubmitting) {
         addAddress();
       }
-    },
-    [errors]
-  );
+      // eslint-disable-next-line
+  },[errors]);
+
 
   return { handleChange, handleSubmit, values, errors };
 };
