@@ -37,7 +37,6 @@
         letter-spacing: 0px;
         color: color(dark-text);
         transform: translateY(-50%);
-        z-index: -1;
         transition: .5s;
     }
     .input-span::before {
@@ -51,7 +50,6 @@
         letter-spacing: 0px;
         color: color(dark-text);
         transform: translateY(-50%);
-        z-index: -1;
         transition: .5s;
     }
 

@@ -1,10 +1,22 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import InputField from '../../Contact/InputField'
 import { IoMdClose } from 'react-icons/io'
 import AuthContext from '../../../contexts/authContext'
 
 const RegistrationCard = () => {
     const { setLoginActive, setVisible } = useContext(AuthContext)
+    const [values, setValues] = useState({
+        email: '',
+        password: '',
+        cpassword: '',
+      });
+    const handleChange = e => {
+        const { name, value } = e.target;
+        setValues({
+          ...values,
+          [name]: value
+        });
+      };
     return (
         <>
                 <IoMdClose className='close-btn' onClick={() => {
@@ -16,14 +28,23 @@ const RegistrationCard = () => {
                     <InputField
                         type='email'
                         placeholder='Email'
+                        name='email'
+                        value={values.email}
+                        handleChange={handleChange}
                     />
                     <InputField 
                         type='password' 
                         placeholder='Jelszó'
+                        name='password'
+                        value={values.password}
+                        handleChange={handleChange}
                     />
                     <InputField 
                         type='password' 
                         placeholder='Jelszó újra'
+                        name='cpasssowrd'
+                        value={values.cpassword}
+                        handleChange={handleChange}
                     />
                     <div className='checkbox-bar'>
                         <input type='checkbox' />

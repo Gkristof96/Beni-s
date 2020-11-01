@@ -27,6 +27,7 @@ const InputField = ({type, placeholder, name, value, handleChange}) => {
                     className='input-span' 
                     data-placeholder={placeholder} 
                 />
+
             </div>
         </>
     )
