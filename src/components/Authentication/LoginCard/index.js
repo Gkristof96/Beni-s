@@ -36,7 +36,7 @@ const LoginCard = () => {
                             data-placeholder='Email' 
                         />
                         </div>
-                        {errors.email && <p className='error-message'>{errors.email}</p>}
+                        {errors.email && <p className='error-message'><IoMdAlert/> {errors.email}</p>}
                         <div className={`input-container ${focus ? 'focus' : null}`}>
                             <input
                                 name='password'
@@ -50,7 +50,7 @@ const LoginCard = () => {
                                 data-placeholder='Jelszó'
                             />
                         </div>
-                        {errors.password && <p className='error-message'>{errors.password}</p>}
+                        {errors.password && <p className='error-message'><IoMdAlert /> {errors.password}</p>}
                     <span className='highlight-text'>Elfelejtett jelszó</span>
                     <input
                         className='btn'

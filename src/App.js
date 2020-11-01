@@ -14,6 +14,7 @@ import SideBar from './components/SideBar';
 import NotFound from './pages/404'
 import { CartProvider } from './contexts/cartContext';
 import { AuthProvider } from './contexts/authContext';
+import PrivateRoute from './components/privateRoute'
 
 function App() {
   const [isSideBarOpen, setOpen] = useState(false)
@@ -41,7 +42,9 @@ function App() {
                   <Route path='/gyik' component={Gyik} />
                   <Route path='/product' component={Product} />
                   <Route path='/contact' component={Contact} />
-                  <Route path='/profile' component={Profile} />
+                  <PrivateRoute >
+                    <Route path='/profile' component={Profile} />
+                  </PrivateRoute>
                   <Route component={NotFound} />
                 </Switch>
               <Footer />
