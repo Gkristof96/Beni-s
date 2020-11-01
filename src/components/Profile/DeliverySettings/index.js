@@ -20,18 +20,18 @@ const DeliverySettings = ({setOpen}) => {
             <div className='settings-container'>
                 <h1>Új cím</h1>
                 <form onSubmit={handleSubmit}>
-                    <input type="text" name='firstname' value={values.firstname} onChange={handleChange}></input>
+                    <InputField name='firstname' placeholder='Keresztnév' handleChange={handleChange} value={values.firstname}/>
                     {errors.firstname && <p>{errors.firstname}</p>}
-                    <input type="text" name='lastname' value={values.lastname} onChange={handleChange}></input>
+                    <InputField name='lastname' placeholder='Vezetéknév' handleChange={handleChange} value={values.lastname}/>
                     {errors.lastname && <p>{errors.lastname}</p>}
-                    <input type="text" name='street' value={values.street} onChange={handleChange}></input>
+                    <InputField name='street' placeholder='Utca, házszám' handleChange={handleChange} value={values.street}/>
                     {errors.street && <p>{errors.street}</p>}
-                    <input type="text" name='other' value={values.other} onChange={handleChange}></input>
-                    <input type="text" name='ir' value={values.ir} onChange={handleChange}></input>
+                    <InputField name='other' placeholder='Megjegyzés' handleChange={handleChange} value={values.other}/>
+                    <InputField name='ir' placeholder='Irányítószám' handleChange={handleChange} value={values.ir}/>
                     {errors.ir && <p>{errors.ir}</p>}
-                    <input type="text" name='city' value={values.city} onChange={handleChange}></input>
+                    <InputField name='city' placeholder='Város' handleChange={handleChange} value={values.city}/>
                     {errors.city && <p>{errors.city}</p>}
-                    <input type="text" name='country' value={values.country} onChange={handleChange}></input>
+                    <InputField name='country' placeholder='Ország' handleChange={handleChange} value={values.country}/>
                     {errors.country && <p>{errors.country}</p>}
                     <div className='btn-wrapper'>
                         <button className='btn' onClick={() => setOpen(false)}>Töröl</button>

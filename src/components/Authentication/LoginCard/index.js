@@ -22,34 +22,9 @@ const LoginCard = () => {
                 />
                 <h1 className='title'>Bejelentkezés</h1>
                 <form onSubmit={handleSubmit}>
-                    <div className={`input-container ${focus ? 'focus' : null}`}>
-                        <input
-                            name='email'
-                            value={values.email}
-                            onChange={handleChange}
-                            type='text'
-                            className='input-field'
-                            validate='no'
-                        />
-                        <span 
-                            className='input-span' 
-                            data-placeholder='Email' 
-                        />
-                        </div>
+                        <InputField name='email' handleChange={handleChange} value={values.email} placeholder='Email' type='text'/>
                         {errors.email && <p className='error-message'><IoMdAlert/> {errors.email}</p>}
-                        <div className={`input-container ${focus ? 'focus' : null}`}>
-                            <input
-                                name='password'
-                                value={values.password}
-                                onChange={handleChange}
-                                type='password'
-                                className='input-field'
-                            />
-                            <span 
-                                className='input-span' 
-                                data-placeholder='Jelszó'
-                            />
-                        </div>
+                        <InputField name='password' handleChange={handleChange} value={values.password} placeholder='Passsword' type='password'/>
                         {errors.password && <p className='error-message'><IoMdAlert /> {errors.password}</p>}
                     <span className='highlight-text'>Elfelejtett jelszó</span>
                     <input

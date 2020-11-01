@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 
-const InputField = ({type, placeholder, name}) => {
+const InputField = ({type, placeholder, name, value, handleChange}) => {
     const [focus, setFocus] = useState(false)
-    const [input, setInput] = useState('')
 
     const handleInput = () => {
-        if(input.length > 0) {
+        if(value.length > 0) {
             setFocus(true);
         }
         else {
@@ -17,8 +16,9 @@ const InputField = ({type, placeholder, name}) => {
             <div className={`input-container ${focus ? 'focus' : null}`}>
                 <input
                     name={name}
-                    onChange={(e) => setInput(e.target.value)}
-                    value={input} type={type}
+                    onChange={handleChange}
+                    value={value}
+                    type={type}
                     onBlur={() => handleInput()}
                     onFocus={() => handleInput()}
                     className='input-field'

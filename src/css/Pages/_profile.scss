@@ -77,3 +77,18 @@
         
     }
 }
+
+@media (max-width: 768px) {
+    .profile-section {
+        .page-title,
+        .line {
+            width: 90%;
+        }
+        .profile-container {
+            width: 90%;
+            grid-template-columns: 1fr;
+            grid-template-rows: 450px auto;
+            grid-template-areas: 'profile' 'addresses';
+        }
+    }
+}
