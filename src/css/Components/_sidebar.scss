@@ -1,10 +1,10 @@
 .sidebar {
-    height: calc(100vh - 50px);
+    height: calc(100vh - 5vh);
     width: 40%;
     position: fixed;
     right: 0;
     z-index: 10;
-    top: 50px;
+    top: 5vh;
 
     background: color(primary);
     transform: translateX(100%);

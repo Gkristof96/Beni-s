@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap");
 header {
   width: 100%;
-  height: 50px;
+  height: 5vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -59,7 +59,7 @@ header .top-container .topbar-button .dropdown {
   max-width: 134px;
   margin: 0;
   position: absolute;
-  top: 50px;
+  top: 5vh;
   right: 0;
   -webkit-box-shadow: 0px 10px 20px #00000033;
           box-shadow: 0px 10px 20px #00000033;
@@ -108,8 +108,8 @@ header .top-container .topbar-button .dropdown.open {
 
 .hero-section {
   width: 100%;
-  height: calc(100vh - 200px);
-  margin-top: 200px;
+  height: calc(100vh - 20vh);
+  margin-top: 20vh;
   background: url("background_hero.png") center no-repeat;
   background-size: cover;
 }
@@ -199,12 +199,11 @@ header .top-container .topbar-button .dropdown.open {
 
 nav {
   width: 100%;
-  height: 150px;
+  height: 15vh;
   position: absolute;
-  top: 50px;
+  top: 5vh;
   left: 0;
   z-index: 9;
-  background-color: #FFFFFF;
 }
 
 nav .nav-container {
@@ -248,12 +247,16 @@ nav .nav-container .logo__image {
 }
 
 nav .nav-container .navbar {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   list-style: none;
 }
 
@@ -333,8 +336,7 @@ nav .nav-container .hamburger-icon {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: search;
-  max-width: 1140px;
-  width: 100%;
+  width: 60vw;
   margin: 0 auto;
   position: relative;
   -ms-flex-item-align: center;
@@ -559,8 +561,8 @@ nav .nav-container .hamburger-icon {
     padding: 15px 5px;
   }
   .search-wrapper .suggestion ul li a img {
-    max-width: 50px;
-    height: 25px;
+    width: auto;
+    height: 45px;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -697,6 +699,8 @@ footer .footer-container .copyright img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -920,7 +924,7 @@ footer .footer-container .copyright img {
 }
 
 .gyik-section {
-  margin-top: 200px;
+  margin-top: 20vh;
 }
 
 .gyik-section .gyik-container {
@@ -1248,7 +1252,7 @@ footer .footer-container .copyright img {
 }
 
 .contact-section {
-  margin-top: 200px;
+  margin-top: 20vh;
   height: 700px;
 }
 
@@ -1314,42 +1318,12 @@ footer .footer-container .copyright img {
   }
 }
 
-.login {
-  height: 650px;
-}
-
-@media (max-width: 768px) {
-  .authentication-card {
-    padding: 70px 40px;
-    max-width: 300px;
-  }
-  .authentication-card .title {
-    font-size: 18px;
-  }
-}
-
 .registration {
-  height: 750px;
+  height: auto;
 }
 
 .registration .checkbox-bar {
   margin: 25px 0;
-}
-
-@media (max-width: 768px) {
-  .authentication-card {
-    max-width: 300px;
-    padding: 70px 40px;
-  }
-  .authentication-card .title {
-    font-size: 18px;
-  }
-  .authentication-card .btn {
-    margin: 10px 0;
-  }
-  .authentication-card .text {
-    margin: 10px 0;
-  }
 }
 
 .authentication {
@@ -1434,7 +1408,7 @@ footer .footer-container .copyright img {
 
 .authentication .authentication-card {
   width: 510px;
-  padding: 70px 60px;
+  padding: 60px 50px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1450,8 +1424,29 @@ footer .footer-container .copyright img {
   -webkit-box-shadow: 0px 20px 40px #0000004D;
           box-shadow: 0px 20px 40px #0000004D;
   border-radius: 5px;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  -webkit-transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
+}
+
+.authentication .login {
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .authentication .authentication-card {
+    width: 300px;
+    padding: 40px 30px;
+  }
+  .authentication .authentication-card .text {
+    margin: 10px 0;
+    margin-left: 2px;
+  }
+  .authentication .authentication-card .title {
+    font-size: 18px;
+  }
+  .authentication .authentication-card .highlight-text {
+    margin: 10px 0;
+  }
 }
 
 .paginator-container {
@@ -1550,7 +1545,7 @@ footer .footer-container .copyright img {
 
 .white-header {
   height: 200px;
-  margin-top: 200px;
+  margin-top: 20vh;
   padding: 0 10px;
   background: #FFFFFF;
   position: relative;
@@ -1638,7 +1633,7 @@ footer .footer-container .copyright img {
 .product-section {
   width: 100%;
   height: 1100px;
-  margin-top: 200px;
+  margin-top: 20vh;
 }
 
 .product-section .path-container {
@@ -2041,7 +2036,7 @@ footer .footer-container .copyright img {
   display: block;
   padding: 0;
   position: absolute;
-  top: 50px;
+  top: 5vh;
   right: 0;
 }
 
@@ -2072,6 +2067,7 @@ footer .footer-container .copyright img {
   }
   .cart .cart-container ul .cart-item .item-name {
     font-size: 8px;
+    text-align: center;
   }
   .cart .cart-container ul .cart-item .item-counter {
     width: 50px;
@@ -2079,13 +2075,14 @@ footer .footer-container .copyright img {
     padding: 15px 0;
   }
   .cart .cart-container ul .cart-item .item-btn {
-    width: 20px;
-    height: 20px;
-    font-size: 10px;
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
   }
   .cart .cart-container ul .cart-item .item-icon {
     height: 20px;
     width: 20px;
+    margin-left: 5px;
   }
   .cart .cart-container .total-price {
     margin: 15px;
@@ -2288,7 +2285,7 @@ footer .footer-container .copyright img {
 
 .profile-section {
   width: 100%;
-  margin-top: 200px;
+  margin-top: 20vh;
 }
 
 .profile-section .page-title {
@@ -2395,12 +2392,12 @@ footer .footer-container .copyright img {
 }
 
 .sidebar {
-  height: calc(100vh - 50px);
+  height: calc(100vh - 5vh);
   width: 40%;
   position: fixed;
   right: 0;
   z-index: 10;
-  top: 50px;
+  top: 5vh;
   background: #7A233C;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
@@ -2460,8 +2457,8 @@ footer .footer-container .copyright img {
 
 .notfound {
   width: 100%;
-  height: calc(100vh - 200px);
-  margin-top: 200px;
+  height: calc(100vh - 20vh);
+  margin-top: 20vh;
 }
 
 .notfound .container {
@@ -2600,6 +2597,7 @@ html {
 .home-title {
   width: 60vw;
   margin: 0 auto;
+  margin-top: 30px;
   text-align: left;
   font: normal normal 600 14px/21px Poppins;
   letter-spacing: 0px;

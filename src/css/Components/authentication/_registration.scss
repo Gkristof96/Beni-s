@@ -1,23 +1,6 @@
 .registration {
-    height: 750px;
+    height: auto;
     .checkbox-bar {
         margin: 25px 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .authentication-card {
-        max-width: 300px;
-        padding: 70px 40px;
-
-        .title {
-            font-size: 18px;
-        }
-        .btn {
-            margin: 10px 0;
-        }
-        .text {
-            margin: 10px 0;
-        }
     }
 }
