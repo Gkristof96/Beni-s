@@ -40,7 +40,6 @@ const Product = () => {
                     <IoIosArrowForward className='path-icon'/>
                     <h1 className='path-title'>{product.name}</h1>
                 </div>
-                
                 <div className='product-container'>
                     <div className='image-wrapper'>
                         <img src={`../${product.image}`} alt={product.name} />

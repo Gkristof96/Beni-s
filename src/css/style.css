@@ -878,9 +878,9 @@ footer .footer-container .copyright img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -1596,9 +1596,9 @@ footer .footer-container .copyright img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -1634,6 +1634,7 @@ footer .footer-container .copyright img {
   width: 100%;
   height: 1100px;
   margin-top: 20vh;
+  margin-bottom: 200px;
 }
 
 .product-section .path-container {
@@ -1663,7 +1664,7 @@ footer .footer-container .copyright img {
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'img info' 'desc desc';
+      grid-template-areas: "img info" "desc desc";
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
   -ms-grid-columns: 1fr 1fr;
@@ -1689,8 +1690,8 @@ footer .footer-container .copyright img {
       -ms-flex-align: center;
           align-items: center;
   background: #FFFFFF 0% 0% no-repeat padding-box;
-  -webkit-box-shadow: 0px 20px 40px #0000001A;
-          box-shadow: 0px 20px 40px #0000001A;
+  -webkit-box-shadow: 0px 20px 40px #0000001a;
+          box-shadow: 0px 20px 40px #0000001a;
   border-radius: 5px;
 }
 
@@ -1834,8 +1835,8 @@ footer .footer-container .copyright img {
       -ms-flex-align: center;
           align-items: center;
   background: #DC386D 0% 0% no-repeat padding-box;
-  -webkit-box-shadow: 0px 20px 60px #0000001F;
-          box-shadow: 0px 20px 60px #0000001F;
+  -webkit-box-shadow: 0px 20px 60px #0000001f;
+          box-shadow: 0px 20px 60px #0000001f;
   text-align: center;
   font: normal normal bold 16px/25px Poppins;
   letter-spacing: 0.48px;
@@ -1851,8 +1852,8 @@ footer .footer-container .copyright img {
 .product-section .product-container .text-wrapper .description-wrapper {
   padding: 40px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
-  -webkit-box-shadow: 0px 20px 60px #0000001F;
-          box-shadow: 0px 20px 60px #0000001F;
+  -webkit-box-shadow: 0px 20px 60px #0000001f;
+          box-shadow: 0px 20px 60px #0000001f;
 }
 
 .product-section .product-container .text-wrapper p {
@@ -1879,9 +1880,9 @@ footer .footer-container .copyright img {
   .product-section .product-container {
     width: 90%;
     height: 100%;
-        grid-template-areas: 'img' 'info' 'desc';
-    -ms-grid-rows: auto  1fr auto;
-        grid-template-rows: auto  1fr auto;
+        grid-template-areas: "img" "info" "desc";
+    -ms-grid-rows: auto 1fr auto;
+        grid-template-rows: auto 1fr auto;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     grid-row-gap: 20px;

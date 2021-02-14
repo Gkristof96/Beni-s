@@ -1,72 +1,71 @@
 .recomended-section {
-    width: 100%;
+  width: 100%;
 
-    background: linear-gradient(
+  background: linear-gradient(
       135deg,
       rgba(122, 35, 60, 0.9) 0%,
-      rgba(122, 35, 60, 0.9) 100%,
+      rgba(122, 35, 60, 0.9) 100%
     ),
-    url('background.png') center no-repeat;
-    background-size: cover;
-    .recomended-container {
-        width: 60vw;
-        margin: 0 auto;
+    url("background.png") center no-repeat;
+  background-size: cover;
+  .recomended-container {
+    width: 60vw;
+    margin: 0 auto;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    
-        .section-title {
-            margin-top: 70px;
-            margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-            color: color(light-text);
-        }
-    
-        .products-container {
-            width: 100%;
+    .section-title {
+      margin-top: 70px;
+      margin-bottom: 30px;
 
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-    
-    
-        .recomended-btn {
-            width: 280px;
-            height: 70px;
-            margin: 50px 0;
-            padding: 25px 0;
-
-            text-align: center;
-            text-decoration: none;
-            
-            background: color(secondary) 0% 0% no-repeat padding-box;
-            border-radius: 6px;
-            font: normal normal bold 16px/25px Poppins;
-            letter-spacing: 0.48px;
-            color: color(light-text);
-            text-transform: uppercase;
-            
-            transition: transform 0.5s ease-in-out;
-            &:hover {
-                background: color(light-secondary);
-                transform: scale(1.02,1.02);
-            }
-        }
+      color: color(light-text);
     }
+
+    .products-container {
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .recomended-btn {
+      width: 280px;
+      height: 70px;
+      margin: 50px 0;
+      padding: 25px 0;
+
+      text-align: center;
+      text-decoration: none;
+
+      background: color(secondary) 0% 0% no-repeat padding-box;
+      border-radius: 6px;
+      font: normal normal bold 16px/25px Poppins;
+      letter-spacing: 0.48px;
+      color: color(light-text);
+      text-transform: uppercase;
+
+      transition: transform 0.5s ease-in-out;
+      &:hover {
+        background: color(light-secondary);
+        transform: scale(1.02, 1.02);
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
-    .recomended-section {
-        .recomended-container {
-            width: 95%;
-            .recomended-title {
-                font-size: 18px;
-            }
-            .products-container {
-                justify-content: space-around;
-            }
-        }
+  .recomended-section {
+    .recomended-container {
+      width: 95%;
+      .recomended-title {
+        font-size: 18px;
+      }
+      .products-container {
+        justify-content: space-around;
+      }
     }
+  }
 }
